@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+
+  closeMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      menu.classList.add('hidden');
+    }
+  }
+}
