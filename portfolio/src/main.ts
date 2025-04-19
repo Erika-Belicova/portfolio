@@ -3,9 +3,13 @@ import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes)
   ]
-})
-  .catch((err) => console.error(err));
+}).then(() => {
+  AOS.init();
+}).catch((err) => console.error(err));

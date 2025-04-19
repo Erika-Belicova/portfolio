@@ -5,7 +5,16 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        slateNight: {
+          100: '#2D3748', // about
+          200: '#2E3F57', // skills
+          300: '#29364C', // projects
+          400: '#232837', // contact
+        }
+      }
+    },
   },
   variants: {
     extend: {},

@@ -1,1 +1,178 @@
-<p>about works!</p>
+<!-- about section -->
+<div class="min-h-screen flex items-center justify-center py-10 bg-slate-700 px-4 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 py-12 flex flex-col lg:flex-row items-center lg:items-center gap-y-8 lg:gap-6"> <!-- flex-col-reverse -->
+
+    <!-- Photo original -->
+    <div class="w-full lg:w-1/2 flex justify-center">
+      <div class="relative w-[200px] h-[240px] sm:w-[240px] sm:h-[280px] md:w-[260px] md:h-[320px] lg:w-[300px] lg:h-[350px]">
+        <img
+          src="me.png" alt="Profile" class="absolute inset-0 w-full h-full object-cover shadow-2xl" 
+          style="clip-path: polygon(65% 0, 100% 35%, 87% 100%, 25% 100%, 0 55%, 15% 0); border-radius: 20px;"
+        >
+      </div>
+    </div>
+
+    <!-- description -->
+    <div data-aos="fade-down" data-aos-duration="1000" class="w-full lg:w-[42%] text-left lg:text-left">
+      <div class="space-y-6">
+        <h2 class="text-4xl font-bold text-blue-300">About Me</h2>
+
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <h3 class="text-xl font-semibold text-white">What I Do</h3>
+          <p class="text-md text-gray-300 leading-relaxed">
+            I’m a developer focused on building elegant, performant, and user-focused web applications. I work mostly with Angular, TypeScript, and modern backend services.
+          </p>
+        </div>
+
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <h3 class="text-xl font-semibold text-white">Tech Philosophy</h3>
+          <p class="text-md text-gray-300 leading-relaxed">
+            I value simplicity in code, consistency in UI, and a great developer experience. I love clean UIs and thoughtful UX that make users feel confident and in control.
+          </p>
+        </div>
+
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <h3 class="text-xl font-semibold text-white">Outside the Code</h3>
+          <p class="text-md text-gray-400 leading-relaxed">
+            When I’m not coding, I’m probably sketching UI ideas, playing games, or rethinking the layout of my own portfolio.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- work experience section -->
+  <div class="relative max-w-5xl mx-auto mt-8 px-4 pb-10">
+    <h3 class="text-2xl font-bold text-white text-center">Work Experience</h3>
+    <div class="relative max-w-5xl mx-auto mt-14 px-4">
+        
+      <!-- timeline layout -->
+      <div class="relative max-w-5xl mx-auto mt-8 px-4">
+        <!-- timeline center line -->
+        <div class="absolute top-[-2rem] left-1/2 w-0.5 bg-gray-400 shadow-xl h-full transform -translate-x-1/2"></div>
+      
+        <!-- timeline items -->
+        <div class="space-y-20">
+      
+          <!-- job 1 -->
+          <div class="relative flex items-start">
+            <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+              <div data-aos="fade-right" class="inline-block bg-slate-800 p-6 rounded-lg shadow-xl text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-2xl">
+                <h4 class="text-lg font-semibold text-blue-300">Frontend Developer – Company</h4>
+                <p class="text-m text-gray-400">Jan 2020 – Present</p>
+                <ul class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                  <li>Built and maintained Angular apps</li>
+                  <li>Collaborated closely with UX/UI team</li>
+                  <li>Focused on responsive and accessible design</li>
+                </ul>
+                <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+              </div>
+            </div>
+
+            <!-- timeline dot -->
+            <div class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)] flex items-center justify-center z-10">
+            </div>
+
+            <!-- mobile card -->
+            <div class="w-full md:hidden pl-8">
+              <div class="bg-slate-800 p-6 rounded-lg shadow-xl text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-2xl" data-aos="fade-left">
+                <h4 class="text-lg font-semibold text-blue-300">Frontend Developer – Company</h4>
+                <p class="text-m text-gray-400">Jan 2020 – Present</p>
+                <ul class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                  <li>Built and maintained Angular apps</li>
+                  <li>Collaborated closely with UX/UI team</li>
+                  <li>Focused on responsive and accessible design</li>
+                </ul>
+                <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- job 2 -->
+          <div class="relative flex items-start">
+            <div class="w-full md:w-1/2 hidden md:block">
+            </div>
+
+            <!-- timeline dot -->
+            <div class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)] flex items-center justify-center z-10">
+            </div>
+            <div class="w-full md:w-1/2 pl-8">
+              <div data-aos="fade-left" class="bg-slate-800 p-6 rounded-lg shadow-xl text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-2xl">
+                <h4 class="text-lg font-semibold text-blue-300">Web Developer – Company</h4>
+                <p class="text-m text-gray-400">Aug 2018 – Dec 2019</p>
+                <ul class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                  <li>Built and maintained Angular apps</li>
+                  <li>Collaborated closely with UX/UI team</li>
+                  <li>Focused on responsive and accessible design</li>
+                </ul>
+                <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+              </div>
+            </div>
+
+          </div>
+      
+          <!-- job 3 -->
+          <div class="relative flex items-start">
+            <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+              <div data-aos="fade-right" class="inline-block bg-slate-800 p-6 rounded-lg shadow-xl text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-2xl">
+                <h4 class="text-lg font-semibold text-blue-300">Software Engineer – Company</h4>
+                <p class="text-m text-gray-400">Jan 2017 – Aug 2018</p>
+                <ul class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                  <li>Built and maintained Angular apps</li>
+                  <li>Collaborated closely with UX/UI team</li>
+                  <li>Focused on responsive and accessible design</li>
+                </ul>
+                <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+              </div>
+            </div>
+
+            <!-- timeline dot -->
+            <div class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)] flex items-center justify-center z-10">
+            </div>
+            
+            <!-- mobile card -->
+            <div class="w-full md:hidden pl-8">
+              <div class="bg-slate-800 p-6 rounded-lg shadow-xl text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-2xl" data-aos="fade-left">
+                <h4 class="text-lg font-semibold text-blue-300">Software Engineer – Company</h4>
+                <p class="text-m text-gray-400">Jan 2017 – Aug 2018</p>
+                <ul class="p-4 list-disc list-outisde text-gray-300 space-y-1">
+                  <li>Built and maintained Angular apps</li>
+                  <li>Collaborated closely with UX/UI team</li>
+                  <li>Focused on responsive and accessible design</li>
+                </ul>
+                <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+              </div>
+            </div>
+
+          </div>
+      
+          <!-- job 4 -->
+          <div class="relative flex items-start">
+            <div class="w-full md:w-1/2 hidden md:block">
+            </div>
+
+            <!-- timeline dot -->
+            <div class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)]  flex items-center justify-center z-10">
+            </div>
+            <div class="w-full md:w-1/2 pl-8">
+              <div data-aos="fade-left" class="bg-slate-800 p-6 rounded-lg shadow-xl text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-2xl">
+                <h4 class="text-lg font-semibold text-blue-300">Intern Developer – Company</h4>
+                <p class="text-m text-gray-400">Jun 2016 – Dec 2016</p>
+                <ul class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                  <li>Built and maintained Angular apps</li>
+                  <li>Collaborated closely with UX/UI team</li>
+                  <li>Focused on responsive and accessible design</li>
+                </ul>
+                <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+              </div>
+            </div>
+
+          </div>
+
+      </div>  
+      
+    </div>
+  </div>
