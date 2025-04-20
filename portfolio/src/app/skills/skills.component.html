@@ -1,0 +1,297 @@
+<div class="max-w-6xl mx-auto px-4 mt-16">
+  <div class="text-left px-4">
+    <h2 class="text-4xl font-bold text-[#D0D5DC]">Technical skills</h2>
+  </div>
+
+  <!-- skills section -->
+  <div class="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-start gap-16">
+
+    <!-- columns wrapper -->
+    <div class="w-full lg:w-full flex flex-col lg:flex-row gap-4 text-left"> <!-- gap-8-->
+
+      <!-- full-stack section -->
+      <div class="relative isolate w-full lg:w-1/3 space-y-6" data-aos="fade-down" data-aos-duration="1000">
+
+        <!-- full stack header - header scroll anker point -->
+        <div #fullStackHeader></div>
+        <h2 class="text-4xl font-bold text-blue-300">Full-Stack Development</h2>
+
+        <!-- short summary -->
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <h3 class="text-xl font-semibold text-white">What I Do</h3>
+          <p class="text-md text-gray-300 leading-relaxed">
+            I build end-to-end solutions with an emphasis on performance and scalability. I enjoy bridging the gap between front-end and back-end, offering cohesive experiences and solutions.
+          </p>
+      
+          <!-- main tech stack -->
+          <h3 class="text-xl font-semibold text-white">Main Stack</h3>
+          <p class="text-gray-300">JavaScript • HTML • CSS • Angular • TypeScript</p>
+        </div>
+
+        <!-- full stack section - details scroll anker point -->
+        <div #fullStackSection>
+        </div>
+
+        <!-- expand button -->
+        <button class="text-blue-300 hover:underline border-2 border-blue-300 border-opacity-50 my-4 relative z-30 py-3 px-6 rounded-lg text-lg font-semibold"
+          (click)="toggleSection('fullStackDetails')" aria-controls="fullStackDetailsContent">
+          {{ isSectionVisible['fullStackDetails'] ? 'Collapse Details' : 'Expand Details' }}
+        </button>
+
+        <!-- expanded content - toggled visibility -->
+        <div [ngClass]="{
+            'fade-in': isSectionVisible['fullStackDetails'], 'fade-out': !isSectionVisible['fullStackDetails']
+            }" class="space-y-6 transition-all duration-500">
+          <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
+            <h3 class="text-xl font-semibold text-white">Full-Stack Background</h3>
+            <p class="text-md text-gray-300 leading-relaxed">
+              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
+            </p>
+          </div>
+
+          <!-- tech stack full-stack -->
+          <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+            <h3 class="text-xl font-semibold text-white">Technologies</h3>
+            <div class="grid grid-cols-2 gap-4 text-gray-300">
+
+              <!-- front end -->
+              <div>
+                <h4 class="font-semibold text-blue-300">Front-end</h4>
+                <ul class="list-disc pl-5">
+                  <li>Angular</li>
+                  <li>TypeScript</li>
+                  <li>JavaScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>RxJS</li>
+                  <li>VS Code</li>
+                </ul>
+              </div>
+        
+              <!-- back end -->
+              <div>
+                <h4 class="font-semibold text-indigo-300">Back-end</h4>
+                <ul class="list-disc pl-5">
+                  <li>Java</li>
+                  <li>JEE</li>
+                  <li>Spring</li>
+                  <li>Spring Boot</li>
+                  <li>Hibernate</li>
+                  <li>Spring Security</li>
+                  <li>SQL</li>
+                </ul>
+              </div>
+        
+              <!-- databases -->
+              <div>
+                <h4 class="font-semibold text-[#AFB1F4]">Databases</h4>
+                <ul class="list-disc pl-5">
+                  <li>MySQL</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+        
+              <!-- version control -->
+              <div>
+                <h4 class="font-semibold text-blue-300">Version Control</h4>
+                <ul class="list-disc pl-5">
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>TortoiseSVN</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- front-end section -->
+      <div class="relative isolate w-full lg:w-1/3 space-y-6" data-aos="fade-down" data-aos-duration="1000">
+
+        <!-- front end header - header scroll anker point -->
+        <div #frontEndHeader>
+        </div>
+        <h2 class="text-4xl font-bold text-indigo-300">Front-End Development</h2>
+
+        <!-- short summary -->
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <h3 class="text-xl font-semibold text-white ">What I Do</h3>
+          <p class="text-md text-gray-300 leading-relaxed">
+            I build end-to-end solutions with an emphasis on performance and scalability. I enjoy bridging the gap between front-end and back-end, offering cohesive experiences and solutions.
+          </p>
+
+          <!-- main tech stack -->
+          <h3 class="text-xl font-semibold text-white">Main Stack</h3>
+          <p class="text-gray-300">JavaScript • HTML • CSS • Angular • TypeScript</p>
+        </div>
+
+        <!-- front end section - details scroll anker point -->
+        <div #frontEndSection>
+        </div>
+
+        <!-- expand button -->
+        <button class="text-indigo-300 hover:underline border-2 border-indigo-300 border-opacity-50 my-4 relative z-30 py-3 px-6 rounded-lg text-lg font-semibold"
+          (click)="toggleSection('frontEndDetails')" aria-controls="frontEndDetailsContent">
+          {{ isSectionVisible['frontEndDetails'] ? 'Collapse Details' : 'Expand Details' }}
+        </button>
+
+        <!-- expanded content - toggled visibility -->
+        <div [ngClass]="{
+            'fade-in': isSectionVisible['frontEndDetails'], 'fade-out': !isSectionVisible['frontEndDetails']
+            }" class="space-y-6 transition-all duration-500">
+          <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
+            <h3 class="text-xl font-semibold text-white">Front-End Background</h3>
+            <p class="text-md text-gray-300 leading-relaxed">
+              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
+            </p>
+          </div>
+
+          <!-- tech stack front end -->
+          <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+            <h3 class="text-xl font-semibold text-white">Technologies</h3>
+            <div class="grid grid-cols-2 gap-4 text-gray-300">
+
+              <!-- frameworks -->
+              <div>
+                <h4 class="font-semibold text-blue-300">Frameworks</h4>
+                <ul class="list-disc pl-5">
+                  <li>React</li>
+                  <li>Vue.js</li>
+                  <li>Angular</li>
+                </ul>
+              </div>
+        
+              <!-- styling -->
+              <div>
+                <h4 class="font-semibold text-indigo-300">Styling</h4>
+                <ul class="list-disc pl-5">
+                  <li>CSS3</li>
+                  <li>SCSS</li>
+                  <li>Tailwind CSS</li>
+                  <li>Styled Components</li>
+                </ul>
+              </div>
+        
+              <!-- tools -->
+              <div>
+                <h4 class="font-semibold text-[#AFB1F4]">Tools</h4>
+                <ul class="list-disc pl-5">
+                  <li>Webpack</li>
+                  <li>Babel</li>
+                  <li>npm/yarn</li>
+                  <li>Gulp</li>
+                </ul>
+              </div>
+
+              <!-- libraries -->
+              <div>
+                <h4 class="font-semibold text-blue-300">Libraries</h4>
+                <ul class="list-disc pl-5">
+                  <li>ngx-charts</li>
+                  <li>Angular Material</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- back-end section -->
+      <div class="relative isolate w-full lg:w-1/3 space-y-6" data-aos="fade-down" data-aos-duration="1000">
+
+        <!-- back end header - header scroll anker point -->
+        <div #backEndHeader></div>
+        <h2 class="text-4xl font-bold text-[#AFB1F4]">Back-End Development</h2>
+
+        <!-- short summary -->
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <h3 class="text-xl font-semibold text-white">What I Do</h3>
+          <p class="text-md text-gray-300 leading-relaxed">
+            I build end-to-end solutions with an emphasis on performance and scalability. I enjoy bridging the gap between front-end and back-end, offering cohesive experiences and solutions.
+          </p>
+    
+          <!-- main tech stack -->
+          <h3 class="text-xl font-semibold text-white">Main Stack</h3>
+          <p class="text-gray-300">JavaScript • HTML • CSS • Angular • TypeScript</p>
+        </div>
+
+        <!-- back end section - details scroll anker point -->
+        <div #backEndSection>
+        </div>
+        
+        <!-- expand button -->
+        <button class="text-[#AFB1F4]  hover:underline border-2 border-[#AFB1F4]  border-opacity-50 my-4 relative z-30 py-3 px-6 rounded-lg text-lg font-semibold"
+          (click)="toggleSection('backEndDetails')" aria-controls="backEndDetailsContent">
+          {{ isSectionVisible['backEndDetails'] ? 'Collapse Details' : 'Expand Details' }}
+        </button>
+
+        <!-- expanded content - toggled visibility -->
+        <div [ngClass]="{
+            'fade-in': isSectionVisible['backEndDetails'], 'fade-out': !isSectionVisible['backEndDetails']
+            }" class="space-y-6 transition-all duration-500">
+          <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
+            <h3 class="text-xl font-semibold text-white">Back-End Background</h3>
+            <p class="text-md text-gray-300 leading-relaxed">
+              I have been working in back-end development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
+            </p>
+          </div>
+
+          <!-- tech stack back end -->
+          <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+            <h3 class="text-xl font-semibold text-white">Technologies</h3>
+            <div class="grid grid-cols-2 gap-4 text-gray-300">
+
+              <!-- back end languages -->
+              <div>
+                <h4 class="font-semibold text-blue-300">Back-end Languages</h4>
+                <ul class="list-disc pl-5">
+                  <li>Node.js</li>
+                  <li>Python</li>
+                  <li>Java</li>
+                  <li>Go</li>
+                </ul>
+              </div>
+        
+              <!-- frameworks -->
+              <div>
+                <h4 class="font-semibold text-indigo-300">Back-end Frameworks</h4>
+                <ul class="list-disc pl-5">
+                  <li>Express.js</li>
+                  <li>Django</li>
+                  <li>Flask</li>
+                  <li>Spring Boot</li>
+                </ul>
+              </div>
+        
+              <!-- databases -->
+              <div>
+                <h4 class="font-semibold text-[#AFB1F4]">Databases</h4>
+                <ul class="list-disc pl-5">
+                  <li>MongoDB</li>
+                  <li>MySQL</li>
+                  <li>PostgreSQL</li>
+                  <li>Redis</li>
+                </ul>
+              </div>
+
+              <!-- libraries -->
+              <div>
+                <h4 class="font-semibold text-blue-300">Libraries</h4>
+                <ul class="list-disc pl-5">
+                  <li>Lombok</li>
+                </ul>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
