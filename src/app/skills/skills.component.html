@@ -20,7 +20,7 @@
         <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
           <h3 class="text-xl font-semibold text-white">What I Do</h3>
           <p class="text-md text-gray-300 leading-relaxed">
-            I build end-to-end solutions with an emphasis on performance and scalability. I enjoy bridging the gap between front-end and back-end, offering cohesive experiences and solutions.
+            I build end-to-end solutions with an emphasis on performance and scalability.
           </p>
       
           <!-- main tech stack -->
@@ -45,62 +45,36 @@
           <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Full-Stack Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
-              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
+              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services.
             </p>
           </div>
 
           <!-- tech stack full-stack -->
           <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
-            <div class="grid grid-cols-2 gap-4 text-gray-300">
-
-              <!-- front end -->
-              <div>
-                <h4 class="font-semibold text-blue-300">Front-end</h4>
-                <ul class="list-disc pl-5">
-                  <li>Angular</li>
-                  <li>TypeScript</li>
-                  <li>JavaScript</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>RxJS</li>
-                  <li>VS Code</li>
-                </ul>
-              </div>
-        
-              <!-- back end -->
-              <div>
-                <h4 class="font-semibold text-indigo-300">Back-end</h4>
-                <ul class="list-disc pl-5">
-                  <li>Java</li>
-                  <li>JEE</li>
-                  <li>Spring</li>
-                  <li>Spring Boot</li>
-                  <li>Hibernate</li>
-                  <li>Spring Security</li>
-                  <li>SQL</li>
-                </ul>
-              </div>
-        
-              <!-- databases -->
-              <div>
-                <h4 class="font-semibold text-[#AFB1F4]">Databases</h4>
-                <ul class="list-disc pl-5">
-                  <li>MySQL</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-        
-              <!-- version control -->
-              <div>
-                <h4 class="font-semibold text-blue-300">Version Control</h4>
-                <ul class="list-disc pl-5">
-                  <li>Git</li>
-                  <li>GitHub</li>
-                  <li>TortoiseSVN</li>
-                </ul>
+          
+            <div class="space-y-6 text-white">
+              <div *ngFor="let section of skillSections">
+                <h4 class="font-semibold mb-2" [ngClass]="section.colorClass">{{ section.title }}</h4>
+                
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    *ngFor="let tech of section.items"
+                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1"
+                  >
+                    <img
+                    [src]="'/icons/' + getIconFilename(tech)"
+                    [alt]="tech + ' logo'"
+                    class="w-6 h-6 tech-icon"
+                    loading="lazy"
+                    />
+                
+                    <span>{{ tech }}</span>
+                  </span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -117,7 +91,7 @@
         <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
           <h3 class="text-xl font-semibold text-white ">What I Do</h3>
           <p class="text-md text-gray-300 leading-relaxed">
-            I build end-to-end solutions with an emphasis on performance and scalability. I enjoy bridging the gap between front-end and back-end, offering cohesive experiences and solutions.
+            I build end-to-end solutions with an emphasis on performance and scalability.
           </p>
 
           <!-- main tech stack -->
@@ -142,58 +116,38 @@
           <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Front-End Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
-              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
+              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services.
             </p>
           </div>
 
           <!-- tech stack front end -->
           <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
-            <div class="grid grid-cols-2 gap-4 text-gray-300">
 
-              <!-- frameworks -->
-              <div>
-                <h4 class="font-semibold text-blue-300">Frameworks</h4>
-                <ul class="list-disc pl-5">
-                  <li>React</li>
-                  <li>Vue.js</li>
-                  <li>Angular</li>
-                </ul>
-              </div>
-        
-              <!-- styling -->
-              <div>
-                <h4 class="font-semibold text-indigo-300">Styling</h4>
-                <ul class="list-disc pl-5">
-                  <li>CSS3</li>
-                  <li>SCSS</li>
-                  <li>Tailwind CSS</li>
-                  <li>Styled Components</li>
-                </ul>
-              </div>
-        
-              <!-- tools -->
-              <div>
-                <h4 class="font-semibold text-[#AFB1F4]">Tools</h4>
-                <ul class="list-disc pl-5">
-                  <li>Webpack</li>
-                  <li>Babel</li>
-                  <li>npm/yarn</li>
-                  <li>Gulp</li>
-                </ul>
-              </div>
-
-              <!-- libraries -->
-              <div>
-                <h4 class="font-semibold text-blue-300">Libraries</h4>
-                <ul class="list-disc pl-5">
-                  <li>ngx-charts</li>
-                  <li>Angular Material</li>
-                </ul>
+            <div class="space-y-6 text-white">
+              <div *ngFor="let section of skillSections">
+                <h4 class="font-semibold mb-2" [ngClass]="section.colorClass">{{ section.title }}</h4>
+                
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    *ngFor="let tech of section.items"
+                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1"
+                  >
+                    <img
+                    [src]="'/icons/' + getIconFilename(tech)"
+                    [alt]="tech + ' logo'"
+                    class="w-6 h-6 tech-icon"
+                    loading="lazy"
+                    />
+                
+                    <span>{{ tech }}</span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
 
+          </div>
+          
         </div>
 
       </div>
@@ -209,7 +163,7 @@
         <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
           <h3 class="text-xl font-semibold text-white">What I Do</h3>
           <p class="text-md text-gray-300 leading-relaxed">
-            I build end-to-end solutions with an emphasis on performance and scalability. I enjoy bridging the gap between front-end and back-end, offering cohesive experiences and solutions.
+            I build end-to-end solutions with an emphasis on performance and scalability.
           </p>
     
           <!-- main tech stack -->
@@ -241,50 +195,29 @@
           <!-- tech stack back end -->
           <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
-            <div class="grid grid-cols-2 gap-4 text-gray-300">
-
-              <!-- back end languages -->
-              <div>
-                <h4 class="font-semibold text-blue-300">Back-end Languages</h4>
-                <ul class="list-disc pl-5">
-                  <li>Node.js</li>
-                  <li>Python</li>
-                  <li>Java</li>
-                  <li>Go</li>
-                </ul>
+            
+            <div class="space-y-6 text-white">
+              <div *ngFor="let section of skillSections">
+                <h4 class="font-semibold mb-2" [ngClass]="section.colorClass">{{ section.title }}</h4>
+                
+                <div class="flex flex-wrap gap-3">
+                  <span
+                    *ngFor="let tech of section.items"
+                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1"
+                  >
+                    <img
+                    [src]="'/icons/' + getIconFilename(tech)"
+                    [alt]="tech + ' logo'"
+                    class="w-6 h-6 tech-icon"
+                    loading="lazy"
+                    />
+                
+                    <span>{{ tech }}</span>
+                  </span>
+                </div>
               </div>
-        
-              <!-- frameworks -->
-              <div>
-                <h4 class="font-semibold text-indigo-300">Back-end Frameworks</h4>
-                <ul class="list-disc pl-5">
-                  <li>Express.js</li>
-                  <li>Django</li>
-                  <li>Flask</li>
-                  <li>Spring Boot</li>
-                </ul>
-              </div>
-        
-              <!-- databases -->
-              <div>
-                <h4 class="font-semibold text-[#AFB1F4]">Databases</h4>
-                <ul class="list-disc pl-5">
-                  <li>MongoDB</li>
-                  <li>MySQL</li>
-                  <li>PostgreSQL</li>
-                  <li>Redis</li>
-                </ul>
-              </div>
-
-              <!-- libraries -->
-              <div>
-                <h4 class="font-semibold text-blue-300">Libraries</h4>
-                <ul class="list-disc pl-5">
-                  <li>Lombok</li>
-                </ul>
-              </div>
-        
             </div>
+            
           </div>
         </div>
 
