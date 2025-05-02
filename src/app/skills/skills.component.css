@@ -17,4 +17,10 @@
     z-index: 0;
   }
 
+  .tech-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(49%) sepia(38%) saturate(306%) hue-rotate(179deg) brightness(120%) contrast(103%);
+    transition: filter 0.3s ease;
+  }
   

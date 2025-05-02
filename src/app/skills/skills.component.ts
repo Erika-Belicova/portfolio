@@ -11,6 +11,54 @@ type SectionKey = 'fullStackDetails' | 'frontEndDetails' | 'backEndDetails';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
+   skillSections = [
+    {
+      title: 'Front-end',
+      colorClass: 'text-blue-300',
+      items: ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'RxJS', 'VS Code'],
+    },
+    {
+      title: 'Back-end',
+      colorClass: 'text-indigo-300',
+      items: ['Java', 'JEE', 'Spring', 'Spring Boot', 'Hibernate', 'Spring Security', 'SQL'],
+    },
+    {
+      title: 'Databases',
+      colorClass: 'text-[#AFB1F4]',
+      items: ['MySQL', 'PostgreSQL'],
+    },
+    {
+      title: 'Version Control',
+      colorClass: 'text-blue-300',
+      items: ['Git', 'GitHub', 'TortoiseSVN'],
+    },
+  ];
+
+  // an icon for each technology
+  getIconFilename(tech: string): string {
+    const map: { [key: string]: string } = {
+      'VS Code': 'visualstudiocode.svg',
+      'Spring Boot': 'springboot.svg',
+      'Spring': 'spring.svg',
+      'RxJS': 'rxjs.svg',
+      'GitHub': 'github.svg',
+      'Git': 'git.svg',
+      'TypeScript': 'typescript.svg',
+      'HTML': 'html5.svg',
+      'CSS': 'css.svg',
+      'PostgreSQL': 'postgresql.svg',
+      'TortoiseSVN': 'tortoisesvn.svg',
+      'MySQL': 'mysql.svg',
+      'Hibernate': 'hibernate.svg',
+      'Angular': 'angular.svg',
+      'SQL': 'sql.svg',
+      'Java': 'java.svg',
+      'JavaScript': 'javascript.svg',
+      'JEE': 'java.svg'
+    };
+  
+    return map[tech] || `${tech.toLowerCase().replace(/\s+/g, '')}.svg`;
+  }
 
   // ViewChild to access the header and section elements
   @ViewChild('fullStackSection', { static: false }) fullStackSection: ElementRef<HTMLElement> | undefined;
