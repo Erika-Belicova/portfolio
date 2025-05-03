@@ -106,7 +106,7 @@ export class SkillsComponent {
       // delay to match fade-out
       setTimeout(() => {
         this.isSectionVisible[section] = false;
-      }, 500);
+      }, 0);
     } else {
       // EXPANDING: show immediately
       this.isSectionVisible[section] = true;

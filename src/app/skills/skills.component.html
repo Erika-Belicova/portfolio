@@ -10,14 +10,14 @@
     <div class="w-full lg:w-full flex flex-col lg:flex-row gap-4 text-left"> <!-- gap-8-->
 
       <!-- full-stack section -->
-      <div class="relative isolate w-full lg:w-1/3 space-y-6" data-aos="fade-down" data-aos-duration="1000">
+      <div class="relative isolate w-full lg:w-1/3 space-y-6">
 
         <!-- full stack header - header scroll anker point -->
         <div #fullStackHeader></div>
         <h2 class="text-4xl font-bold text-blue-300">Full-Stack Development</h2>
 
         <!-- short summary -->
-        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
           <h3 class="text-xl font-semibold text-white">What I Do</h3>
           <p class="text-md text-gray-300 leading-relaxed">
             I build end-to-end solutions with an emphasis on performance and scalability.
@@ -41,8 +41,8 @@
         <!-- expanded content - toggled visibility -->
         <div [ngClass]="{
             'fade-in': isSectionVisible['fullStackDetails'], 'fade-out': !isSectionVisible['fullStackDetails']
-            }" class="space-y-6 transition-all duration-500">
-          <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
+            }" class="space-y-6 transition-all">
+          <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Full-Stack Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
               I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services.
@@ -50,7 +50,7 @@
           </div>
 
           <!-- tech stack full-stack -->
-          <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
           
             <div class="space-y-6 text-white">
@@ -80,7 +80,7 @@
       </div>
 
       <!-- front-end section -->
-      <div class="relative isolate w-full lg:w-1/3 space-y-6" data-aos="fade-down" data-aos-duration="1000">
+      <div class="relative isolate w-full lg:w-1/3 space-y-6">
 
         <!-- front end header - header scroll anker point -->
         <div #frontEndHeader>
@@ -88,7 +88,7 @@
         <h2 class="text-4xl font-bold text-indigo-300">Front-End Development</h2>
 
         <!-- short summary -->
-        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
           <h3 class="text-xl font-semibold text-white ">What I Do</h3>
           <p class="text-md text-gray-300 leading-relaxed">
             I build end-to-end solutions with an emphasis on performance and scalability.
@@ -112,8 +112,8 @@
         <!-- expanded content - toggled visibility -->
         <div [ngClass]="{
             'fade-in': isSectionVisible['frontEndDetails'], 'fade-out': !isSectionVisible['frontEndDetails']
-            }" class="space-y-6 transition-all duration-500">
-          <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
+            }" class="space-y-6 transition-all">
+          <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Front-End Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
               I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services.
@@ -121,7 +121,7 @@
           </div>
 
           <!-- tech stack front end -->
-          <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
 
             <div class="space-y-6 text-white">
@@ -153,14 +153,14 @@
       </div>
 
       <!-- back-end section -->
-      <div class="relative isolate w-full lg:w-1/3 space-y-6" data-aos="fade-down" data-aos-duration="1000">
+      <div class="relative isolate w-full lg:w-1/3 space-y-6">
 
         <!-- back end header - header scroll anker point -->
         <div #backEndHeader></div>
         <h2 class="text-4xl font-bold text-[#AFB1F4]">Back-End Development</h2>
 
         <!-- short summary -->
-        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+        <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
           <h3 class="text-xl font-semibold text-white">What I Do</h3>
           <p class="text-md text-gray-300 leading-relaxed">
             I build end-to-end solutions with an emphasis on performance and scalability.
@@ -184,8 +184,8 @@
         <!-- expanded content - toggled visibility -->
         <div [ngClass]="{
             'fade-in': isSectionVisible['backEndDetails'], 'fade-out': !isSectionVisible['backEndDetails']
-            }" class="space-y-6 transition-all duration-500">
-          <div data-aos="fade-down" data-aos-duration="1000" class="space-y-2">
+            }" class="space-y-6 transition-all">
+          <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Back-End Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
               I have been working in back-end development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
@@ -193,7 +193,7 @@
           </div>
 
           <!-- tech stack back end -->
-          <div class="space-y-2" data-aos="fade-down" data-aos-duration="1000">
+          <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
             
             <div class="space-y-6 text-white">
