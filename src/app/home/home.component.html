@@ -1,7 +1,37 @@
-<section class="min-h-screen bg-gray-800 text-white flex items-center justify-center overflow-x-hidden">
-	<div class="max-w-6xl mx-auto text-center">
-		<h1 class="text-5xl font-bold mb-4">Welcome</h1>
-		<p class="text-xl mb-8">Take a look at my work and projects</p>
-		<a href="#about" class="text-blue-300 border-2 border-blue-300 border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10">Show More</a>
+<section class="min-h-screen bg-slate-800 text-white flex items-center justify-center px-6 relative  overflow-hidden" appMouseTrail>
+	<!-- canvas for Three.js 3D scene render -->
+	<div #threeJsCanvas class="w-full h-full absolute top-0 left-0 z-0 pointer-events-none">
+  </div>
+  
+	<!-- content remains above the globe -->
+	<div class="max-w-6xl text-center relative z-20">
+	  <h2 class="text-xl sm:text-2xl text-blue-300 mb-4 font-semibold tracking-wide">
+      <span class="bg-slate-800 px-1">
+        Back-End & Full-Stack Java Developer
+      </span>
+	  </h2>
+	  <h1 class="inline-block text-4xl sm:text-5xl md:text-6xl font-bold bg-slate-800 text-white mb-6 leading-tight">
+		  Hi, I'm 
+      <span class="text-blue-300">
+        Erika Belicová
+      </span>
+      <span class="block mt-2">
+        I'm a software developer with a passion for quality and detail.
+      </span>
+	  </h1>
+	  <p class="text-lg sm:text-xl bg-slate-800 text-gray-300 mb-10">
+		  With 2.5 years in development and nearly 4 years in IT, I focus on writing clean code, building user-friendly software, and supporting team growth through collaboration and mentoring.
+	  </p>
+	  <a href="#about"
+      class="inline-block text-blue-300 border-2 border-blue-300 py-3 px-6 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10 transition ease-in-out duration-300"
+      >
+      <span class="mr-2">
+        Discover More
+      </span>
+      <svg class="w-4 h-4 inline-block align-middle stroke-current" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
 	</div>
+
 </section>
