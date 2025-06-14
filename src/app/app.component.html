@@ -1,13 +1,21 @@
 <app-navbar></app-navbar>
 
+<!-- fixed creative background -->
+<div class="fixed inset-0 -z-10 bg-slate-800 overflow-hidden">
+  <app-creative-coding></app-creative-coding>
+</div>
+
 <section id="home">
   <app-home></app-home>
 </section>
 
 <!-- glass Sections -->
-<section id="about" class="text-white bg-slate-800">
+<section id="about" class="text-white">
   <div class="container mx-auto px-4 py-16">
-    <div class="backdrop-blur-md bg-slate-700 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+    <div class="bg-slate-700/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+      <!-- bg-[#263345] = bg-slate-700/40 -->
+      <!-- bg-[#2D3A4E] = bg-slate-700/70-->
+      <!-- bg-[#2B374B] = bg-slate-700/60 - by far best option visually -->
       <!-- consider to change bg color about and experience or just change about color to clash less -->
       <!-- bg-white/10 -->
       <app-about></app-about>
@@ -15,36 +23,36 @@
   </div>
 </section>
 
-<section id="experience" class="text-white bg-slate-800">
+<section id="experience" class="text-white">
   <div class="container mx-auto px-4 py-16">
-    <div class="backdrop-blur-md bg-slateNight-100 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+    <div class="bg-slateNight-100/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
       <!-- bg-white/10 -->
       <app-experience></app-experience>
     </div>
   </div>
 </section>
 
-<section id="skills" class="text-white bg-slate-800">
+<section id="skills" class="text-white">
   <div class="container mx-auto px-4 py-16">
-    <div class="backdrop-blur-md bg-slateNight-200 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+    <div class="bg-slateNight-200/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
       <!-- bg-white/10 -->
       <app-skills></app-skills>
     </div>
   </div>
 </section>
 
-<section id="projects" class="text-white bg-slate-800">
+<section id="projects" class="text-white">
   <div class="container mx-auto px-4 py-16">
-    <div class="backdrop-blur-md bg-slateNight-300 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+    <div class="bg-slateNight-300/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
       <!-- bg-white/10 -->
       <app-projects></app-projects>
     </div>
   </div>
 </section>
 
-<section id="contact" class="text-white flex flex-col bg-slate-800">
+<section id="contact" class="text-white flex flex-col">
   <div class="flex-grow container mx-auto px-4 py-16">
-    <div class="backdrop-blur-md bg-slateNight-100 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+    <div class="bg-slateNight-100 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
       <!-- bg-white/10 -->
       <app-contact></app-contact>
     </div>

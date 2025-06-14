@@ -8,3 +8,22 @@
     }
   }
   
+  .bg-slate-700 {
+    --tw-bg-opacity: 0.75;
+    background-color: rgb(46 63 87 / var(--tw-bg-opacity, 0.1));
+  }
+
+  .bg-slateNight-100 {
+    --tw-bg-opacity: 0.65;
+    background-color: rgb(46 63 87 / var(--tw-bg-opacity, 0.1));
+  }
+
+  .bg-slateNight-200 {
+    --tw-bg-opacity: 0.75;
+    background-color: rgb(46 63 87 / var(--tw-bg-opacity, 0.1));
+  }
+
+  .bg-slateNight-300 {
+    --tw-bg-opacity: 0.75;
+    background-color: rgb(46 63 87 / var(--tw-bg-opacity, 0.1));
+  }
