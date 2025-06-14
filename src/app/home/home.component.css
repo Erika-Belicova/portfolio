@@ -3,16 +3,6 @@
     width: 100%;
     height: 100%;
   }
-  
-  #threeJsCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-  
   .mouse-trail-dot {
     position: absolute;
     background-color: #ffffff;
@@ -39,4 +29,3 @@
       opacity: 0;
     }
   }
-  
