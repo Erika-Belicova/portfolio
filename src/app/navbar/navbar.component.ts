@@ -18,4 +18,19 @@ export class NavbarComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  scrollToSection(id: string, event: Event) {
+    event.preventDefault(); // stop href="#" from scrolling to top
+
+    const el = document.getElementById(id);
+    if (el) {
+      const yOffset = -40; // about 1cm offset above card
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+    }
+  }
 }
