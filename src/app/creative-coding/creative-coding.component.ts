@@ -3,12 +3,11 @@ import {
   ViewChild, Renderer2, Inject, PLATFORM_ID
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { MouseTrailDirective } from '../directives/mouse-trail.directive';
 import * as THREE from 'three';
 
 @Component({
   selector: 'app-creative-coding',
-  imports: [MouseTrailDirective],
+  imports: [],
   templateUrl: './creative-coding.component.html',
   styleUrl: './creative-coding.component.css'
 })
