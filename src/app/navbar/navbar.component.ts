@@ -24,7 +24,7 @@ export class NavbarComponent {
 
     const el = document.getElementById(id);
     if (el) {
-      const yOffset = -40; // about 1cm offset above card
+      const yOffset = -40; // about 1cm offset above card -> alternative: -window.innerHeight * 0.05 (for 5%)
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
       window.scrollTo({

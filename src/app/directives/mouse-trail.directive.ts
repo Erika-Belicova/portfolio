@@ -1,11 +1,12 @@
-import { 
-  Directive, ElementRef, Renderer2,HostListener, OnInit, Inject
+import {
+  Directive, ElementRef, Renderer2, HostListener, OnInit, Inject
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 
 @Directive({
-  selector: '[appMouseTrail]'
+  selector: '[appMouseTrail]',
+  standalone: true,
 })
 export class MouseTrailDirective implements OnInit {
   private lastTime: number = 0; // last time a particle was created
@@ -15,7 +16,7 @@ export class MouseTrailDirective implements OnInit {
     private el: ElementRef<HTMLElement>,
     private renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -30,11 +31,15 @@ export class MouseTrailDirective implements OnInit {
   onMouseMove(e: MouseEvent) {
     const currentTime = Date.now();
 
+    // prevent trail inside .section-card elements
+    const target = e.target as HTMLElement;
+    if (target.closest('.section-card')) {
+      return;
+    }
+
     // create particle after minimum delay has passed
     if (currentTime - this.lastTime > this.particleDelay) {
       this.createParticle(e);
-
-      // update creation time
       this.lastTime = currentTime;
     }
   }
@@ -42,16 +47,22 @@ export class MouseTrailDirective implements OnInit {
   // mouse click event to generate 6 dots
   @HostListener('click', ['$event'])
   onClick(e: MouseEvent) {
+    const target = e.target as HTMLElement;
+
+    // prevent click trail inside .section-card elements
+    if (target.closest('.section-card')) {
+      return;
+    }
+
     const directions = [
-      { x:  1, y:  0 },  // right
-      { x: -1, y:  0 },  // left
-      { x:  0, y:  1 },  // down
-      { x:  0, y: -1 },  // up
-      { x:  1, y:  1 },  // bottom-right diagonal
-      { x: -1, y: -1 }   // top-left diagonal
+      { x: 1, y: 0 },
+      { x: -1, y: 0 },
+      { x: 0, y: 1 },
+      { x: 0, y: -1 },
+      { x: 1, y: 1 },
+      { x: -1, y: -1 }
     ];
 
-    // create 6 dots moving in each direction
     for (const direction of directions) {
       this.createExplosionDot(e, direction);
     }
@@ -63,8 +74,9 @@ export class MouseTrailDirective implements OnInit {
     this.renderer.addClass(dot, 'mouse-trail-dot');
 
     const size = 5;
-    const x = e.offsetX - size / 2;
-    const y = e.offsetY - size / 2;
+    const rect = this.el.nativeElement.getBoundingClientRect();
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
 
     this.renderer.setStyle(dot, 'width', `${size}px`);
     this.renderer.setStyle(dot, 'height', `${size}px`);
@@ -82,8 +94,9 @@ export class MouseTrailDirective implements OnInit {
     this.renderer.addClass(dot, 'mouse-trail-dot');
 
     const size = 5;
-    const x = e.offsetX - size / 2;
-    const y = e.offsetY - size / 2;
+    const rect = this.el.nativeElement.getBoundingClientRect();
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
 
     // set initial position at mouse click
     this.renderer.setStyle(dot, 'width', `${size}px`);

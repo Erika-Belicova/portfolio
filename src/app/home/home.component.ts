@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { MouseTrailDirective } from '../directives/mouse-trail.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [MouseTrailDirective],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

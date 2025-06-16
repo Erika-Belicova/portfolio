@@ -1,9 +1,3 @@
-:host {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
 #threeJsCanvas {
   position: absolute;
   top: 0;
@@ -12,31 +6,3 @@
   height: 100%;
   pointer-events: none;
 }
-
-.mouse-trail-dot {
-  position: absolute;
-  background-color: #ffffff;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: shootStar 1s ease-out, fadeOut 1s ease-in forwards;
-}
-
-/* keyframe to move particles */
-@keyframes shootStar {
-  0% {
-    transform: translate(0, 0) scale(0.6); /* start at mouse position */
-  }
-  100% {
-    transform: translate(150px, -100px) scale(1); /* move up and right */
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-  
