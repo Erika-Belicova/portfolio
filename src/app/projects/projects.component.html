@@ -4,187 +4,179 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
 
-      <!-- project card -->
-      <div class="bg-slate-800 shadow-xl shadow-black/30 text-blue-200 font-semibold flex flex-col h-full p-4"
-        data-aos="fade-down" data-aos-duration="600" data-aos-anchor-placement="top-bottom">
+      <!-- new project card one bg-slateNight-400/60 -->
+      <div
+        class="project-card bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        <!-- alternative : border-white/30 or even border-white/20 -->
 
         <!-- framed image -->
-        <div class="overflow-hidden border-4 border-blue-300 border-opacity-50 mb-4">
+        <div class="overflow-hidden border border-blue-300/40 rounded-lg mb-6">
           <img src="olympic1.png" alt="Screenshot of Olympic Games Project interface"
             class="w-full h-40 object-cover" />
         </div>
 
         <!-- content -->
         <div class="flex flex-col flex-grow px-2">
-          <h3 class="text-xl text-blue-200 mb-2">Olympic Games Application</h3>
+          <h3 class="text-xl mb-2">Olympic Games Application</h3>
           <p class="text-slate-200 mb-5 flex-grow text-center">
             An Angular application that displays Olympic Games statistics by country.
           </p>
 
-          <!-- tech stack -->
-          <div class="flex justify-center my-2">
-            <div class="flex flex-wrap justify-center gap-2 max-w-[500px] pb-6 pt-3">
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                Angular
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                Typescript
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                HTML
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                RxJS
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                ngx-charts
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                Angular Material
-              </span>
-            </div>
+          <!-- tech stack pills -->
+          <div class="flex justify-center my-2 flex-wrap gap-2 max-w-[500px] pb-6 pt-3">
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              Angular
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              Typescript
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              HTML
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              RxJS
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              ngx-charts
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              Angular Material
+            </span>
           </div>
 
           <!-- buttons -->
           <div class="mt-auto flex flex-wrap gap-2 justify-between">
             <a href="https://my.site/" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 py-2 px-4 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
+              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-4 text-sm font-semibold rounded-lg hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
               See Website
             </a>
+            <!-- border-blue-300/60 is an option -- also an option to remove rounded-lg from the buttons here-->
             <a href="https://github.com/my/olympic-games" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 py-2 px-4 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
+              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-4 text-sm font-semibold rounded-lg hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
               GitHub Repo
             </a>
           </div>
-
         </div>
-
       </div>
 
-      <!-- project card -->
-      <div class="bg-slate-800 shadow-xl shadow-black/30 text-blue-200 font-semibold flex flex-col h-full p-4"
-        data-aos="fade-down" data-aos-duration="600" data-aos-delay="300" data-aos-anchor-placement="top-bottom">
+      <!-- project card two -->
+
+      <div
+        class="project-card bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
 
         <!-- framed image -->
-        <div class="overflow-hidden border-4 border-blue-300 border-opacity-50 mb-4">
+        <div class="overflow-hidden border border-blue-300/40 rounded-lg mb-6">
           <img src="estate.jpg" alt="Estate Project" class="w-full h-40 object-cover" />
         </div>
 
         <!-- content -->
         <div class="flex flex-col flex-grow px-2">
-          <h3 class="text-xl text-blue-200 mb-2">Estate Application</h3>
+          <h3 class="text-xl mb-2">Estate Application</h3>
           <p class="text-slate-200 mb-5 flex-grow text-center">
             A simple application to connect landlords and tenants.
           </p>
 
-          <!-- tech stack -->
-          <div class="flex justify-center my-2">
-            <div class="flex flex-wrap justify-center gap-2 max-w-[500px] pb-6 pt-3">
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                Java
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                Spring Boot
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                API REST
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                MySQL
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                JWT authentication
-              </span>
-            </div>
+          <!-- tech stack pills -->
+          <div class="flex justify-center my-2 flex-wrap gap-2 max-w-[500px] pb-6 pt-3">
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              Java
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              Spring Boot
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              API REST
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              MySQL
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              JWT authentication
+            </span>
           </div>
 
           <!-- buttons -->
           <div class="mt-auto flex flex-wrap gap-2 justify-between">
             <a href="https://my.site/" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 py-2 px-4 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
+              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-4 text-sm font-semibold rounded-lg hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
               See Website
             </a>
-            <a href="https://github.com/my/estate" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 py-2 px-4 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
+            <!-- border-blue-300/60 is an option -- also an option to remove rounded-lg from the buttons here-->
+            <a href="https://github.com/my/olympic-games" target="_blank"
+              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-4 text-sm font-semibold rounded-lg hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
               GitHub Repo
             </a>
           </div>
-
         </div>
-
       </div>
 
-      <!-- project card -->
-      <div class="bg-slate-800 shadow-xl shadow-black/30 text-blue-200 font-semibold flex flex-col h-full p-4"
-        data-aos="fade-down" data-aos-duration="600" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
-
+      <div
+        class="project-card bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
         <!-- framed image -->
-        <div class="overflow-hidden border-4 border-blue-300 border-opacity-50 mb-4">
+        <div class="overflow-hidden border border-blue-300/40 rounded-lg mb-6">
           <img src="portfolio.png" alt="Portfolio Project" class="w-full h-40 object-cover" />
         </div>
 
         <!-- content -->
         <div class="flex flex-col flex-grow px-2">
-          <h3 class="text-xl text-blue-200 mb-2">Portfolio Website</h3>
+          <h3 class="text-xl mb-2">Portfolio Website</h3>
           <p class="text-slate-200 mb-5 flex-grow text-center">
             A place where I can show my work. A simple website created with Angular.
           </p>
 
-          <!-- tech stack -->
-          <div class="flex justify-center my-2">
-            <div class="flex flex-wrap justify-center gap-2 max-w-[500px] pb-6 pt-3">
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                Angular
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                TypeScript
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                HTML
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                CSS
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                TailwindCSS
-              </span>
-              <span
-                class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-                EmailJS
-              </span>
-            </div>
+          <!-- tech stack pills -->
+          <div class="flex justify-center my-2 flex-wrap gap-2 max-w-[500px] pb-6 pt-3">
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              Angular
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              TypeScript
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              HTML
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              CSS
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              TailwindCSS
+            </span>
+            <span
+              class="inline-flex items-center border-2 border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              EmailJS
+            </span>
           </div>
 
           <!-- buttons -->
           <div class="mt-auto flex flex-wrap gap-2 justify-between">
             <a href="https://my.site/" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 py-2 px-4 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
+              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-4 text-sm font-semibold rounded-lg hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
               See Website
             </a>
-            <a href="https://github.com/my/portfolio" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 py-2 px-4 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
+            <!-- border-blue-300/60 is an option -- also an option to remove rounded-lg from the buttons here-->
+            <a href="https://github.com/my/olympic-games" target="_blank"
+              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-4 text-sm font-semibold rounded-lg hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
               GitHub Repo
             </a>
           </div>
-
         </div>
-
       </div>
 
     </div>
