@@ -1,8 +1,8 @@
 .separator {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
-  
+
 .separator::after {
 content: "";
 position: absolute;
@@ -13,19 +13,26 @@ height: 1px;
 background-color: #E2E8F0;
 margin-top: 1rem;
 }
-  
-p {
-    line-height: 1.6rem;
-}
 
+p {
+  line-height: 1.6rem;
+}
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 600px) {
-    .h-40 {
-        height: auto;
-    }
+  .h-40 {
+    height: auto;
+  }
 }
 
 @media (max-width: 768px) {
-    .tech-stack {
-        flex-direction: column;
-    }
+  .tech-stack {
+    flex-direction: column;
+  }
 }
