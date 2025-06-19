@@ -33,6 +33,9 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
   private positionAttribute!: THREE.BufferAttribute;
   private colorAttribute!: THREE.BufferAttribute;
 
+  private observer!: IntersectionObserver;
+  private isInViewport: boolean = true;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngAfterViewInit(): void {
@@ -56,6 +59,14 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       antialias: true,
     });
     this.renderer.setSize(container.clientWidth, container.clientHeight);
+
+    this.observer = new IntersectionObserver(
+      ([entry]) => {
+        this.isInViewport = entry.isIntersecting;
+      },
+      { threshold: 0.1 }
+    );
+    this.observer.observe(container);
 
     const loader = new THREE.TextureLoader();
     loader.load('viswaprem-anbarasapandian-n6V7gk-LUfA-unsplash.jpg', (texture) => {
@@ -168,6 +179,8 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       const animate = () => {
         this.animationFrameId = requestAnimationFrame(animate);
 
+        if (!this.isInViewport) return;
+
         points.rotation.y += 0.003;
 
         const angleRad = points.rotation.y % (2 * Math.PI);
@@ -273,6 +286,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       cancelAnimationFrame(this.animationFrameId);
       this.renderer?.dispose();
+      this.observer?.disconnect();
     }
   }
 }
