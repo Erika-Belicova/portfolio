@@ -26,6 +26,13 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
   private camera!: THREE.PerspectiveCamera;
   private animationFrameId: number = 0;
 
+  private basePositions!: Float32Array;
+  private baseColors!: Float32Array;
+  private paletteColors!: Float32Array;
+
+  private positionAttribute!: THREE.BufferAttribute;
+  private colorAttribute!: THREE.BufferAttribute;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngAfterViewInit(): void {
@@ -36,10 +43,10 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
 
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(
-      70,
+      100,
       container.clientWidth / container.clientHeight,
       0.1,
-      100
+      60
     );
     this.camera.position.z = 5;
 
@@ -51,8 +58,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     this.renderer.setSize(container.clientWidth, container.clientHeight);
 
     const loader = new THREE.TextureLoader();
-    loader.load('me.png', (texture) => {
-      // hidden canvas to sample image pixels
+    loader.load('viswaprem-anbarasapandian-n6V7gk-LUfA-unsplash.jpg', (texture) => {
       const imgCanvas = document.createElement('canvas');
       const imgCtx = imgCanvas.getContext('2d')!;
       const imgWidth = 200;
@@ -70,33 +76,38 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       const centerX = imgWidth / 2;
       const centerY = imgHeight / 2;
 
-      const maxStep = 4;  // sparse step size at edges
-      const minStep = 1;  // dense step size at center
+      const maxStep = 4;
+      const minStep = 0.05;
 
       for (let y = 0; y < imgHeight;) {
-        // normalize distance from center vertically
-        const distYNorm = Math.abs(y - centerY) / centerY;
+        const verticalStretch = 0.4;
+        const distYNorm = (Math.abs(y - centerY) / centerY) * verticalStretch;
 
         const stepY = minStep + (maxStep - minStep) * distYNorm;
 
         for (let x = 0; x < imgWidth;) {
-          // normalize distance from center horizontally
           const distXNorm = Math.abs(x - centerX) / centerX;
 
-          const distFromCenter = Math.sqrt(distXNorm * distXNorm + distYNorm * distYNorm);
+          const radiusScale = 1.8;
+          let distFromCenter = Math.sqrt(distXNorm * distXNorm + distYNorm * distYNorm) / radiusScale;
+          distFromCenter = Math.min(distFromCenter, 1);
+          const adjustedDist = Math.pow(distFromCenter, 2.1);
 
-          const stepX = minStep + (maxStep - minStep) * distFromCenter;
+          const stepX = minStep + (maxStep - minStep) * adjustedDist;
 
           const i = (Math.floor(y) * imgWidth + Math.floor(x)) * 4;
           const alpha = imageData[i + 3];
 
           if (alpha > 50) {
-            // convert pixel coords to normalized coords centered around zero
+            const skipProbability = adjustedDist * 3;
+            if (Math.random() < skipProbability) {
+              x += stepX;
+              continue;
+            }
+
             const xpos = (x - centerX) / 40;
             const ypos = -(y - centerY) / 40;
-
-            // z spread same as before — scales with distFromCenter but randomized
-            const zpos = (Math.random() - 0.5) * distFromCenter * 1.4;
+            const zpos = (Math.random() - 0.5) * distXNorm * 150;
 
             positions.push(xpos, ypos, zpos);
             colors.push(
@@ -114,8 +125,37 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
       geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
 
+      this.positionAttribute = geometry.getAttribute('position') as THREE.BufferAttribute;
+      this.colorAttribute = geometry.getAttribute('color') as THREE.BufferAttribute;
+
+
+      this.basePositions = new Float32Array(positions.length);
+      this.baseColors = new Float32Array(colors.length);
+      this.paletteColors = new Float32Array(colors.length);
+
+      for (let i = 0; i < positions.length; i++) {
+        this.basePositions[i] = positions[i];
+      }
+      for (let i = 0; i < colors.length; i++) {
+        this.baseColors[i] = colors[i];
+      }
+
+      const dreamyPalette = [
+        [0.6, 0.8, 1.0],
+        [0.6, 0.4, 0.8],
+        [1.0, 1.0, 1.0],
+        [1.0, 1.0, 0.7],
+      ];
+
+      for (let i = 0; i < colors.length / 3; i++) {
+        const c = dreamyPalette[Math.floor(Math.random() * dreamyPalette.length)];
+        this.paletteColors[i * 3] = c[0];
+        this.paletteColors[i * 3 + 1] = c[1];
+        this.paletteColors[i * 3 + 2] = c[2];
+      }
+
       const material = new THREE.PointsMaterial({
-        size: 0.03,       // particle size — adjust
+        size: 0.01,
         vertexColors: true,
         transparent: true,
         opacity: 1,
@@ -127,12 +167,106 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
 
       const animate = () => {
         this.animationFrameId = requestAnimationFrame(animate);
-        points.rotation.y += 0.002;  // slow spin revealing 3D structure
+
+        points.rotation.y += 0.003;
+
+        const angleRad = points.rotation.y % (2 * Math.PI);
+        const deg = THREE.MathUtils.radToDeg(angleRad);
+
+        let swirlProgress = 0;
+        if (deg >= 90 && deg < 270) {
+          swirlProgress = (deg - 90) / 180;
+        } else if (deg >= 270) {
+          swirlProgress = 1 - (deg - 270) / 90;
+        }
+
+        if (deg < 90) {
+          for (let i = 0; i < this.basePositions.length / 3; i++) {
+            this.positionAttribute.setXYZ(i,
+              this.basePositions[i * 3],
+              this.basePositions[i * 3 + 1],
+              this.basePositions[i * 3 + 2]
+            );
+            this.colorAttribute.setXYZ(i,
+              this.baseColors[i * 3],
+              this.baseColors[i * 3 + 1],
+              this.baseColors[i * 3 + 2]
+            );
+          }
+        } else if (deg >= 90 && deg < 270) {
+          for (let i = 0; i < this.basePositions.length / 3; i++) {
+            const i3 = i * 3;
+            const baseX = this.basePositions[i3];
+            const baseY = this.basePositions[i3 + 1];
+            const baseZ = this.basePositions[i3 + 2];
+
+            const radius = Math.sqrt(baseX * baseX + baseY * baseY);
+            const baseAngle = Math.atan2(baseY, baseX);
+
+            const swirlAngle = baseAngle + swirlProgress * 2 * Math.PI + angleRad;
+            const swirlRadius = radius * (1 + 1.5 * swirlProgress);
+
+            const posX = swirlRadius * Math.cos(swirlAngle);
+            const posY = swirlRadius * Math.sin(swirlAngle);
+            const posZ = baseZ + swirlProgress * 0.5 * Math.sin(i + angleRad * 10);
+
+            const baseR = this.baseColors[i3];
+            const baseG = this.baseColors[i3 + 1];
+            const baseB = this.baseColors[i3 + 2];
+
+            const paletteR = this.paletteColors[i3];
+            const paletteG = this.paletteColors[i3 + 1];
+            const paletteB = this.paletteColors[i3 + 2];
+
+            const colorR = baseR + (paletteR - baseR) * swirlProgress;
+            const colorG = baseG + (paletteG - baseG) * swirlProgress;
+            const colorB = baseB + (paletteB - baseB) * swirlProgress;
+
+            this.positionAttribute.setXYZ(i, posX, posY, posZ);
+            this.colorAttribute.setXYZ(i, colorR, colorG, colorB);
+          }
+        } else if (deg >= 270) {
+          const reassembleProgress = 1 - (deg - 270) / 90;
+          for (let i = 0; i < this.basePositions.length / 3; i++) {
+            const i3 = i * 3;
+            const baseX = this.basePositions[i3];
+            const baseY = this.basePositions[i3 + 1];
+            const baseZ = this.basePositions[i3 + 2];
+
+            const radius = Math.sqrt(baseX * baseX + baseY * baseY);
+            const baseAngle = Math.atan2(baseY, baseX);
+
+            const swirlAngle = baseAngle + reassembleProgress * 2 * Math.PI + angleRad;
+            const swirlRadius = radius * (1 + 1.5 * reassembleProgress);
+
+            const posX = swirlRadius * Math.cos(swirlAngle);
+            const posY = swirlRadius * Math.sin(swirlAngle);
+            const posZ = baseZ + reassembleProgress * 0.5 * Math.sin(i + angleRad * 10);
+
+            const baseR = this.baseColors[i3];
+            const baseG = this.baseColors[i3 + 1];
+            const baseB = this.baseColors[i3 + 2];
+
+            const paletteR = this.paletteColors[i3];
+            const paletteG = this.paletteColors[i3 + 1];
+            const paletteB = this.paletteColors[i3 + 2];
+
+            const colorR = baseR + (paletteR - baseR) * reassembleProgress;
+            const colorG = baseG + (paletteG - baseG) * reassembleProgress;
+            const colorB = baseB + (paletteB - baseB) * reassembleProgress;
+
+            this.positionAttribute.setXYZ(i, posX, posY, posZ);
+            this.colorAttribute.setXYZ(i, colorR, colorG, colorB);
+          }
+        }
+
+        this.positionAttribute.needsUpdate = true;
+        this.colorAttribute.needsUpdate = true;
+
         this.renderer.render(this.scene, this.camera);
       };
       animate();
     });
-
   }
 
   ngOnDestroy(): void {
