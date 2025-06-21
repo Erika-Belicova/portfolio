@@ -10,6 +10,7 @@
     <ul class="hidden md:flex space-x-6">
       <li><a href="#" (click)="scrollToSection('home', $event)" class="hover:text-blue-300">Home</a></li>
       <li><a href="#" (click)="scrollToSection('about', $event)" class="hover:text-blue-300">About</a></li>
+      <li><a href="#" (click)="scrollToSection('education', $event)" class="hover:text-blue-300">Education</a></li>
       <li><a href="#" (click)="scrollToSection('experience', $event)" class="hover:text-blue-300">Experience</a></li>
       <li><a href="#" (click)="scrollToSection('skills', $event)" class="hover:text-blue-300">Skills</a></li>
       <li><a href="#" (click)="scrollToSection('projects', $event)" class="hover:text-blue-300">Projects</a></li>
@@ -31,6 +32,9 @@
 
     <a href="#" (click)="scrollToSection('about', $event); closeMenu()"
       class="block px-4 py-2.5 hover:text-blue-300">About</a>
+
+    <a href="#" (click)="scrollToSection('education', $event); closeMenu()"
+      class="block px-4 py-2.5 hover:text-blue-300">Education</a>
 
     <a href="#" (click)="scrollToSection('experience', $event); closeMenu()"
       class="block px-4 py-2.5 hover:text-blue-300">Experience</a>
