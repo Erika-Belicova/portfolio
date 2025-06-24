@@ -22,7 +22,7 @@
           <p class="text-md text-gray-300 leading-relaxed">
             I build end-to-end solutions with an emphasis on performance and scalability.
           </p>
-      
+
           <!-- main tech stack -->
           <h3 class="text-xl font-semibold text-white">Main Stack</h3>
           <p class="text-gray-300">JavaScript • HTML • CSS • Angular • TypeScript</p>
@@ -33,7 +33,8 @@
         </div>
 
         <!-- expand button -->
-        <button class="text-blue-300 border-2 border-blue-300 border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10"
+        <button
+          class="text-blue-300 border-2 border-blue-300 border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10"
           (click)="toggleSection('fullStackDetails')" aria-controls="fullStackDetailsContent">
           {{ isSectionVisible['fullStackDetails'] ? 'Collapse Details' : 'Expand Details' }}
         </button>
@@ -45,30 +46,25 @@
           <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Full-Stack Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
-              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services.
+              I have been working in full-stack development for over 3 years, crafting applications with both front-end
+              frameworks and back-end services.
             </p>
           </div>
 
           <!-- tech stack full-stack -->
           <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
-          
+
             <div class="space-y-6 text-white">
               <div *ngFor="let section of skillSections">
                 <h4 class="font-semibold mb-2" [ngClass]="section.colorClass">{{ section.title }}</h4>
-                
+
                 <div class="flex flex-wrap gap-3">
-                  <span
-                    *ngFor="let tech of section.items"
-                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1"
-                  >
-                    <img
-                    [src]="'/icons/' + getIconFilename(tech)"
-                    [alt]="tech + ' logo'"
-                    class="w-6 h-6 tech-icon"
-                    loading="lazy"
-                    />
-                
+                  <span *ngFor="let tech of section.items"
+                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1">
+                    <img [src]="'/icons/' + getIconFilename(tech)" [alt]="tech + ' logo'" class="w-6 h-6 tech-icon"
+                      loading="lazy" />
+
                     <span>{{ tech }}</span>
                   </span>
                 </div>
@@ -104,7 +100,8 @@
         </div>
 
         <!-- expand button -->
-        <button class="text-indigo-300 border-2 border-indigo-300 border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-indigo-400 hover:bg-opacity-10"
+        <button
+          class="text-indigo-300 border-2 border-indigo-300 border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-indigo-400 hover:bg-opacity-10"
           (click)="toggleSection('frontEndDetails')" aria-controls="frontEndDetailsContent">
           {{ isSectionVisible['frontEndDetails'] ? 'Collapse Details' : 'Expand Details' }}
         </button>
@@ -116,7 +113,8 @@
           <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Front-End Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
-              I have been working in full-stack development for over 3 years, crafting applications with both front-end frameworks and back-end services.
+              I have been working in full-stack development for over 3 years, crafting applications with both front-end
+              frameworks and back-end services.
             </p>
           </div>
 
@@ -127,19 +125,13 @@
             <div class="space-y-6 text-white">
               <div *ngFor="let section of skillSections">
                 <h4 class="font-semibold mb-2" [ngClass]="section.colorClass">{{ section.title }}</h4>
-                
+
                 <div class="flex flex-wrap gap-3">
-                  <span
-                    *ngFor="let tech of section.items"
-                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1"
-                  >
-                    <img
-                    [src]="'/icons/' + getIconFilename(tech)"
-                    [alt]="tech + ' logo'"
-                    class="w-6 h-6 tech-icon"
-                    loading="lazy"
-                    />
-                
+                  <span *ngFor="let tech of section.items"
+                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1">
+                    <img [src]="'/icons/' + getIconFilename(tech)" [alt]="tech + ' logo'" class="w-6 h-6 tech-icon"
+                      loading="lazy" />
+
                     <span>{{ tech }}</span>
                   </span>
                 </div>
@@ -147,7 +139,7 @@
             </div>
 
           </div>
-          
+
         </div>
 
       </div>
@@ -165,7 +157,7 @@
           <p class="text-md text-gray-300 leading-relaxed">
             I build end-to-end solutions with an emphasis on performance and scalability.
           </p>
-    
+
           <!-- main tech stack -->
           <h3 class="text-xl font-semibold text-white">Main Stack</h3>
           <p class="text-gray-300">JavaScript • HTML • CSS • Angular • TypeScript</p>
@@ -174,9 +166,10 @@
         <!-- back end section - details scroll anker point -->
         <div #backEndSection>
         </div>
-        
+
         <!-- expand button -->
-        <button class="text-[#AFB1F4] border-2 border-[#AFB1F4]  border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-[#9497f0] hover:bg-opacity-10"
+        <button
+          class="text-[#AFB1F4] border-2 border-[#AFB1F4]  border-opacity-50 my-4 relative z-30 py-3 px-6 text-lg font-semibold hover:bg-[#9497f0] hover:bg-opacity-10"
           (click)="toggleSection('backEndDetails')" aria-controls="backEndDetailsContent">
           {{ isSectionVisible['backEndDetails'] ? 'Collapse Details' : 'Expand Details' }}
         </button>
@@ -188,36 +181,32 @@
           <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Back-End Background</h3>
             <p class="text-md text-gray-300 leading-relaxed">
-              I have been working in back-end development for over 3 years, crafting applications with both front-end frameworks and back-end services. My education and professional experiences have shaped my ability to handle both sides of development.
+              I have been working in back-end development for over 3 years, crafting applications with both front-end
+              frameworks and back-end services. My education and professional experiences have shaped my ability to
+              handle both sides of development.
             </p>
           </div>
 
           <!-- tech stack back end -->
           <div class="space-y-2">
             <h3 class="text-xl font-semibold text-white">Technologies</h3>
-            
+
             <div class="space-y-6 text-white">
               <div *ngFor="let section of skillSections">
                 <h4 class="font-semibold mb-2" [ngClass]="section.colorClass">{{ section.title }}</h4>
-                
+
                 <div class="flex flex-wrap gap-3">
-                  <span
-                    *ngFor="let tech of section.items"
-                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1"
-                  >
-                    <img
-                    [src]="'/icons/' + getIconFilename(tech)"
-                    [alt]="tech + ' logo'"
-                    class="w-6 h-6 tech-icon"
-                    loading="lazy"
-                    />
-                
+                  <span *ngFor="let tech of section.items"
+                    class="flex flex-col items-center justify-center px-4 py-2 min-h-[64px] w-[80px] bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium border border-blue-300 border-opacity-50 rounded-md hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300 transition text-center space-y-1">
+                    <img [src]="'/icons/' + getIconFilename(tech)" [alt]="tech + ' logo'" class="w-6 h-6 tech-icon"
+                      loading="lazy" />
+
                     <span>{{ tech }}</span>
                   </span>
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
 
