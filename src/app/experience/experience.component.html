@@ -27,20 +27,22 @@
         <!-- absolute top-[-2rem] to move the timeline lower -->
       </div>
 
-      <!-- timeline items -->
-      <div class="space-y-10 md:space-y-0">
+      <!-- timeline items, spacing between timeline dots -->
+      <div class="space-y-10 md:space-y-4">
 
         <!-- job 1 -->
         <div class="relative flex items-start">
           <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
             <div data-aos="fade-right"
-              class="relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
+              class="card relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
 
               <!-- toggle button -->
               <ng-container *ngTemplateOutlet="toggleButton; context: { index: 0 }"></ng-container>
 
-              <h4 class="text-lg font-semibold text-blue-300">Frontend Developer – Company</h4>
-              <p class="text-m text-gray-400">Jan 2020 – Present</p>
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse JavaScript<br>– Automatisation</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
+
               <ul *ngIf="showDetails[0]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
                 <li>Built and maintained Angular apps</li>
                 <li>Collaborated closely with UX/UI team</li>
@@ -48,15 +50,7 @@
               </ul>
 
               <!-- always visible tech stack -->
-              <!--<p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>-->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
             </div>
           </div>
 
@@ -68,30 +62,22 @@
           <!-- mobile card -->
           <div class="w-full md:hidden pl-8">
             <div
-              class="relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl"
+              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl"
               data-aos="fade-left">
 
               <!-- toggle button -->
               <ng-container *ngTemplateOutlet="toggleButton; context: { index: 0 }"></ng-container>
 
-              <h4 class="text-lg font-semibold text-blue-300">Frontend Developer – Company</h4>
-              <p class="text-m text-gray-400">Jan 2020 – Present</p>
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse JavaScript<br>– Automatisation</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
               <ul *ngIf="showDetails[0]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
                 <li>Built and maintained Angular apps</li>
                 <li>Collaborated closely with UX/UI team</li>
                 <li>Focused on responsive and accessible design</li>
               </ul>
-
               <!-- always visible tech stack -->
-              <!-- <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p> -->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
             </div>
           </div>
         </div>
@@ -103,90 +89,50 @@
 
           <!-- timeline dot -->
           <div
-            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)] flex items-center justify-center z-10">
+            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)]  flex items-center justify-center z-10">
           </div>
           <div class="w-full md:w-1/2 pl-8">
             <div data-aos="fade-left"
-              class="timeline-container relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
+              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
 
               <!-- toggle button -->
               <ng-container *ngTemplateOutlet="toggleButton; context: { index: 1 }"></ng-container>
 
-              <h4 class="text-lg font-semibold text-blue-300">Web Developer – Company</h4>
-              <p class="text-m text-gray-400">Aug 2018 – Dec 2019</p>
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Testeuse fonctionnelle<br>mobile et web</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
               <ul *ngIf="showDetails[1]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
                 <li>Built and maintained Angular apps</li>
                 <li>Collaborated closely with UX/UI team</li>
                 <li>Focused on responsive and accessible design</li>
               </ul>
-
               <!-- always visible tech stack -->
-              <!-- <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p> -->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
-
-
-              <!-- second job on card 2 -->
-              <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 1 }"></ng-container>
-
-              <h4 class="text-lg font-semibold mt-4 text-blue-300">Web Developer – Company</h4>
-              <p class="text-m text-gray-400">Aug 2018 – Dec 2019</p>
-              <ul *ngIf="showDetails[1]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
-              <!-- always visible tech stack -->
-              <!-- <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p> -->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
             </div>
           </div>
-
         </div>
 
         <!-- job 3 -->
         <div class="relative flex items-start">
           <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
             <div data-aos="fade-right"
-              class="relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
+              class="card relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
 
               <!-- toggle button -->
               <ng-container *ngTemplateOutlet="toggleButton; context: { index: 2 }"></ng-container>
 
-              <h4 class="text-lg font-semibold text-blue-300">Software Engineer – Company</h4>
-              <p class="text-m text-gray-400">Jan 2017 – Aug 2018</p>
-
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Conceptrice d'Applications</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <!-- text-[#bdcae2] -->
+              <!-- #9CA3AF is text-gray-400-->
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p> <!-- text-[#bdcae2] -->
               <ul *ngIf="showDetails[2]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
                 <li>Built and maintained Angular apps</li>
                 <li>Collaborated closely with UX/UI team</li>
                 <li>Focused on responsive and accessible design</li>
               </ul>
-
               <!-- always visible tech stack -->
-              <!-- <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p> -->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
             </div>
           </div>
 
@@ -198,30 +144,22 @@
           <!-- mobile card -->
           <div class="w-full md:hidden pl-8">
             <div
-              class="relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl"
+              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl"
               data-aos="fade-left">
 
               <!-- toggle button -->
               <ng-container *ngTemplateOutlet="toggleButton; context: { index: 2 }"></ng-container>
 
-              <h4 class="text-lg font-semibold text-blue-300">Software Engineer – Company</h4>
-              <p class="text-m text-gray-400">Jan 2017 – Aug 2018</p>
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Conceptrice d'Applications</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
               <ul *ngIf="showDetails[2]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
                 <li>Built and maintained Angular apps</li>
                 <li>Collaborated closely with UX/UI team</li>
                 <li>Focused on responsive and accessible design</li>
               </ul>
-
               <!-- always visible tech stack -->
-              <!-- <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p> -->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
             </div>
           </div>
 
@@ -237,30 +175,74 @@
             class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)]  flex items-center justify-center z-10">
           </div>
           <div class="w-full md:w-1/2 pl-8">
-            <div data-aos="fade-left" id="timeline"
-              class="relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
+            <div data-aos="fade-left"
+              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
 
               <!-- toggle button -->
               <ng-container *ngTemplateOutlet="toggleButton; context: { index: 3 }"></ng-container>
 
-              <h4 class="text-lg font-semibold text-blue-300">Intern Developer – Company</h4>
-              <p class="text-m text-gray-400">Jun 2016 – Dec 2016</p>
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Consultante / Ingénieure<br> en Automatisation de
+                Tests
+              </h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
               <ul *ngIf="showDetails[3]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
                 <li>Built and maintained Angular apps</li>
                 <li>Collaborated closely with UX/UI team</li>
                 <li>Focused on responsive and accessible design</li>
               </ul>
-
               <!-- always visible tech stack -->
-              <!-- <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p> -->
-              <div class="space-y-2">
-                <ul class="flex flex-wrap gap-3 pt-4">
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Java</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Spring Boot</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">Angular</li>
-                  <li class="bg-[#3B4F6E] rounded-full px-4 py-1 text-gray-100 text-sm">TypeScript</li>
-                </ul>
-              </div>
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- job 5 -->
+        <div class="relative flex items-start">
+          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+            <div data-aos="fade-right" id="timeline"
+              class="card relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl">
+
+              <!-- toggle button -->
+              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 4 }"></ng-container>
+
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse d'Applications Java</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
+              <ul *ngIf="showDetails[4]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                <li>Built and maintained Angular apps</li>
+                <li>Collaborated closely with UX/UI team</li>
+                <li>Focused on responsive and accessible design</li>
+              </ul>
+              <!-- always visible tech stack -->
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
+            </div>
+          </div>
+
+          <!-- timeline dot -->
+          <div
+            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.20)] flex items-center justify-center z-10">
+          </div>
+
+          <!-- mobile card -->
+          <div class="w-full md:hidden pl-8">
+            <div
+              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md transition-transform hover:-translate-y-1 hover:shadow-xl"
+              data-aos="fade-left">
+
+              <!-- toggle button -->
+              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 4 }"></ng-container>
+
+              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse d'Applications Java</h4>
+              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
+              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
+              <ul *ngIf="showDetails[4]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
+                <li>Built and maintained Angular apps</li>
+                <li>Collaborated closely with UX/UI team</li>
+                <li>Focused on responsive and accessible design</li>
+              </ul>
+              <!-- always visible tech stack -->
+              <p class="mt-2 text-gray-400">JavaScript • HTML • CSS • Angular • TypeScript • SQL</p>
             </div>
           </div>
         </div>

@@ -5,3 +5,9 @@
   filter: brightness(0) saturate(100%) invert(49%) sepia(38%) saturate(306%) hue-rotate(179deg) brightness(120%) contrast(103%);
   transition: filter 0.3s ease;
 }
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
