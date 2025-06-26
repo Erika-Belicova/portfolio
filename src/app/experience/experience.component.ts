@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ExperienceComponent {
   allExpanded = false;
-  showDetails: boolean[] = [false, false, false, false]; // four jobs
+  showDetails: boolean[] = [false, false, false, false, false]; // five jobs
 
   toggleDetails(index: number) {
     this.showDetails[index] = !this.showDetails[index];
