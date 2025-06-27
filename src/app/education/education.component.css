@@ -1,7 +1,16 @@
-.shadow-pill {
+.skill-tag {
+  transition: all 0.2s ease;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 }
-
+.skill-tag:hover {
+  background-color: #4a6280;
+  box-shadow: 0 0 0 1px #4a6280; /* #334155 or #374151 or #565F6F*/
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
 .no-margin-p {
   margin: 0 !important;
+}
+
+.less-margin-p {
+  margin-top: 8px !important;
 }
