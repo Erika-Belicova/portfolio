@@ -1,6 +1,6 @@
 <!-- experience section -->
 <div class="relative max-w-6xl mx-auto mt-12 px-4 pb-10 overflow-x-hidden">
-  <h3 class="text-4xl font-bold text-gray-100 text-center mb-4">Work Experience</h3>
+  <h3 class="text-4xl font-bold text-gray-200 text-center mb-4">Work Experience</h3>
   <div class="relative max-w-6xl mx-auto mt-8 px-4">
 
     <div class="text-center">
@@ -14,7 +14,7 @@
     <button (click)="scrollToTimeline()"
       class="mx-auto w-11 h-11 mt-2 cursor-pointer text-blue-300 animate-bounce hover:text-blue-400 flex items-center justify-center"
       aria-label="Scroll down" title="Scroll down to work experience timeline">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
         stroke-linecap="round" stroke-linejoin="round" class="w-11 h-11">
         <polyline points="6 9 12 15 18 9" />
       </svg>
@@ -28,276 +28,559 @@
       </div>
 
       <!-- timeline items, spacing between timeline dots -->
-      <div class="space-y-10 md:space-y-4">
+      <div class="space-y-6 md:space-y-0">
 
         <!-- job 1 -->
-        <div class="relative flex items-start">
-          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
-            <div data-aos="fade-right"
-              class="card relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md">
-
-              <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 0 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse JavaScript<br>– Automatisation</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-
-              <ul *ngIf="showDetails[0]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
-              <button (click)="toggleDetails(0)"
-                class="inline-block text-sky-300 border border-sky-300 border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-sky-400 hover:bg-opacity-10">
-                Software Development
-              </button>
-              <button (click)="toggleDetails(0)"
-                class="inline-block text-cyan-300 border-cyan-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-cyan-400 hover:bg-opacity-10">
-                Software Architecture
-              </button>
-            </div>
-          </div>
-
+        <div class="relative">
           <!-- timeline dot -->
           <div
-            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-sky-400 border-slate-700 border rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.4),0_2px_8px_rgba(0,0,0,0.3)] flex items-center justify-center z-10">
+            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-sky-400 to-sky-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+          </div>
+        </div>
+
+        <div class="relative flex items-start fade-in" style="animation-delay: 0.1s;">
+          <!-- desktop card (left side) -->
+          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+            <div
+              class="card relative inline-block border border-white/20 bg-slate-800 md:bg-slate-800/80 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
+              data-aos="fade-right">
+              <!-- toggle button -->
+              <button (click)="toggleDetails(0)"
+                class="absolute top-4 right-4 text-blue-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon with rotate on hover -->
+                <svg *ngIf="!showDetails[0]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon, no rotation -->
+                <svg *ngIf="showDetails[0]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg>
+              </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+                Développeuse JavaScript<br />– Automatisation
+              </h4>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- toggle for details -->
+              <div *ngIf="showDetails[0]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Built and maintained Angular applications with modern best practices
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Collaborated closely with UX/UI teams to deliver exceptional user experiences
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Focused on responsive design and accessibility standards
+                  </li>
+                </ul>
+              </div>
+
+              <!-- skill tags -->
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Software Development
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Software Architecture
+                </span>
+              </div>
+            </div>
           </div>
 
           <!-- mobile card -->
           <div class="w-full md:hidden pl-8">
             <div
-              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md"
+              class="card relative bg-slate-800 md:bg-slate-800/80 border border-white/20 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-left">
-
-              <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 0 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse JavaScript<br>– Automatisation</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-              <ul *ngIf="showDetails[0]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
+              <!-- mobile toggle button -->
               <button (click)="toggleDetails(0)"
-                class="inline-block text-sky-300 border border-sky-300 border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-sky-400 hover:bg-opacity-10">
-                Software Development
+                class="absolute top-4 right-4 text-blue-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon with rotate on hover -->
+                <svg *ngIf="!showDetails[0]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon, static -->
+                <svg *ngIf="showDetails[0]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg>
               </button>
-              <button (click)="toggleDetails(0)"
-                class="inline-block text-cyan-300 border-cyan-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-cyan-400 hover:bg-opacity-10">
-                Software Architecture
-              </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse JavaScript<br />– Automatisation</h4>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- toggle for details -->
+              <div *ngIf="showDetails[0]">
+                <ul class="space-y-5 mb-6 pl-4 text-gray-300">
+                  <li class="flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Built and maintained Angular applications with modern best practices
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Collaborated closely with UX/UI teams to deliver exceptional user experiences
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Focused on responsive design and accessibility standards
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-xs font-semibold rounded-full">Software
+                  Development</span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-xs font-semibold rounded-full">Software
+                  Architecture</span>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- job 2 -->
-        <div class="relative flex items-start">
-          <div class="w-full md:w-1/2 hidden md:block">
-          </div>
-
+        <div class="relative">
           <!-- timeline dot -->
           <div
-            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-teal-400 border-slate-700 border rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.4),0_2px_8px_rgba(0,0,0,0.3)]  flex items-center justify-center z-10">
+            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-emerald-400 to-green-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
           </div>
+        </div>
+
+        <div class="relative flex items-start fade-in" style="animation-delay: 0.2s;">
+          <div class="w-full md:w-1/2 hidden md:block"></div>
+
           <div class="w-full md:w-1/2 pl-8">
-            <div data-aos="fade-left"
-              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md">
+            <div
+              class="card relative bg-slate-800 md:bg-slate-800/80 border border-white/20 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-emerald-400/30"
+              data-aos="fade-left">
 
               <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 1 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Testeuse fonctionnelle<br>mobile et web</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-              <ul *ngIf="showDetails[1]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
               <button (click)="toggleDetails(1)"
-                class="inline-block border text-teal-300 border-teal-300 border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-teal-400 hover:bg-opacity-10">
-                Test
+                class="absolute top-4 right-4 text-emerald-300 border-2 border-emerald-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-emerald-400/10 hover:border-emerald-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon with rotate on hover -->
+                <svg *ngIf="!showDetails[1]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon, static -->
+                <svg *ngIf="showDetails[1]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg>
               </button>
-              <button (click)="toggleDetails(1)"
-                class="inline-block text-indigo-300 border-indigo-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-indigo-400 hover:bg-opacity-10">
-                Business Analysis
-              </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+                Testeuse fonctionnelle<br />mobile et web
+              </h4>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- toggled details -->
+              <div *ngIf="showDetails[1]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-emerald-400 mr-2">•</span>
+                    Conducted comprehensive functional testing across mobile and web platforms
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-emerald-400 mr-2">•</span>
+                    Developed test strategies and documentation for quality assurance
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-emerald-400 mr-2">•</span>
+                    Worked closely with development teams to ensure product quality
+                  </li>
+                </ul>
+              </div>
+
+              <!-- skill tags -->
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Test
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Business Analysis
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- job 3 -->
-        <div class="relative flex items-start">
-          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
-            <div data-aos="fade-right"
-              class="card relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md">
-
-              <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 2 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Conceptrice d'Applications</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <!-- text-[#bdcae2] -->
-              <!-- #9CA3AF is text-gray-400-->
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p> <!-- text-[#bdcae2] -->
-              <ul *ngIf="showDetails[2]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
-              <button (click)="toggleDetails(2)"
-                class="inline-block text-cyan-300 border-cyan-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-cyan-400 hover:bg-opacity-10">
-                Software Architecture
-              </button>
-              <button (click)="toggleDetails(2)"
-                class="inline-block text-indigo-300 border-indigo-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-indigo-400 hover:bg-opacity-10">
-                Business Analysis
-              </button>
-            </div>
-          </div>
-
+        <div class="relative">
           <!-- timeline dot -->
           <div
-            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-400 border-slate-700 border rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.4),0_2px_8px_rgba(0,0,0,0.3)] flex items-center justify-center z-10">
+            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+          </div>
+        </div>
+
+        <div class="relative flex items-start fade-in" style="animation-delay: 0.3s;">
+          <!-- desktop left side card -->
+          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+            <div
+              class="card relative inline-block border border-white/20 bg-slate-800 md:bg-slate-800/80 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
+              data-aos="fade-right">
+
+              <!-- toggle button -->
+              <button (click)="toggleDetails(2)"
+                class="absolute top-4 right-4 text-cyan-300 border-2 border-cyan-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-cyan-400/10 hover:border-cyan-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon -->
+                <svg *ngIf="!showDetails[2]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon -->
+                <svg *ngIf="showDetails[2]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg>
+              </button>
+
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Conceptrice d'Applications</h4>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- details toggled -->
+              <div *ngIf="showDetails[2]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-cyan-400 mr-2">•</span>
+                    Designed application architecture and system workflows
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-cyan-400 mr-2">•</span>
+                    Collaborated with stakeholders to define technical requirements
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-cyan-400 mr-2">•</span>
+                    Created technical documentation and specifications
+                  </li>
+                </ul>
+              </div>
+
+              <!-- skill tags -->
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Software Architecture
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Business Analysis
+                </span>
+              </div>
+            </div>
           </div>
 
           <!-- mobile card -->
           <div class="w-full md:hidden pl-8">
             <div
-              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md"
+              class="card relative bg-slate-800 md:bg-slate-800/80 border border-white/20 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
               data-aos="fade-left">
 
-              <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 2 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Conceptrice d'Applications</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-              <ul *ngIf="showDetails[2]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
+              <!-- mobile toggle button -->
               <button (click)="toggleDetails(2)"
-                class="inline-block text-cyan-300 border-cyan-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-cyan-400 hover:bg-opacity-10">
-                Software Architecture
+                class="absolute top-4 right-4 text-cyan-300 border-2 border-cyan-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-cyan-400/10 hover:border-cyan-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon with rotate on hover -->
+                <svg *ngIf="!showDetails[2]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon, static -->
+                <svg *ngIf="showDetails[2]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg>
               </button>
-              <button (click)="toggleDetails(2)"
-                class="inline-block text-indigo-300 border-indigo-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-indigo-400 hover:bg-opacity-10">
-                Business Analysis
-              </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Conceptrice d'Applications</h4>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- details toggled mobile -->
+              <div *ngIf="showDetails[2]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-cyan-400 mr-2">•</span>
+                    Designed application architecture and system workflows
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-cyan-400 mr-2">•</span>
+                    Collaborated with stakeholders to define technical requirements
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-cyan-400 mr-2">•</span>
+                    Created technical documentation and specifications
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Software Architecture
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Business Analysis
+                </span>
+              </div>
             </div>
           </div>
-
         </div>
 
         <!-- job 4 -->
-        <div class="relative flex items-start">
-          <div class="w-full md:w-1/2 hidden md:block">
-          </div>
-
+        <div class="relative">
           <!-- timeline dot -->
           <div
-            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-teal-400 border-slate-700 border rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.4),0_2px_8px_rgba(0,0,0,0.3)]  flex items-center justify-center z-10">
+            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-emerald-400 to-green-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
           </div>
+        </div>
+
+        <div class="relative flex items-start fade-in" style="animation-delay: 0.4s;">
+          <div class="w-full md:w-1/2 hidden md:block"></div>
+
           <div class="w-full md:w-1/2 pl-8">
-            <div data-aos="fade-left"
-              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md">
+            <div
+              class="card relative bg-slate-800 md:bg-slate-800/80 border border-white/20 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-emerald-400/30"
+              data-aos="fade-left">
 
               <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 3 }"></ng-container>
+              <button (click)="toggleDetails(3)"
+                class="absolute top-4 right-4 text-emerald-300 border-2 border-emerald-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-emerald-400/10 hover:border-emerald-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
 
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Consultante / Ingénieure<br> en Automatisation de
-                Tests
+                <!-- plus icon with rotate on hover -->
+                <svg *ngIf="!showDetails[3]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon, static -->
+                <svg *ngIf="showDetails[3]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg> </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+                Consultante / Ingénieure<br>en Automatisation de Tests
               </h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-              <ul *ngIf="showDetails[3]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
 
-              <button (click)="toggleDetails(3)"
-                class="inline-block text-teal-300 border-teal-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-teal-400 hover:bg-opacity-10">
-                Test
-              </button>
-              <button (click)="toggleDetails(3)"
-                class="inline-block text-violet-300 border-violet-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-violet-400 hover:bg-opacity-10">
-                Consulting
-              </button>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- details -->
+              <div *ngIf="showDetails[3]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-emerald-400 mr-2">•</span>
+                    Designed and implemented automated testing frameworks
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-emerald-400 mr-2">•</span>
+                    Provided consulting services for test automation strategies
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-emerald-400 mr-2">•</span>
+                    Led cross-functional teams in implementing quality processes
+                  </li>
+                </ul>
+              </div>
+
+              <!-- skill tags -->
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Test
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-violet-500/20 to-violet-600/20 text-violet-300 border border-violet-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Consulting
+                </span>
+              </div>
+
             </div>
           </div>
         </div>
 
         <!-- job 5 -->
-        <div class="relative flex items-start">
+        <div class="relative">
+          <!-- timeline dot -->
+          <div id="timeline"
+            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-sky-400 to-sky-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+          </div>
+        </div>
+
+        <div class="relative flex items-start fade-in" style="animation-delay: 0.5s;">
           <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
-            <div data-aos="fade-right" id="timeline"
-              class="card relative inline-block border border-white/20 bg-slate-800 p-6 rounded-lg shadow-lg text-white w-full max-w-md">
+            <div
+              class="card relative inline-block border border-white/20 bg-slate-800 md:bg-slate-800/80 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
+              data-aos="fade-right">
 
               <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 4 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse d'Applications Java</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-              <ul *ngIf="showDetails[4]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
               <button (click)="toggleDetails(4)"
-                class="inline-block text-sky-300 border border-sky-300 border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-sky-400 hover:bg-opacity-10">
-                Software Development
-              </button>
-              <button (click)="toggleDetails(4)"
-                class="inline-block text-indigo-300 border-indigo-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-indigo-400 hover:bg-opacity-10">
-                Business Analysis
-              </button>
+                class="absolute top-4 right-4 text-sky-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon -->
+                <svg *ngIf="!showDetails[4]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon -->
+                <svg *ngIf="showDetails[4]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg> </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse d'Applications Java</h4>
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <!-- details -->
+              <div *ngIf="showDetails[4]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Developed enterprise Java applications using Spring framework
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Implemented RESTful APIs and microservices architecture
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Analyzed business requirements and translated them into technical solutions
+                  </li>
+                </ul>
+              </div>
+
+              <!-- skill tags -->
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Software Development
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Business Analysis
+                </span>
+              </div>
             </div>
-          </div>
-
-          <!-- timeline dot -->
-          <div
-            class="absolute top-[-0.5rem] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-sky-400 border-slate-700 border rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.4),0_2px_8px_rgba(0,0,0,0.3)] flex items-center justify-center z-10">
           </div>
 
           <!-- mobile card -->
           <div class="w-full md:hidden pl-8">
             <div
-              class="card relative bg-slate-800 border border-white/20 p-6 rounded-lg shadow-lg text-white w-full max-w-md"
+              class="card relative bg-slate-800 md:bg-slate-800/80 border border-white/20 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-left">
 
               <!-- toggle button -->
-              <ng-container *ngTemplateOutlet="toggleButton; context: { index: 4 }"></ng-container>
-
-              <h4 class="text-xl font-semibold text-blue-300 mb-2">Développeuse d'Applications Java</h4>
-              <p class="text-m text-gray-300 text-left mb-1">Global Software – Paris, France</p>
-              <p class="text-m text-gray-300 text-left">Jan 2020 – Present</p>
-              <ul *ngIf="showDetails[4]" class="p-4 list-disc list-outside text-gray-300 space-y-1">
-                <li>Built and maintained Angular apps</li>
-                <li>Collaborated closely with UX/UI team</li>
-                <li>Focused on responsive and accessible design</li>
-              </ul>
-
               <button (click)="toggleDetails(4)"
-                class="inline-block text-sky-300 border border-sky-300 border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-sky-400 hover:bg-opacity-10">
-                Software Development
+                class="absolute top-4 right-4 text-sky-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                aria-label="Toggle details" title="Toggle details">
+
+                <!-- plus icon with rotate on hover -->
+                <svg *ngIf="!showDetails[4]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+                <!-- minus icon -->
+                <svg *ngIf="showDetails[4]" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
+                </svg>
               </button>
-              <button (click)="toggleDetails(4)"
-                class="inline-block text-indigo-300 border-indigo-300 border border-opacity-50 px-4 py-1 mr-4 mt-4 text-sm font-semibold hover:bg-indigo-400 hover:bg-opacity-10">
-                Business Analysis
-              </button>
+
+              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse d'Applications Java</h4>
+
+              <div class="space-y-1 mb-4">
+                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
+                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+              </div>
+
+              <div *ngIf="showDetails[4]">
+                <ul class="space-y-5 mb-6 pl-4">
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Developed enterprise Java applications using Spring framework
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Implemented RESTful APIs and microservices architecture
+                  </li>
+                  <li class="text-gray-300 flex items-start">
+                    <span class="text-sky-400 mr-2">•</span>
+                    Analyzed business requirements and translated them into technical solutions
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Software Development
+                </span>
+                <span
+                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-xs font-semibold rounded-full">
+                  Business Analysis
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -314,11 +597,11 @@
     [attr.aria-label]="showDetails[index] ? 'Hide details' : 'Show details'"
     [title]="showDetails[index] ? 'Hide details' : 'Show details'">
     <svg *ngIf="!showDetails[index]" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor" stroke-width="3">
+      stroke="currentColor" stroke-width="2.5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
     </svg>
     <svg *ngIf="showDetails[index]" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor" stroke-width="3">
+      stroke="currentColor" stroke-width="2.5">
       <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
     </svg>
   </button>

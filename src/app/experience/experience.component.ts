@@ -28,7 +28,7 @@ export class ExperienceComponent {
     const scrollY = window.scrollY || window.pageYOffset;
     const viewportHeight = window.innerHeight;
 
-    const offset = 100; // pixels to scroll past bottom
+    const offset = 300; // pixels to scroll past bottom
 
     // scroll position: timeline top + timeline height * 2 - viewport height + offset
     const targetScrollTop = scrollY + rect.top + rect.height - viewportHeight + offset;
