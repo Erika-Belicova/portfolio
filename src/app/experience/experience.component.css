@@ -8,11 +8,17 @@
 .card {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  box-shadow:
+  inset 1px 1px 8px rgba(0, 0, 0, 0.25),
+  0 4px 15px rgba(0, 0, 0, 0.3);  
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow:
+  inset 1px 1px 8px rgba(0, 0, 0, 0.25),
+  0 20px 25px -5px rgba(0, 0, 0, 0.3),
+  0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .skill-tag {
