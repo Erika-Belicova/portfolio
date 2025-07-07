@@ -1,0 +1,15 @@
+.scroll-arrow-btn {
+  @apply
+    absolute 
+    bottom-5 
+    right-6 
+    w-12
+    h-12
+    z-50 
+    text-blue-300 
+    transition border 
+    border-gray-400 
+    rounded-md 
+    hover:border-blue-300 
+    hover:text-blue-400;
+}
