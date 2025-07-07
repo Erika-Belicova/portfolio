@@ -1,24 +1,24 @@
 <!-- experience section -->
-<div class="relative max-w-6xl mx-auto mt-12 px-4 pb-10 overflow-x-hidden">
+<div class="relative max-w-6xl mx-auto py-12 px-4 overflow-x-hidden">
   <h3 class="text-4xl font-bold text-gray-200 text-center mb-4">Work Experience</h3>
   <div class="relative max-w-6xl mx-auto mt-8 px-4">
 
     <div class="text-center">
       <button (click)="toggleAll()"
-        class="text-blue-300 border-2 border-blue-300 border-opacity-50 relative z-30 py-3 px-6 mb-4 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10">
+        class="text-blue-300 border-2 border-blue-300 border-opacity-50 relative z-30 py-3 px-6 mt-4 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10">
         {{ allExpanded ? 'Collapse All' : 'Expand All' }}
       </button>
     </div>
 
     <!-- scroll arrow -->
-    <button (click)="scrollToTimeline()"
+    <!-- <button (click)="scrollToTimeline()"
       class="mx-auto w-11 h-11 mt-2 cursor-pointer text-blue-300 animate-bounce hover:text-blue-400 flex items-center justify-center"
       aria-label="Scroll down" title="Scroll down to work experience timeline">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
         stroke-linecap="round" stroke-linejoin="round" class="w-11 h-11">
         <polyline points="6 9 12 15 18 9" />
       </svg>
-    </button>
+    </button> -->
 
     <!-- timeline layout -->
     <div class="relative max-w-6xl mx-auto mt-8 px-4">
@@ -46,7 +46,7 @@
               data-aos="fade-right">
               <!-- toggle button -->
               <button (click)="toggleDetails(0)"
-                class="absolute top-4 right-4 text-blue-300 border border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                class="absolute top-4 right-4 text-blue-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->

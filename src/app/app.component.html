@@ -14,13 +14,15 @@
   <!-- glass sections -->
   <section id="about" class="text-white">
     <div class="container mx-auto px-4 py-16">
-      <div class="section-card bg-slate-700/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+      <div class="section-card bg-slate-700/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10 relative">
         <!-- bg-[#263345] = bg-slate-700/40 -->
         <!-- bg-[#2D3A4E] = bg-slate-700/70-->
         <!-- bg-[#2B374B] = bg-slate-700/60 - by far best option visually -->
         <!-- consider to change bg color about and experience or just change about color to clash less -->
         <!-- bg-white/10 -->
         <app-about></app-about>
+        <app-scroll-arrow-button (click)="scrollToSection('education')"
+          aria-label="Scroll to Education"></app-scroll-arrow-button>
       </div>
     </div>
   </section>
@@ -34,15 +36,20 @@
         <!-- consider to change bg color about and experience or just change about color to clash less -->
         <!-- bg-white/10 -->
         <app-education></app-education>
+        <app-scroll-arrow-button (click)="scrollToSection('skills')"
+          aria-label="Scroll to Skills"></app-scroll-arrow-button>
       </div>
     </div>
   </section>
 
   <section id="skills" class="text-white">
     <div class="container mx-auto px-4 py-16">
-      <div class="section-card bg-slateNight-200/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+      <div class="section-card bg-slateNight-200/40 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
         <!-- bg-white/10 -->
+        <!-- bg-slateNight-200/60 -->
         <app-skills></app-skills>
+        <app-scroll-arrow-button (click)="scrollToSection('experience')"
+          aria-label="Scroll to Experience"></app-scroll-arrow-button>
       </div>
     </div>
   </section>
@@ -54,15 +61,20 @@
         <!-- bg-slateNight-100/60 -->
         <!-- bg-white/10 -->
         <app-experience></app-experience>
+        <app-scroll-arrow-button (click)="scrollToSection('projects')"
+          aria-label="Scroll to Projects"></app-scroll-arrow-button>
       </div>
     </div>
   </section>
 
   <section id="projects" class="text-white">
     <div class="container mx-auto px-4 py-16">
-      <div class="section-card bg-slateNight-300/60 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
+      <div class="section-card bg-slateNight-300/50 border border-white/20 rounded-2xl shadow-xl p-6 lg:p-10">
         <!-- bg-white/10 -->
+        <!-- bg-slateNight-300/60 -->
         <app-projects></app-projects>
+        <app-scroll-arrow-button (click)="scrollToSection('contact')"
+          aria-label="Scroll to Contact"></app-scroll-arrow-button>
       </div>
     </div>
   </section>

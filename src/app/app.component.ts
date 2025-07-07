@@ -10,14 +10,30 @@ import { ContactComponent } from "./contact/contact.component";
 import { FooterComponent } from "./footer/footer.component";
 import { ExperienceComponent } from './experience/experience.component';
 import { MouseTrailDirective } from './directives/mouse-trail.directive';
+import { ScrollArrowButtonComponent } from './scroll-arrow-button/scroll-arrow-button.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, CreativeCodingComponent, HomeComponent, AboutComponent, EducationComponent, ExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent, FooterComponent, MouseTrailDirective],
+  imports: [NavbarComponent, CreativeCodingComponent, HomeComponent, AboutComponent, EducationComponent, ExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent, FooterComponent, MouseTrailDirective, ScrollArrowButtonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'portfolio';
+
+  scrollToSection(id: string, event?: Event) {
+    event?.preventDefault();
+
+    const el = document.getElementById(id);
+    if (el) {
+      const yOffset = -40; // adjust this to control the offset
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+    }
+  }
 }
