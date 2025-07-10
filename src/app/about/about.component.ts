@@ -8,12 +8,14 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import * as THREE from 'three';
 
 @Component({
   selector: 'app-about',
   standalone: true,
+  imports: [TranslateModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
