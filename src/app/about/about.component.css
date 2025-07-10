@@ -1,0 +1,49 @@
+p {
+  @apply text-base text-gray-300 leading-relaxed bg-[#2B374B];
+}
+
+h2 {
+  @apply text-4xl font-bold text-blue-300 bg-[#2B374B] inline;
+}
+
+h3 {
+  @apply text-xl font-semibold text-white bg-[#2B374B] inline;
+}
+
+.text-column {
+  @apply w-full lg:w-[42%] text-left;
+}
+
+.text-content {
+  @apply space-y-6;
+}
+
+.text-block {
+  @apply space-y-2;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto overflow-x-hidden;
+}
+
+.section-layout {
+  @apply px-4 py-12 flex flex-col gap-y-8;
+}
+
+@media (min-width: 1024px) {
+  .section-layout {
+    @apply flex-row items-center gap-6;
+  }
+}
+
+.canvas-section {
+  @apply w-full lg:w-1/2 flex justify-center;
+}
+
+.canvas-container {
+  @apply relative w-[300px] h-[400px];
+}
+
+.particle-canvas {
+  @apply w-full h-full rounded-[20px];
+}
