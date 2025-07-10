@@ -1,14 +1,29 @@
 .skill-tag {
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  background-color: #3a4a5d; /* #34475a or #2f4052 or #3a4a5d*/
+  background-color: #3a4a5d; /* #34475a or #2f4052 or #3a4a5d or #3e5068*/
   font-weight: 400;
+  @apply rounded-full text-gray-100 text-sm mb-2 py-1 px-4;
 }
+
 .skill-tag:hover {
-  background-color: #4a6280; /* #3e5068 */
+  background-color: #4a6280; /* #3e5068 or #4a6280*/
   box-shadow: 0 0 0 1px #4a6280; /* #334155 or #374151 or #565F6F*/
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
 }
+
+.language-tag {
+  @apply inline-flex justify-center mt-1 min-w-[160px];
+}
+
+.scope-tag {
+  @apply my-1;
+}
+
+.stack-tag {
+  @apply mt-1;
+}
+
 .no-margin-p {
   margin: 0 !important;
 }
@@ -16,6 +31,40 @@
 .less-margin-p {
   margin-top: 8px !important;
 }
+
 .education-title {
   text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  @apply text-lg font-semibold text-blue-200/90;
+}
+
+.section-container {
+  @apply overflow-x-hidden;
+}
+
+.content-box {
+  @apply space-y-2;
+}
+
+.education-box {
+  @apply space-y-4;
+}
+
+.subtitle {
+  @apply text-3xl font-bold mt-8 mb-6;
+}
+
+.text-dark-gray {
+  @apply text-base text-gray-400 leading-relaxed;
+}
+
+.text-light-gray {
+  @apply text-base text-gray-300 leading-relaxed;
+}
+
+.list {
+  @apply flex flex-wrap gap-3;
+}
+
+.stack-box {
+  @apply flex flex-col sm:flex-row sm:justify-between gap-4;
 }
