@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreativeCodingComponent } from './creative-coding/creative-coding.component';
 import { HomeComponent } from "./home/home.component";
@@ -19,22 +19,8 @@ import { ScrollArrowButtonComponent } from './scroll-arrow-button/scroll-arrow-b
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'portfolio';
-
-  ngOnInit(): void {
-    if (typeof window !== 'undefined') {
-      this.setActualViewportHeight();
-      window.addEventListener('resize', this.setActualViewportHeight);
-    }
-  }
-
-  // cleanup to prevent memory leaks
-  ngOnDestroy(): void {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.setActualViewportHeight);
-    }
-  }
 
   scrollToSection(id: string, event?: Event) {
     event?.preventDefault();
@@ -50,11 +36,4 @@ export class AppComponent implements OnInit {
       });
     }
   }
-
-  private setActualViewportHeight = () => {
-    if (typeof window !== 'undefined') {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-  };
 }
