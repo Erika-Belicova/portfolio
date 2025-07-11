@@ -16,4 +16,7 @@ html {
 
 html, body {
   overflow-x: hidden;
+  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
+  overscroll-behavior-x: none;
 }
