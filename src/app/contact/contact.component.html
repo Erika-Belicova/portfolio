@@ -3,7 +3,7 @@
   <div class="max-w-6xl mx-auto px-4 pt-8 pb-16">
 
     <!-- contact section -->
-    <section class="text-blue-300 font-normal px-6">
+    <section class="text-blue-300 font-normal px-0 sm:px-6">
       <div class="max-w-6xl mx-auto space-y-10">
 
         <!-- two column layout -->
@@ -114,7 +114,7 @@
               </div>
 
               <button type="submit" [disabled]="isSending"
-                class="px-6 py-3 sm:py-2 flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 mt-2 sm:bg-[#28374E] w-fit border-blue-300 border-opacity-50 text-base sm:text-lg font-semibold sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#232837] transition duration-200">
+                class="px-6 py-3 mt-4 sm:mt-2 sm:py-2 flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 sm:bg-[#28374E] w-fit border-blue-300 border-opacity-50 text-base sm:text-lg font-semibold sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#232837] transition duration-200">
                 <span *ngIf="!isSending">Envoyer</span>
                 <span *ngIf="isSending">Envoi en cours...</span>
               </button>
