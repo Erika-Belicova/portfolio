@@ -1,52 +1,52 @@
-<nav class="bg-gray-900 text-white p-4 shadow-md fixed w-full top-0 left-0 z-50">
-  <div class="container mx-auto flex justify-between items-center">
+<nav class="bg-gray-900 text-white shadow-md fixed w-full top-0 left-0 z-50
+         h-12 py-2 px-4
+         lg:h-16 lg:py-4 lg:px-8">
+  <div class="container mx-auto flex justify-between items-center h-full">
 
-    <!-- logo to be added -->
-    <a href="#" (click)="scrollToSection('home', $event)" class="text-2xl font-semibold hover:text-blue-300">
+    <!-- logo -->
+    <a href="#" (click)="scrollToSection('home', $event)" class="font-semibold text-xl
+              lg:text-3xl
+              hover:text-blue-300">
       Portfolio
     </a>
 
     <!-- navbar -->
-    <ul class="hidden md:flex space-x-6">
-      <li><a href="#" (click)="scrollToSection('home', $event)" class="hover:text-blue-300">Home</a></li>
-      <li><a href="#" (click)="scrollToSection('about', $event)" class="hover:text-blue-300">About</a></li>
-      <li><a href="#" (click)="scrollToSection('education', $event)" class="hover:text-blue-300">Education</a></li>
-      <li><a href="#" (click)="scrollToSection('skills', $event)" class="hover:text-blue-300">Skills</a></li>
-      <li><a href="#" (click)="scrollToSection('experience', $event)" class="hover:text-blue-300">Experience</a></li>
-      <li><a href="#" (click)="scrollToSection('projects', $event)" class="hover:text-blue-300">Projects</a></li>
+    <ul class="hidden lg:flex space-x-6 text-base lg:text-lg">
+      <li><a href="#" (click)="scrollToSection('home', $event)" class="hover:text-blue-300">Accueil</a></li>
+      <li><a href="#" (click)="scrollToSection('about', $event)" class="hover:text-blue-300">À propos</a></li>
+      <li><a href="#" (click)="scrollToSection('education', $event)" class="hover:text-blue-300">Formation</a></li>
+      <li><a href="#" (click)="scrollToSection('skills', $event)" class="hover:text-blue-300">Technologies & Outils</a>
+      </li>
+      <li><a href="#" (click)="scrollToSection('experience', $event)" class="hover:text-blue-300">Expérience</a></li>
+      <li><a href="#" (click)="scrollToSection('projects', $event)" class="hover:text-blue-300">Projets</a></li>
       <li><a href="#" (click)="scrollToSection('contact', $event)" class="hover:text-blue-300">Contact</a></li>
     </ul>
 
     <!-- menu mobile button -->
-    <button id="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-controls="mobile-menu"
-      aria-label="Toggle menu" class="text-5xl md:hidden hover:text-blue-300 focus-visible:outline-none">
+    <button #menuToggle id="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
+      aria-controls="mobile-menu" aria-label="Toggle menu"
+      class="text-4xl lg:hidden hover:text-blue-300 focus-visible:outline-none">
       ☰
     </button>
 
   </div>
 
-  <!-- menu mobile - default : hidden -->
-  <div id="mobile-menu" [ngClass]="{'hidden': !isMenuOpen}" class="md:hidden bg-gray-900 pt-4 text-white space-y-0">
+  <!-- menu mobile - default: hidden -->
+  <div #mobileMenu id="mobile-menu" [ngClass]="{'hidden': !isMenuOpen}"
+    class="lg:hidden bg-gray-900 pt-4 text-white space-y-2 text-base">
     <a href="#" (click)="scrollToSection('home', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">Home</a>
-
+      class="block px-4 py-3 hover:text-blue-300 border-b border-gray-700">Accueil</a>
     <a href="#" (click)="scrollToSection('about', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">About</a>
-
+      class="block px-4 py-3 hover:text-blue-300 border-b border-gray-700">À propos</a>
     <a href="#" (click)="scrollToSection('education', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">Education</a>
-
+      class="block px-4 py-3 hover:text-blue-300 border-b border-gray-700">Formation</a>
     <a href="#" (click)="scrollToSection('skills', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">Skills</a>
-
+      class="block px-4 py-3 hover:text-blue-300 border-b border-gray-700">Technologies & Outils</a>
     <a href="#" (click)="scrollToSection('experience', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">Experience</a>
-
+      class="block px-4 py-3 hover:text-blue-300 border-b border-gray-700">Expérience</a>
     <a href="#" (click)="scrollToSection('projects', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">Projects</a>
-
+      class="block px-4 py-3 hover:text-blue-300 border-b border-gray-700">Projects</a>
     <a href="#" (click)="scrollToSection('contact', $event); closeMenu()"
-      class="block px-4 py-2.5 hover:text-blue-300">Contact</a>
+      class="block px-4 py-3 hover:text-blue-300">Contact</a>
   </div>
-
 </nav>

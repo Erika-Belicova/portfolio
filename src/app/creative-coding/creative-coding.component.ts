@@ -83,11 +83,11 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.scene.add(this.sphere);
   }
 
-  private createParticles(): void {
+  private createParticles(particleCount: number = 900): void {
     if (!this.isBrowser) return;
 
     const particleGeometry = new THREE.BufferGeometry();
-    const particleCount = 900; // set number of particles
+    //const particleCount = 900; // set number of particles
 
     const positions = [];
     for (let i = 0; i < particleCount; i++) {
@@ -134,13 +134,58 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
 
   // update when resizing canvas
   private resizeCanvas(): void {
-    this.windowWidth = window.innerWidth; // window dimensions
+    this.windowWidth = window.innerWidth;
     this.windowHeight = window.innerHeight;
 
-    this.camera.aspect = this.windowWidth / this.windowHeight; // camera aspect ratio
+    this.updateGlobeScale(); // update globe size and camera based on window size
 
-    this.camera.updateProjectionMatrix(); // camera projection matrix
+    this.camera.aspect = this.windowWidth / this.windowHeight;
+    this.camera.updateProjectionMatrix();
 
-    this.renderer.setSize(this.windowWidth, this.windowHeight); // renderer size
+    this.renderer.setSize(this.windowWidth, this.windowHeight);
   }
+
+  private updateGlobeScale(): void {
+    let radius: number;
+    let cameraZ: number;
+    let particleCount: number;
+
+    if (this.windowWidth < 640) {
+      // mobile
+      radius = 320;
+      cameraZ = 1000;
+      particleCount = 600;
+    } else if (this.windowWidth < 1024) {
+      // tablet
+      radius = 380;
+      cameraZ = 700;
+      particleCount = 900;
+    } else {
+      // desktop
+      radius = 500;
+      cameraZ = 700;
+      particleCount = 900;
+    }
+
+    this.radius = radius;
+    this.camera.position.z = cameraZ;
+
+    // rebuild sphere
+    this.scene.remove(this.sphere);
+    const geometry = new THREE.SphereGeometry(this.radius, 30, 30);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0x0077ff,
+      wireframe: false,
+      transparent: true,
+      opacity: 0
+    });
+    this.sphere = new THREE.Mesh(geometry, material);
+    this.scene.add(this.sphere);
+
+    // rebuild particles
+    this.scene.remove(this.particles);
+    this.createParticles(particleCount);
+  }
+
+
 }
