@@ -3,7 +3,7 @@
   <div class="max-w-6xl mx-auto px-4 pt-8 pb-16">
 
     <!-- contact section -->
-    <section class="text-blue-300 font-semibold px-6">
+    <section class="text-blue-300 font-normal px-6">
       <div class="max-w-6xl mx-auto space-y-10">
 
         <!-- two column layout -->
@@ -15,41 +15,40 @@
 
               <!-- section header -->
               <div class="text-left">
-                <h2 class="text-4xl font-bold mb-8">Contact Me!</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 bg-[#28374E] w-fit">Contact</h2>
               </div>
 
               <!-- social links -->
-              <h3 class="text-2xl font-semibold text-white">Where to find me</h3>
-              <p class="text-md text-gray-300">
-                You can connect with me on these platforms:
+              <h3 class="text-xl sm:text-2xl font-semibold text-white bg-[#28374E] w-fit">Où me trouver</h3>
+              <p class="text-md text-gray-300 bg-[#28374E] w-fit">
+                Vous pouvez me retrouver sur les plateformes suivantes :
               </p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 font-semibold bg-[#28374E] w-full">
               <!-- linkedin -->
               <a href="https://www.linkedin.com/in/erika-belicova" target="_blank"
-                class="flex items-center gap-3 hover:text-blue-400 p-2">
-                <i class="fab fa-linkedin fa-3x"></i>
-                <div>
+                class="flex items-center gap-3 hover:text-blue-400 p-2 max-w-full">
+                <i class="fab fa-linkedin fa-3x flex-shrink-0"></i>
+                <div class="min-w-0 w-full">
                   <p class="text-lg font-medium">LinkedIn</p>
-                  <p class="text-base overflow-wrap break-word">https://www.linkedin.com/in/erika-belicova</p>
+                  <p class="text-base break-words w-full">https://<wbr>www.linkedin.com<wbr>/in/<wbr>erika-belicova</p>
                 </div>
               </a>
 
               <!-- github -->
               <a href="https://github.com/Erika-Belicova" target="_blank"
-                class="flex items-center gap-3 hover:text-gray-400 p-2">
-                <i class="fab fa-github fa-3x"></i>
-                <div>
+                class="flex items-center gap-3 hover:text-gray-400 p-2 max-w-full">
+                <i class="fab fa-github fa-3x flex-shrink-0"></i>
+                <div class="min-w-0 w-full">
                   <p class="text-lg font-medium">GitHub</p>
-                  <p class="text-base overflow-wrap break-word">https://github.com/Erika-Belicova</p>
+                  <p class="text-base break-words w-full">https://<wbr>github.com/<wbr>Erika-Belicova</p>
                 </div>
               </a>
             </div>
 
-            <p class="balanced-text text-md text-gray-300 leading-relaxed pt-3">
-              Feel free to reach out — whether on social media or by sending me a message — I’ll be happy to hear from
-              you and will get back to you as soon as I can. In the meantime, have a nice day!
+            <p class="balanced-text text-md text-gray-300 leading-relaxed pt-3 bg-[#28374E] w-fit">
+              N’hésitez pas à me contacter via les réseaux sociaux ou par message, je vous répondrai rapidement.
             </p>
 
           </div>
@@ -59,11 +58,10 @@
 
             <!-- contact form -->
             <div>
-              <h3 class="text-2xl font-semibold text-white">Send me a message</h3>
-              <p class="balanced-text text-md text-gray-300 leading-relaxed mt-2">
-                Do you have a question, found a bug to report, have an opportunity to share, or simply want to say
-                hello? You can also book a time for a phone or video call — just suggest a date and time that works for
-                you.
+              <h3 class="text-xl sm:text-2xl font-semibold text-white bg-[#28374E] w-fit">Formulaire de contact</h3>
+              <p class="balanced-text text-base text-gray-300 leading-relaxed mt-2 bg-[#28374E] w-fit">
+                Pour toute question, signalement de bug, opportunité ou simplement un bonjour, utilisez le formulaire
+                ci-dessous.
               </p>
             </div>
 
@@ -72,14 +70,14 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- name field -->
                 <div class="flex flex-col w-full">
-                  <input type="text" name="name" ngModel required #name="ngModel" placeholder="Your name*"
+                  <input type="text" name="name" ngModel required #name="ngModel" placeholder="Votre nom*"
                     class="w-full px-4 py-2 bg-slate-700 text-blue-100 border border-blue-300 border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-300"
                     [ngClass]="{
                       'border-red-400': submitted && name.invalid,
                       'border-blue-300 border-opacity-30': !(submitted && name.invalid)
                     }" />
                   <div *ngIf="submitted && name.invalid" class="text-red-400 text-sm mt-1">
-                    Name is required.
+                    Le nom est obligatoire.
                   </div>
                 </div>
 
@@ -87,15 +85,15 @@
                 <div class="flex flex-col w-full">
                   <input type="email" name="email" ngModel required
                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" #email="ngModel"
-                    placeholder="Your email*"
+                    placeholder="Votre email*"
                     class="w-full px-4 py-2 bg-slate-700 text-blue-100 border border-blue-300 border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-300"
                     [ngClass]="{
                       'border-red-400': submitted && email.invalid,
                       'border-blue-300 border-opacity-30': !(submitted && email.invalid)
                     }" />
                   <div *ngIf="submitted && email.invalid" class="text-red-400 text-sm mt-1">
-                    <div *ngIf="email.errors?.['required']">Email is required.</div>
-                    <div *ngIf="email.errors?.['pattern']">Please enter a valid email address.</div>
+                    <div *ngIf="email.errors?.['required']">L’email est obligatoire.</div>
+                    <div *ngIf="email.errors?.['pattern']">Veuillez entrer une adresse email valide.</div>
                   </div>
                 </div>
 
@@ -104,23 +102,22 @@
               </div>
 
               <div class="flex flex-col w-full">
-                <textarea name="message" ngModel required #message="ngModel" rows="6" placeholder="Your message*"
+                <textarea name="message" ngModel required #message="ngModel" rows="6" placeholder="Votre message*"
                   class="w-full px-4 py-2 bg-slate-700 text-blue-100 border border-blue-300 border-opacity-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-300 resize-none"
                   [ngClass]="{
                     'border-red-400': submitted && message.invalid,
                     'border-blue-300 border-opacity-30': !(submitted && message.invalid)
                   }"></textarea>
                 <div *ngIf="submitted && message.invalid" class="text-red-400 text-sm">
-                  Message is required.
+                  Le message est obligatoire.
                 </div>
               </div>
 
               <button type="submit" [disabled]="isSending"
-                class="px-6 py-2 flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300 border-opacity-50 text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#232837] transition duration-200">
-                <span *ngIf="!isSending">Send Message</span>
-                <span *ngIf="isSending">Sending...</span>
+                class="px-6 py-3 sm:py-2 flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 mt-2 sm:bg-[#28374E] w-fit border-blue-300 border-opacity-50 text-base sm:text-lg font-semibold sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#232837] transition duration-200">
+                <span *ngIf="!isSending">Envoyer</span>
+                <span *ngIf="isSending">Envoi en cours...</span>
               </button>
-
             </form>
 
             <!-- success message notification -->
@@ -131,7 +128,7 @@
                 (click)="showSuccess = false" aria-label="Close success message">
                 ×
               </button>
-              Your message has been sent successfully!
+              Votre message a été envoyé avec succès !
             </div>
 
             <!-- error message notification -->
@@ -142,7 +139,7 @@
                 (click)="showError = false" aria-label="Close error message">
                 ×
               </button>
-              Something went wrong. Please try again.
+              Une erreur est survenue. Veuillez réessayer.
             </div>
 
           </div>

@@ -19,11 +19,11 @@ a {
 }
 
 .tagline {
-    @apply bg-slate-800 inline-block px-1 mt-1;
+    @apply bg-slate-800 inline-block px-1 sm:mt-1;
 }
 
 p {
-    @apply text-lg sm:text-xl text-gray-300 mb-10;
+    @apply text-base sm:text-lg md:text-xl text-gray-300 mb-10;
 }
 
 .profile-description {
@@ -31,7 +31,7 @@ p {
 }
 
 .role-box {
-    @apply text-xl sm:text-2xl text-blue-300 mb-4 font-semibold tracking-wide;
+    @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide;
 }
 
 .role-title {
@@ -39,5 +39,21 @@ p {
 }
 
 .title {
-    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight;
+    @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight;
+}
+
+h1 {
+    @apply space-y-3 sm:space-y-0 my-10 sm:mt-0;
+}
+
+.mobile-text {
+    @apply text-base font-normal text-gray-300 px-4 py-6 pb-10;
+}
+
+.mobile-title {
+    @apply text-2xl font-semibold leading-tight text-gray-100;
+}
+
+.mobile-role {
+    @apply text-xl font-semibold text-blue-300 mb-8;
 }

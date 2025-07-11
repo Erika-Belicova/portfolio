@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,12 +11,25 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   isMenuOpen = false;
 
+  @ViewChild('mobileMenu', { static: false }) mobileMenu!: ElementRef;
+  @ViewChild('menuToggle', { static: false }) menuToggle!: ElementRef;
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const clickedInsideMenu = this.mobileMenu?.nativeElement?.contains(event.target);
+    const clickedOnToggle = this.menuToggle?.nativeElement?.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedOnToggle) {
+      this.closeMenu();
+    }
   }
 
   scrollToSection(id: string, event: Event) {

@@ -1,11 +1,11 @@
 <!-- experience section -->
-<div class="relative max-w-6xl mx-auto py-12 px-4 overflow-x-hidden">
-  <h3 class="text-4xl font-bold text-gray-200 text-center mb-4">Work Experience</h3>
-  <div class="relative max-w-6xl mx-auto mt-8 px-4">
+<div class="relative max-w-6xl mx-auto py-12 px-0 md:px-4 overflow-x-hidden mb-6 md:mb-0">
+  <h3 class="text-3xl sm:text-4xl font-bold text-gray-200 text-center mb-4 bg-[#182234]">Expérience professionnelle</h3>
+  <div class="relative max-w-6xl mx-auto mt-8 px-0 lg:px-8">
 
     <div class="text-center">
       <button (click)="toggleAll()"
-        class="text-blue-300 border-2 border-blue-300 border-opacity-50 relative z-30 py-3 px-6 mt-4 text-lg font-semibold hover:bg-blue-400 hover:bg-opacity-10">
+        class="text-blue-300 border-2 border-blue-300 border-opacity-50 relative z-30 py-3 px-6 mt-4 text-base sm:text-lg font-semibold sm:bg-[#182234]/40 sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10">
         {{ allExpanded ? 'Collapse All' : 'Expand All' }}
       </button>
     </div>
@@ -21,7 +21,7 @@
     </button> -->
 
     <!-- timeline layout -->
-    <div class="relative max-w-6xl mx-auto mt-8 px-4">
+    <div class="relative max-w-6xl mx-auto mt-8">
       <!-- timeline center line -->
       <div class="absolute top-[0rem] left-1/2 w-0.5 bg-gray-400 shadow-xl h-full transform -translate-x-1/2">
         <!-- absolute top-[-2rem] to move the timeline lower -->
@@ -67,8 +67,8 @@
                 Développeuse JavaScript<br />– Automatisation
               </h4>
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
+                <p class="text-gray-400 text-sm">août 2024 – sept. 2024 | Stage</p>
               </div>
 
               <!-- toggle for details -->
@@ -76,15 +76,17 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Built and maintained Angular applications with modern best practices
+                    Analyse du besoin à partir d’un exemple de diagramme et définition d’une approche d’automatisation
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Collaborated closely with UX/UI teams to deliver exceptional user experiences
+                    Utilisation de la bibliothèque JArchi pour automatiser la modélisation de diagrammes d’architecture
+                    logicielle
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Focused on responsive design and accessibility standards
+                    Développement de scripts en JavaScript, intégrant des algorithmes complexes et une logique
+                    fonctionnelle imbriquée
                   </li>
                 </ul>
               </div>
@@ -93,18 +95,18 @@
               <div class="flex flex-wrap gap-2 mt-6">
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Software Development
+                  Développement logiciel
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Software Architecture
+                  Architecture logicielle
                 </span>
               </div>
             </div>
           </div>
 
           <!-- mobile card -->
-          <div class="w-full md:hidden pl-8">
+          <div class="w-full md:hidden pl-0 sm:pl-8">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-left">
@@ -129,8 +131,8 @@
 
               <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse JavaScript<br />– Automatisation</h4>
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">Globasoft – Toulouse, France/p>
+                <p class="text-gray-400 text-sm">août 2024 – sept. 2024 | Stage</p>
               </div>
 
               <!-- toggle for details -->
@@ -138,15 +140,17 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4 text-gray-300">
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Built and maintained Angular applications with modern best practices
+                    Analyse du besoin à partir d’un exemple de diagramme et définition d’une approche d’automatisation
                   </li>
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Collaborated closely with UX/UI teams to deliver exceptional user experiences
+                    Utilisation de la bibliothèque JArchi pour automatiser la modélisation de diagrammes d’architecture
+                    logicielle
                   </li>
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Focused on responsive design and accessibility standards
+                    Développement de scripts en JavaScript, intégrant des algorithmes complexes et une logique
+                    fonctionnelle imbriquée
                   </li>
                 </ul>
               </div>
@@ -154,10 +158,12 @@
               <div class="flex flex-wrap gap-2 mt-6">
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  Software Development</span>
+                  Développement logiciel
+                </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Software Architecture</span>
+                  Architecture logicielle
+                </span>
               </div>
             </div>
           </div>
@@ -174,7 +180,7 @@
         <div class="relative flex items-start fade-in" style="animation-delay: 0.2s;">
           <div class="w-full md:w-1/2 hidden md:block"></div>
 
-          <div class="w-full md:w-1/2 pl-8">
+          <div class="w-full md:w-1/2 pl-0 sm:pl-8">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-emerald-400/30"
               data-aos="fade-left"> <!-- border-white/20 -->
@@ -202,8 +208,8 @@
                 Testeuse fonctionnelle<br />mobile et web
               </h4>
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
+                <p class="text-gray-400 text-sm">mai 2023 – juin 2023 | Stage</p>
               </div>
 
               <!-- toggled details -->
@@ -211,15 +217,15 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Conducted comprehensive functional testing across mobile and web platforms
+                    Réalisation de tests manuels sur une application bancaire mobile (iOS / Android) et web
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Developed test strategies and documentation for quality assurance
+                    Tests fonctionnels des notifications push sur modules critiques
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Worked closely with development teams to ensure product quality
+                    Exécution de tests depuis les tickets Jira (nouvelles fonctionnalités et corrections)
                   </li>
                 </ul>
               </div>
@@ -228,11 +234,11 @@
               <div class="flex flex-wrap gap-2 mt-6">
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0">
-                  Test
+                  Tests logiciels
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  Business Analysis
+                  Analyse des besoins
                 </span>
               </div>
             </div>
@@ -276,8 +282,8 @@
 
               <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Conceptrice d'Applications</h4>
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
+                <p class="text-gray-400 text-sm">nov. 2022 – avr. 2023 | Stage</p>
               </div>
 
               <!-- details toggled -->
@@ -285,15 +291,15 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Designed application architecture and system workflows
+                    Conception de Diagrammes d'Architecture Applicative avec Sparx Enterprise Architect
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Collaborated with stakeholders to define technical requirements
+                    Préparation de documents d'intégration
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Created technical documentation and specifications
+                    Actualisation d'un portail web du point de vue de l'architecture métier
                   </li>
                 </ul>
               </div>
@@ -306,14 +312,14 @@
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Business Analysis
+                  Analyse des besoins
                 </span>
               </div>
             </div>
           </div>
 
           <!-- mobile card -->
-          <div class="w-full md:hidden pl-8">
+          <div class="w-full md:hidden pl-0 sm:pl-8">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
               data-aos="fade-left">
@@ -339,8 +345,8 @@
 
               <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Conceptrice d'Applications</h4>
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
+                <p class="text-gray-400 text-sm">nov. 2022 – avr. 2023 | Stage</p>
               </div>
 
               <!-- details toggled mobile -->
@@ -348,15 +354,15 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Designed application architecture and system workflows
+                    Conception de Diagrammes d'Architecture Applicative avec Sparx Enterprise Architect
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Collaborated with stakeholders to define technical requirements
+                    Préparation de documents d'intégration
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Created technical documentation and specifications
+                    Actualisation d'un portail web du point de vue de l'architecture métier
                   </li>
                 </ul>
               </div>
@@ -368,7 +374,7 @@
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Business Analysis
+                  Analyse des besoins
                 </span>
               </div>
             </div>
@@ -386,7 +392,7 @@
         <div class="relative flex items-start fade-in" style="animation-delay: 0.4s;">
           <div class="w-full md:w-1/2 hidden md:block"></div>
 
-          <div class="w-full md:w-1/2 pl-8">
+          <div class="w-full md:w-1/2 pl-0 sm:pl-8">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-emerald-400/30"
               data-aos="fade-left">
@@ -414,8 +420,8 @@
               </h4>
 
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">msg life Slovakia – Bratislava, Slovaquiee</p>
+                <p class="text-gray-400 text-sm">févr. 2022 – sept. 2022 | CDI</p>
               </div>
 
               <!-- details -->
@@ -423,15 +429,15 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Designed and implemented automated testing frameworks
+                    Développement de scripts pour l'automatisation des cycles de tests
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Provided consulting services for test automation strategies
+                    Collaboration avec l'équipe de direction pour optimiser les stratégies de tests
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Led cross-functional teams in implementing quality processes
+                    Proposition de solutions pour automatiser des processus clés du test manuel
                   </li>
                 </ul>
               </div>
@@ -440,11 +446,11 @@
               <div class="flex flex-wrap gap-2 mt-6">
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0">
-                  Test
+                  Tests logiciels
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-violet-500/20 to-violet-600/20 text-violet-300 border border-violet-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  Consulting
+                  Conseil
                 </span>
               </div>
 
@@ -486,8 +492,8 @@
 
               <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse d'Applications Java</h4>
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">Asseco Central Europe – Bratislava, Slovaquie</p>
+                <p class="text-gray-400 text-sm">sept. 2019 – janv. 2022 | CDI</p>
               </div>
 
               <!-- details -->
@@ -495,15 +501,16 @@
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Developed enterprise Java applications using Spring framework
+                    Développement de nouvelles fonctionnalités du back-end en Java
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Implemented RESTful APIs and microservices architecture
+                    Personnalisation de solutions logicielles existantes en fonction
+                    des demandes du client
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Analyzed business requirements and translated them into technical solutions
+                    Analyse et correction d’erreurs non reproductibles en production
                   </li>
                 </ul>
               </div>
@@ -512,18 +519,18 @@
               <div class="flex flex-wrap gap-2 mt-6">
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Software Development
+                  Développement logiciel
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Business Analysis
+                  Analyse des besoins
                 </span>
               </div>
             </div>
           </div>
 
           <!-- mobile card -->
-          <div class="w-full md:hidden pl-8">
+          <div class="w-full md:hidden pl-0 sm:pl-8">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-left">
@@ -550,23 +557,24 @@
               <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse d'Applications Java</h4>
 
               <div class="space-y-1 mb-4">
-                <p class="text-gray-300 font-medium">Global Software – Paris, France</p>
-                <p class="text-gray-400 text-sm">Jan 2020 – Present</p>
+                <p class="text-gray-300 font-medium">Asseco Central Europe – Bratislava, Slovaquie</p>
+                <p class="text-gray-400 text-sm">Sep 2019 – Jan 2022 | CDI</p>
               </div>
 
               <div *ngIf="showDetails[4]">
                 <ul class="space-y-5 mt-4 mb-8 pl-4">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Developed enterprise Java applications using Spring framework
+                    Développement de nouvelles fonctionnalités du back-end en Java
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Implemented RESTful APIs and microservices architecture
+                    Personnalisation de solutions logicielles existantes en fonction
+                    des demandes du client
                   </li>
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Analyzed business requirements and translated them into technical solutions
+                    Analyse et correction d’erreurs non reproductibles en production
                   </li>
                 </ul>
               </div>
@@ -574,11 +582,11 @@
               <div class="flex flex-wrap gap-2 mt-6">
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  Software Development
+                  Développement logiciel
                 </span>
                 <span
                   class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  Business Analysis
+                  Analyse des besoins
                 </span>
               </div>
             </div>

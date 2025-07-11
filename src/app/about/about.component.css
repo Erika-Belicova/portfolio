@@ -3,7 +3,7 @@ p {
 }
 
 h2 {
-  @apply text-4xl font-bold text-blue-300 bg-[#2B374B] inline;
+  @apply text-3xl sm:text-4xl font-bold text-blue-300 bg-[#2B374B] inline;
 }
 
 h3 {

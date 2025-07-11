@@ -50,7 +50,7 @@
 }
 
 .subtitle {
-  @apply text-3xl font-bold mt-8 mb-6;
+  @apply text-2xl sm:text-3xl font-bold mt-8 mb-6;
 }
 
 .text-dark-gray {
@@ -67,4 +67,18 @@
 
 .stack-box {
   @apply flex flex-col sm:flex-row sm:justify-between gap-4;
+}
+
+.bg-text-tech {
+  @apply bg-[#223048] w-fit;
+}
+
+.bg-text-education {
+  @apply bg-[#202D43] w-fit;
+}
+
+.education-inset {
+  @apply space-y-10 border rounded-xl px-8 py-10;
+  @apply border-[#565F6F] bg-[#1E293B]/40;
+  box-shadow: inset 0 5px 14px rgba(0, 0, 0, 0.65), inset 0 -5px 14px rgba(255, 255, 255, 0.06);
 }

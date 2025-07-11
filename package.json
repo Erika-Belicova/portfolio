@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "ng build --configuration production",
+    "heroku-postbuild": "npm run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "9.x"
   },
   "private": true,
   "dependencies": {
