@@ -48,8 +48,36 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     if (!this.isBrowser) return; // only run in browser
 
+    const isMobile = this.windowWidth < 640;
+    const isTablet = this.windowWidth >= 640 && this.windowWidth < 1024;
+
+    let radius: number;
+    let cameraZ: number;
+    let particleCount: number;
+    let particleSize: number;
+
+    if (isMobile) {
+      radius = 380; // 350
+      cameraZ = 700; // 700
+      particleCount = 800; // 900
+      particleSize = 1.5; // 1.7
+    } else if (isTablet) {
+      radius = 380;
+      cameraZ = 700;
+      particleCount = 800;
+      particleSize = 1.5;
+    } else {
+      radius = 500;
+      cameraZ = 700;
+      particleCount = 900;
+      particleSize = 1; // 1 default size
+    }
+
+    this.radius = radius;
+    this.camera.position.z = cameraZ;
+
     this.setupScene();
-    this.createParticles();
+    this.createParticles(particleCount, particleSize);
     this.animate();
 
     // listen for window resizing
@@ -63,12 +91,13 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
 
     this.scene.background = new THREE.Color(0x1e293b); // set background color
 
-
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(this.windowWidth, this.windowHeight); // use dynamic window size
     this.threeJsCanvas.nativeElement.appendChild(this.renderer.domElement);
 
-    this.camera.position.z = 700; // distance to the camera
+    // use already set camera Z position and radius
+    this.camera.aspect = this.windowWidth / this.windowHeight;
+    this.camera.updateProjectionMatrix();
 
     // create rotating sphere
     const geometry = new THREE.SphereGeometry(this.radius, 30, 30);
@@ -83,7 +112,7 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.scene.add(this.sphere);
   }
 
-  private createParticles(particleCount: number = 900): void {
+  private createParticles(particleCount: number = 900, particleSize: number = 1): void {
     if (!this.isBrowser) return;
 
     const particleGeometry = new THREE.BufferGeometry();
@@ -105,7 +134,8 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
 
     const particleMaterial = new THREE.PointsMaterial({
       color: 0xd1d5db,
-      size: 1,
+      size: particleSize, // 1 for large desktop
+      sizeAttenuation: true, // particles scale naturally with distance from the camera
       transparent: true,
       opacity: 1,
       blending: THREE.AdditiveBlending,
