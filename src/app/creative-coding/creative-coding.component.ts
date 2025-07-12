@@ -57,10 +57,10 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     let particleSize: number;
 
     if (isMobile) {
-      radius = 380; // 350
-      cameraZ = 700; // 700
-      particleCount = 800; // 900
-      particleSize = 1.5; // 1.7
+      radius = 350;
+      cameraZ = 700;
+      particleCount = 900;
+      particleSize = 1.7;
     } else if (isTablet) {
       radius = 380;
       cameraZ = 700;
