@@ -137,7 +137,7 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.windowWidth = window.innerWidth;
     this.windowHeight = window.innerHeight;
 
-    this.updateGlobeScale(); // update globe size and camera based on window size
+    // this.updateGlobeScale(); // update globe size and camera based on window size
 
     this.camera.aspect = this.windowWidth / this.windowHeight;
     this.camera.updateProjectionMatrix();
@@ -145,6 +145,7 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.renderer.setSize(this.windowWidth, this.windowHeight);
   }
 
+  // jumps on resize - if used, the values need to be adjusted and the transition made smooth
   private updateGlobeScale(): void {
     let radius: number;
     let cameraZ: number;
@@ -186,6 +187,5 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.scene.remove(this.particles);
     this.createParticles(particleCount);
   }
-
 
 }
