@@ -31,11 +31,11 @@ p {
 }
 
 .role-box {
-    @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide;
+    @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide mt-12;
 }
 
 .role-title {
-    @apply bg-slate-800 px-1 inline;
+    @apply bg-slate-800 px-1 inline
 }
 
 .title {

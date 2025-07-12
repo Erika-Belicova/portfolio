@@ -60,7 +60,7 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
       radius = 350;
       cameraZ = 700;
       particleCount = 900;
-      particleSize = 1.7;
+      particleSize = 2; // 1.7
     } else if (isTablet) {
       radius = 380;
       cameraZ = 700;
@@ -183,14 +183,14 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
 
     if (this.windowWidth < 640) {
       // mobile
-      radius = 320;
-      cameraZ = 1000;
-      particleCount = 600;
+      radius = 350;
+      cameraZ = 700;
+      particleCount = 900;
     } else if (this.windowWidth < 1024) {
       // tablet
       radius = 380;
       cameraZ = 700;
-      particleCount = 900;
+      particleCount = 800;
     } else {
       // desktop
       radius = 500;
