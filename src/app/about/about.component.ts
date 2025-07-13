@@ -40,6 +40,18 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
+  private resizeListener = () => {
+    const container = this.containerRef.nativeElement;
+    const w = container.clientWidth;
+    const h = container.clientHeight;
+    this.camera.aspect = w / h;
+    this.camera.updateProjectionMatrix();
+
+    this.renderer.setSize(w, h, false);
+    const cappedPixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    this.renderer.setPixelRatio(cappedPixelRatio);
+  };
+
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
@@ -60,7 +72,12 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       alpha: true,
       antialias: true,
     });
-    this.renderer.setSize(container.clientWidth, container.clientHeight);
+    //this.renderer.setSize(container.clientWidth, container.clientHeight);
+
+    // render at a higher density of devices with high resolution
+    const pixelRatio = window.devicePixelRatio || 1;
+    this.renderer.setPixelRatio(pixelRatio);
+    this.renderer.setSize(container.clientWidth, container.clientHeight, false);
 
     this.observer = new IntersectionObserver(
       ([entry]) => {
@@ -281,6 +298,19 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
         this.renderer.render(this.scene, this.camera);
       };
       animate();
+
+      window.addEventListener('resize', () => {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        this.camera.aspect = w / h;
+        this.camera.updateProjectionMatrix();
+
+        this.renderer.setSize(w, h, false);
+        const cappedPixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+        this.renderer.setPixelRatio(cappedPixelRatio);
+      });
+
+      window.addEventListener('resize', this.resizeListener);
     });
   }
 
@@ -289,6 +319,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       cancelAnimationFrame(this.animationFrameId);
       this.renderer?.dispose();
       this.observer?.disconnect();
+      window.removeEventListener('resize', this.resizeListener);
     }
   }
 }

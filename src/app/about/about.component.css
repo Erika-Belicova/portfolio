@@ -3,7 +3,7 @@ p {
 }
 
 h2 {
-  @apply text-3xl sm:text-4xl font-bold text-blue-300 bg-[#2B374B] inline;
+  @apply text-3xl sm:text-4xl mt-0 font-bold text-blue-300 bg-[#2B374B] inline;
 }
 
 h3 {
@@ -11,11 +11,11 @@ h3 {
 }
 
 .text-column {
-  @apply w-full lg:w-[42%] text-left;
+  @apply w-full lg:w-[42%] flex; /* [42%] */
 }
 
 .text-content {
-  @apply space-y-6;
+  @apply space-y-6 h-full flex flex-col justify-center lg:pl-6;
 }
 
 .text-block {
@@ -27,23 +27,34 @@ h3 {
 }
 
 .section-layout {
-  @apply px-4 py-12 flex flex-col gap-y-8;
+  @apply px-2 md:px-4 pb-14 md:pb-12 pt-2 md:pt-4 lg:pt-6 flex flex-col gap-y-8;
 }
 
 @media (min-width: 1024px) {
   .section-layout {
-    @apply flex-row items-center gap-6;
+    @apply flex-row items-stretch gap-6;
   }
 }
 
 .canvas-section {
-  @apply w-full lg:w-1/2 flex justify-center;
+  @apply w-full lg:w-1/2 flex justify-center items-center;
 }
 
 .canvas-container {
-  @apply relative w-[300px] h-[400px];
+  /* @apply relative w-[300px] h-[400px]; */
+  @apply w-full h-[250px] sm:h-[300px] md:h-[400px] lg:mr-8 lg:w-full lg:h-[530px] xl:h-[450px]; /* lg:h-[430px] xl:h-[360px] */
+}
+
+@media (max-height: 529px) and (min-width: 530px) and (orientation: landscape) {
+  .canvas-container {
+    height: 150px !important; /* mobile landscape */
+  }
+
+  .section-layout {
+    @apply px-2;
+  }
 }
 
 .particle-canvas {
-  @apply w-full h-full rounded-[20px];
+  @apply w-full h-full rounded-[8px];
 }

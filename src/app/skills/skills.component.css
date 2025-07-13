@@ -97,3 +97,10 @@
     max-width: calc(4 * 80px + 4rem);
   }
 }
+
+/* landscape tablet and small laptops */
+@media (max-height: 720px) and (min-width: 1024px) and (max-width: 1300px) and (orientation: landscape) {
+  .section-container {
+    max-width: 1080px;
+  }
+}

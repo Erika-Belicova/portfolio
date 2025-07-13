@@ -17,7 +17,7 @@ import { ScrollArrowButtonComponent } from './scroll-arrow-button/scroll-arrow-b
   standalone: true,
   imports: [NavbarComponent, CreativeCodingComponent, HomeComponent, AboutComponent, EducationComponent, ExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent, FooterComponent, MouseTrailDirective, ScrollArrowButtonComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'portfolio';
