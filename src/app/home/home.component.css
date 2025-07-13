@@ -6,6 +6,29 @@
     @apply max-w-6xl text-center relative z-20;
 }
 
+@media (max-height: 529px) and (min-width: 530px) and (orientation: landscape) {
+    .role-box {
+        margin-top: 48px !important; /* mobile landscape */
+        margin-bottom: 8px !important;
+    }
+
+    .role-title {
+        font-size: 20px !important;
+    }
+
+    p {
+        margin-bottom: 1rem !important;
+    }
+
+    a {
+        padding: 6px 12x 6px 12px !important;
+    }
+
+    h1 {
+        margin-bottom: 20px !important;
+    }
+}
+
 .button-span {
     @apply bg-slate-800 px-1 transition-colors duration-300 group-hover:bg-transparent;
 }
@@ -31,7 +54,7 @@ p {
 }
 
 .role-box {
-    @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide mt-12;
+    @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide;
 }
 
 .role-title {
@@ -47,13 +70,44 @@ h1 {
 }
 
 .mobile-text {
-    @apply text-base font-normal text-gray-300 px-4 py-6 pb-10;
+    @apply text-base font-normal bg-slate-800 text-gray-300 px-4 py-6 pb-10;
 }
 
 .mobile-title {
-    @apply text-2xl font-semibold leading-tight text-gray-100;
+    @apply text-2xl font-semibold bg-slate-800 leading-tight text-gray-100;
 }
 
 .mobile-role {
-    @apply text-xl font-semibold text-blue-300 mb-8;
+    @apply text-xl font-semibold bg-slate-800 text-blue-300 mb-8;
+}
+
+/* landscape tablet and small laptops */
+@media (max-height: 720px) and (min-width: 1025px) and  (max-width: 1280px) and (orientation: landscape) {
+    .content-container {
+        max-width: 1024px !important;
+    }
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+        margin: 3rem 1rem 3rem 1rem !important;
+    }
+
+    h2 {
+        font-size: 1.7rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    p {
+        font-size: 1.2rem !important;
+        line-height: 1.5 !important;
+        margin: 2rem 3rem 2rem 3rem;
+    }
+
+    
+
 }

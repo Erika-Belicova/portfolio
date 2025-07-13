@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,6 +8,14 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  @Input() offsetTop = 0; // navbar height
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['offsetTop']) {
+      console.log('offsetTop changed:', this.offsetTop);
+    }
+  }
+
   isMenuOpen = false;
 
   toggleMenu() {
@@ -23,7 +31,17 @@ export class HomeComponent {
 
     const el = document.getElementById(id);
     if (el) {
-      const yOffset = -40; // about 1cm offset above card -> alternative: -window.innerHeight * 0.05 (for 5%)
+      let yOffset = -40; // about 1cm offset above card -> alternative: -window.innerHeight * 0.05 (for 5%)
+
+      // detect if on mobile screen
+      const isMobilePortrait = window.matchMedia('(max-height: 529px) and (max-width: 530px) and (orientation: portrait)').matches;
+      const isMobileLandscape = window.matchMedia('(max-height: 529px) and (min-width: 530px) and (orientation: landscape)').matches;
+
+      if (isMobilePortrait) {
+        yOffset = 100;
+      } else if (isMobileLandscape) {
+        yOffset = 60; // for animation
+      }
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
       window.scrollTo({
