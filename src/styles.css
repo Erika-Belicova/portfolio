@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,11 +58,10 @@ html, body {
   }
 
   /* disable any desktop-only styles */
-  .sm\\:block, .md\\:block, .lg\\:block, .xl\\:block {
+  .sm\:block, .md\:block, .lg\:block, .xl\:block {
     display: none !important;
   }
 }
-
 
 /* landscape tablet and small laptops */
 @media (max-height: 720px) and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
@@ -97,8 +98,8 @@ html, body {
     line-height: 1.5 !important;
   }
 
-  /* disable any desktop-only styles */
-  .xl\\:block {
+  /* disable any xl desktop-only styles */
+  .xl\:block {
     display: none !important;
   }
 }
