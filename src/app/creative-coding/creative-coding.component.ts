@@ -36,7 +36,7 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     if (this.isBrowser) {
       this.windowWidth = window.innerWidth; // get window dimensions in the browser
       this.windowHeight = window.innerHeight - this.offsetTop; // offset for navbar
-      console.log(this.windowWidth + ' x ' + this.windowHeight);
+      // console.log(this.windowWidth + ' x ' + this.windowHeight); // check window size
     } else {
       // default values for non-browser environments (SSR)
       this.windowWidth = 800;
@@ -53,21 +53,36 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     if (!this.isBrowser) return; // only run in browser
 
-    const isMobile = this.windowWidth < 640;
-    const isTablet = this.windowWidth >= 640 && this.windowWidth < 1024;
+    const isPortrait = this.windowHeight > this.windowWidth;
+    const isLandscape = !isPortrait;
+
+    const isMobilePortrait = this.windowWidth < 640 && isPortrait;
+    const isMobileLandscape = this.windowHeight < 640 && isLandscape;
+    const isTablet = this.windowWidth >= 640 && this.windowWidth < 1024 && !isMobileLandscape;
+    const isLarge = !isPortrait && ((this.windowWidth >= 1024 && this.windowWidth < 1440) || this.windowHeight < 900);
 
     let radius: number;
     let cameraZ: number;
     let particleCount: number;
     let particleSize: number;
 
-    if (isMobile) {
+    if (isMobileLandscape) {
+      radius = 400;
+      cameraZ = 700;
+      particleCount = 800;
+      particleSize = 3.5;
+    } else if (isMobilePortrait) {
       radius = 350;
       cameraZ = 700;
       particleCount = 900;
-      particleSize = 2; // 1.7
+      particleSize = 2;
     } else if (isTablet) {
       radius = 380;
+      cameraZ = 700;
+      particleCount = 800;
+      particleSize = 1.7;
+    } else if (isLarge) {
+      radius = 450;
       cameraZ = 700;
       particleCount = 800;
       particleSize = 1.5;
@@ -81,8 +96,8 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     const baseSizes = this.getBaseSizes();
 
     this.radius = baseSizes.radius;
-    this.camera.position.z = -200;            // start zoomed out (far)
-    this.targetCameraZ = baseSizes.cameraZ;   // target base zoom
+    this.camera.position.z = -200; // start zoomed out (far)
+    this.targetCameraZ = baseSizes.cameraZ; // target base zoom
 
     this.setupScene();
     this.createParticles(particleCount, particleSize);
@@ -172,63 +187,18 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.renderer.render(this.scene, this.camera);
   }
 
-  // update when resizing canvas
-  private resizeCanvas(): void {
-    this.windowWidth = window.innerWidth;
-    this.windowHeight = window.innerHeight - this.offsetTop; // offset for navbar
+  // update when resizing canvas - currently not needed
+  // private resizeCanvas(): void {
+  //   this.windowWidth = window.innerWidth;
+  //   this.windowHeight = window.innerHeight - this.offsetTop; // offset for navbar
 
-    // this.updateGlobeScale(); // update globe size and camera based on window size
+  //   this.camera.aspect = this.windowWidth / this.windowHeight;
+  //   this.camera.updateProjectionMatrix();
 
-    this.camera.aspect = this.windowWidth / this.windowHeight;
-    this.camera.updateProjectionMatrix();
-
-    this.renderer.setSize(this.windowWidth, this.windowHeight);
-    const maxPixelRatio = 2;
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, maxPixelRatio));
-  }
-
-  // jumps on resize - if used, the values need to be adjusted and the transition made smooth
-  private updateGlobeScale(): void {
-    let radius: number;
-    let cameraZ: number;
-    let particleCount: number;
-
-    if (this.windowWidth < 640) {
-      // mobile
-      radius = 350;
-      cameraZ = 700;
-      particleCount = 900;
-    } else if (this.windowWidth < 1024) {
-      // tablet
-      radius = 380;
-      cameraZ = 700;
-      particleCount = 800;
-    } else {
-      // desktop
-      radius = 500;
-      cameraZ = 700;
-      particleCount = 900;
-    }
-
-    this.radius = radius;
-    this.camera.position.z = cameraZ;
-
-    // rebuild sphere
-    this.scene.remove(this.sphere);
-    const geometry = new THREE.SphereGeometry(this.radius, 30, 30);
-    const material = new THREE.MeshBasicMaterial({
-      color: 0x0077ff,
-      wireframe: false,
-      transparent: true,
-      opacity: 0
-    });
-    this.sphere = new THREE.Mesh(geometry, material);
-    this.scene.add(this.sphere);
-
-    // rebuild particles
-    this.scene.remove(this.particles);
-    this.createParticles(particleCount);
-  }
+  //   this.renderer.setSize(this.windowWidth, this.windowHeight);
+  //   const maxPixelRatio = 2;
+  //   this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, maxPixelRatio));
+  // }
 
   private lastWindowHeight = 0;
   private lastWindowWidth = 0;
@@ -236,21 +206,32 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
   private setupResizeListeners(): void {
     if (!this.isBrowser) return;
 
-    // on orientation change (mobile)
+    // on orientation change
     window.addEventListener('orientationchange', () => {
       setTimeout(() => this.handleResize(), 300); // delay ensures stable dimensions
     });
 
-    // on real resize (manual / desktop)
+    // on real resize
     window.addEventListener('resize', () => {
       const newHeight = window.innerHeight;
       const newWidth = window.innerWidth;
 
-      // check if this is a real resize
-      const significantHeightChange = Math.abs(newHeight - this.lastWindowHeight) > 100;
-      const widthChanged = newWidth !== this.lastWindowWidth;
+      const heightChange = Math.abs(newHeight - this.lastWindowHeight);
+      const widthChange = Math.abs(newWidth - this.lastWindowWidth);
 
-      if (widthChanged || significantHeightChange) {
+      const isMobileOrTablet = newWidth < 1380;
+
+      let shouldResize = false;
+
+      if (isMobileOrTablet) {
+        // only trigger if there's significant change
+        shouldResize = heightChange > 150 || widthChange > 20;
+      } else {
+        // on desktop, allow resize
+        shouldResize = heightChange >= 10 || widthChange >= 1;
+      }
+
+      if (shouldResize) {
         this.handleResize();
       }
     });
@@ -270,35 +251,39 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     this.windowWidth = newWidth;
     this.windowHeight = newHeight;
 
-    // Update camera aspect ratio for new size
+    // update camera aspect ratio for new size
     this.camera.aspect = newWidth / newHeight;
     this.camera.updateProjectionMatrix();
 
-    // Get base sizes for viewport width
+    // get base sizes for viewport width
     const { radius, cameraZ, particleCount, particleSize } = this.getBaseSizes();
 
     const isLandscape = newWidth > newHeight;
+    const isPortrait = this.windowHeight > this.windowWidth;
     const isMobile = newWidth < 640;
     const isTablet = newWidth >= 640 && newWidth < 1024;
+    const isLarge = !isPortrait && ((this.windowWidth >= 1024 && this.windowWidth < 1440) || this.windowHeight < 900);
 
-    // Decide zoom factor based on device and orientation
+    // decide zoom factor based on device and orientation
     let zoomFactor = 1; // default no zoom
 
     if (isMobile && isLandscape) {
-      zoomFactor = 0.7; // 30% closer for mobile landscape (bigger zoom)
+      zoomFactor = 0.75; // for mobile landscape (bigger zoom)
     } else if (isTablet && isLandscape) {
-      zoomFactor = 0.85; // 15% closer for tablet landscape 85
+      zoomFactor = 0.85; // for tablet landscape (smaller zoom)
+    } else if (isLarge && isLandscape) {
+      zoomFactor = 0.95;
     } else {
-      //zoomFactor = 0.95; // a little zoom on desktop 95
+      zoomFactor = 1; // no zoom on desktop
     }
 
-    // Calculate target camera Z based on zoom factor
+    // calculate target camera distance based on zoom factor
     const targetZ = cameraZ * zoomFactor;
 
-    // Update target zoom smoothly in animation loop
+    // update target zoom smoothly in animation loop
     this.targetCameraZ = targetZ;
 
-    // Update radius if needed — here radius stays the same, or you could scale it similarly:
+    // update radius if needed
     if (this.radius !== radius) {
       this.radius = radius;
 
@@ -314,29 +299,48 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
       this.scene.add(this.sphere);
     }
 
-    // Rebuild particles with updated particleCount and size if needed
+    // rebuild particles with updated particleCount and size if needed
     this.scene.remove(this.particles);
     this.createParticles(particleCount, particleSize);
 
-    // Update renderer size and pixel ratio
     this.renderer.setSize(newWidth, newHeight);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   }
 
   private getBaseSizes() {
-    const isMobile = this.windowWidth < 640;
-    const isTablet = this.windowWidth >= 640 && this.windowWidth < 1024;
+    const isPortrait = this.windowHeight > this.windowWidth;
+    const isLandscape = !isPortrait;
 
-    if (isMobile) {
+    const isMobilePortrait = this.windowWidth < 640 && isPortrait;
+    const isMobileLandscape = this.windowHeight < 640 && isLandscape;
+    const isTablet = this.windowWidth >= 640 && this.windowWidth < 1024 && !isMobileLandscape;
+    const isLarge = !isPortrait && ((this.windowWidth >= 1024 && this.windowWidth < 1440) || this.windowHeight < 900);
+
+    // the values that differ from the ones in ngAfterViewInit() are deliberate
+    if (isMobileLandscape) {
+      return {
+        radius: 400,
+        cameraZ: 700,
+        particleCount: 800, // 850
+        particleSize: 2.5 // 3 is too much with the zoom
+      };
+    } else if (isMobilePortrait) {
       return {
         radius: 350,
         cameraZ: 700,
         particleCount: 900,
         particleSize: 2
       };
-    } else if (isTablet) {
+    } else if (isTablet || isPortrait) {
       return {
         radius: 380,
+        cameraZ: 700,
+        particleCount: 800,
+        particleSize: 1.5
+      };
+    } else if (isLarge) {
+      return {
+        radius: 450,
         cameraZ: 700,
         particleCount: 800,
         particleSize: 1.5

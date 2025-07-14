@@ -42,7 +42,7 @@ a {
 }
 
 .tagline {
-    @apply bg-slate-800 inline-block px-1 sm:mt-1;
+    @apply bg-slate-800/80 inline-block px-1 sm:mt-1 leading-tight;
 }
 
 p {
@@ -50,7 +50,8 @@ p {
 }
 
 .profile-description {
-    @apply bg-slate-800 inline;
+    @apply bg-slate-800/90 lg:bg-slate-800 pb-1 px-4 rounded inline-block;
+    line-height: normal;
 }
 
 .role-box {
@@ -70,15 +71,15 @@ h1 {
 }
 
 .mobile-text {
-    @apply text-base font-normal bg-slate-800 text-gray-300 px-4 py-6 pb-10;
+    @apply text-base font-normal bg-slate-800/90 text-gray-300 px-4 py-6 pb-10 w-fit mx-auto rounded-full;
 }
 
 .mobile-title {
-    @apply text-2xl font-semibold bg-slate-800 leading-tight text-gray-100;
+    @apply text-2xl font-semibold bg-slate-800/80 leading-tight text-gray-100 w-fit mx-auto;
 }
 
 .mobile-role {
-    @apply text-xl font-semibold bg-slate-800 text-blue-300 mb-8;
+    @apply text-xl font-semibold bg-slate-800 w-fit text-blue-300 mb-8 mx-auto;
 }
 
 /* landscape tablet and small laptops */
