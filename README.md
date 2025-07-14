@@ -36,7 +36,7 @@ A personal portfolio website designed to showcase my projects, skills, and work 
 ## Getting Started
 
 1. Clone the repository:  
-   `git clone [https://github.com/Erika-Belicova/portfolio.git]`
+   `git clone https://github.com/Erika-Belicova/portfolio.git`
 
 2. Navigate into the project folder:  
    `cd repository-name`
