@@ -6,7 +6,7 @@
     @apply max-w-6xl text-center relative z-20;
 }
 
-@media (max-height: 529px) and (min-width: 530px) and (orientation: landscape) {
+@media (max-height: 529px) and (min-width: 530px) and (max-width: 1024px)  and (orientation: landscape) {
     .role-box {
         margin-top: 48px !important; /* mobile landscape */
         margin-bottom: 8px !important;
@@ -59,7 +59,7 @@ p {
 }
 
 .role-title {
-    @apply bg-slate-800 px-1 inline
+    @apply bg-slate-800 px-1 inline mt-6
 }
 
 .title {
@@ -109,6 +109,10 @@ h1 {
         margin: 2rem 3rem 2rem 3rem;
     }
 
+    .role-box {
+        @apply mt-6;
+    }
+    
     
 
 }

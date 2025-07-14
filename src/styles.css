@@ -22,7 +22,7 @@ html, body {
 }
 
 /* landscape mobile */
-@media (max-height: 529px) and (min-width: 530px) and (orientation: landscape) {
+@media (max-height: 529px) and (min-width: 530px) and (max-width: 1024px) and (orientation: landscape) {
   body, 
   .section-container, 
   .content-container {
@@ -63,7 +63,7 @@ html, body {
 
 
 /* landscape tablet and small laptops */
-@media (max-height: 720px) and (min-width: 1024px) and  (max-width: 1280px) and (orientation: landscape) {
+@media (max-height: 720px) and (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
   body, 
   .section-container, 
   .content-container {
