@@ -18,8 +18,7 @@ html {
 
 html, body {
   overflow-x: hidden;
-  overscroll-behavior: none;
-  overscroll-behavior-y: contain;
+  overscroll-behavior-y: auto; /* enable pull-to-refresh on mobile */
   overscroll-behavior-x: none;
 }
 
