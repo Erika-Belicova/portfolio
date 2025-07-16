@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import * as AOS from 'aos';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreativeCodingComponent } from './creative-coding/creative-coding.component';
 import { HomeComponent } from "./home/home.component";
@@ -15,12 +17,40 @@ import { ScrollArrowButtonComponent } from './scroll-arrow-button/scroll-arrow-b
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, CreativeCodingComponent, HomeComponent, AboutComponent, EducationComponent, ExperienceComponent, SkillsComponent, ProjectsComponent, ContactComponent, FooterComponent, MouseTrailDirective, ScrollArrowButtonComponent],
+  imports:
+    [NavbarComponent,
+      CreativeCodingComponent,
+      HomeComponent,
+      AboutComponent,
+      EducationComponent,
+      ExperienceComponent,
+      SkillsComponent,
+      ProjectsComponent,
+      ContactComponent,
+      FooterComponent,
+      MouseTrailDirective,
+      ScrollArrowButtonComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        once: false // if true, animation triggers only once
+      });
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.refresh();
+    }
+  }
 
   scrollToSection(id: string, event?: Event) {
     event?.preventDefault();
