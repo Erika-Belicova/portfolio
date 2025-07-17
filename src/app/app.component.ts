@@ -13,6 +13,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { ExperienceComponent } from './experience/experience.component';
 import { MouseTrailDirective } from './directives/mouse-trail.directive';
 import { ScrollArrowButtonComponent } from './scroll-arrow-button/scroll-arrow-button.component';
+import { WakeService } from './wake.service';
 
 @Component({
   selector: 'app-root',
@@ -36,13 +37,21 @@ import { ScrollArrowButtonComponent } from './scroll-arrow-button/scroll-arrow-b
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private wakeService: WakeService
+  ) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        once: false // if true, animation triggers only once
-      });
+      AOS.init({ once: false });
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => this.wakeService.wakeApps());
+      } else {
+        // fallback for older browsers
+        setTimeout(() => this.wakeService.wakeApps(), 200);
+      }
     }
   }
 
