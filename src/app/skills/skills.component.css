@@ -22,11 +22,72 @@
     height: 24px;
     filter: brightness(0) saturate(100%) invert(49%) sepia(38%) saturate(306%) hue-rotate(179deg) brightness(120%) contrast(103%);
     transition: filter 0.3s ease;
+    @apply w-6 h-6;
+  }
+
+  .container-size {
+    @apply max-w-6xl mx-auto px-0 sm:px-4 lg:px-0 xl:px-4 mb-4;
+  }
+
+  .section-size {
+    @apply max-w-6xl mx-auto px-0 sm:px-4 lg:px-0 xl:px-4 py-12;
+  }
+
+  .skill-box-container {
+    @apply flex flex-wrap gap-10 mb-5;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl font-bold text-blue-300 mb-10 w-fit bg-[#243246];
+  }
+
+  h3 {
+    @apply text-2xl font-bold mb-4;
+  }
+
+  .cloud-heading {
+    @apply text-indigo-300 px-0 sm:px-2;
+  }
+
+  .tech-tile {
+    @apply flex flex-col items-center justify-center px-4 py-2 my-2 min-h-[64px] w-[80px] space-y-1;
+    @apply bg-blue-400 bg-opacity-10 text-blue-100 text-xs font-medium text-center;
+    @apply border border-blue-300 border-opacity-50 rounded-md hover:shadow-md transition;
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300;
+  }
+
+  .skill-box {
+    @apply p-6 border rounded-lg max-w-full;
+  }
+
+  .box-blue {
+    @apply bg-opacity-10 backdrop-blur-sm border-blue-300 bg-blue-400;
+  }
+
+  .box-indigo {
+    @apply bg-opacity-10 backdrop-blur-sm border-indigo-300 bg-indigo-400 w-fit;
+  }
+
+  .box-lavender {
+    @apply bg-opacity-10 backdrop-blur-sm border-[#AFB1F4] bg-[#AFB1F4];
+  }
+
+  .text-lavender {
+    @apply text-[#AFB1F4];
   }
   
   .grid-cloud {
+    @apply grid gap-4 px-0 sm:px-2;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     max-width: calc(1 * 80px + 4 * 1rem);
+  }
+
+  .cloud-hidden-up {
+    @apply hidden lg:block 2xl:hidden;
+  }
+
+  .cloud-hidden-down {
+    @apply lg:hidden 2xl:block;
   }
   
   @media (max-width: 767px) { /* anything smaller than tablet portrait */
@@ -88,14 +149,20 @@
 .grid-four {
   @apply grid gap-4;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  max-width: calc(3 * 80px + 4rem);
+  max-width: calc(4 * 80px + 4rem); /* was style default 4, here 3 */
 }
 
 /* larger than mobile portrait (min-width: 480px) - 4 columns */
 @media (min-width: 480px) and (max-width: 767px) {
   .grid-four {
-    max-width: calc(4 * 80px + 4rem);
+    max-width: calc(3 * 80px + 4rem);
   }
+}
+
+.grid-three {
+  @apply grid gap-4;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  max-width: calc(3 * 80px + 4 * 1rem);
 }
 
 /* landscape tablet and small laptops */
