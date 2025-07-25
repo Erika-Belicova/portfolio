@@ -57,7 +57,7 @@
   }
 
   .skill-box {
-    @apply p-6 border rounded-lg max-w-full;
+    @apply px-3 py-4 max-[410px]:px-3 max-[410px]:py-4 min-[411px]:p-6 border rounded-lg max-w-full;
   }
 
   .box-blue {
@@ -78,8 +78,8 @@
   
   .grid-cloud {
     @apply grid gap-4 px-0 sm:px-2;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    max-width: calc(1 * 80px + 4 * 1rem);
+    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+    max-width: calc(1 * 80px + 4 * 1rem); /* 4 rem to match the desktop layout width */
   }
 
   .cloud-hidden-up {
@@ -92,34 +92,51 @@
   
   @media (max-width: 767px) { /* anything smaller than tablet portrait */
     .grid-cloud {
-      max-width: calc(2 * 80px + 4 * 1rem);
+      max-width: calc(2 * 80px + 1 * 1rem);
     }
   }
+
+  
+  @media (min-width: 300px) and (max-width: 410px) {
+  .grid-cloud {
+    @apply grid gap-3;
+    max-width: calc(2 * 80px + 1 * 1rem);
+  }
+}
   
   .grid-database {
     @apply grid gap-4;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    max-width: calc(2 * 80px + 4rem); /* default: mobile portrait */
+    grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+    max-width: calc(2 * 80px + 1 * 1rem); /* default: mobile portrait */
   }
+
+  @media (min-width: 300px) and (max-width: 410px) {
+  .grid-database {
+    @apply grid gap-3;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: calc(2 * 80px + 1 * 1rem);
+  }
+}
   
   /* mobile landscape (typically >= 480px + landscape) */
-  @media (max-width: 767px) and (orientation: landscape) {
+  @media (max-width: 1024px) and (orientation: landscape) {
     .grid-database {
-      max-width: calc(4 * 80px + 4rem);
+      max-width: calc(4 * 80px + 3 * 1rem);
     }
   }
   
   /* tablet portrait (768px–1023px, portrait) */
   @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
     .grid-database {
-      max-width: calc(4 * 80px + 4rem);
+      max-width: calc(4 * 80px + 3 * 1rem);
     }
   }
   
   /* tablet landscape and above */
-  @media (min-width: 768px) and (orientation: landscape), (min-width: 1024px) {
+  @media (min-width: 1024px) and (orientation: landscape) {
     .grid-database {
-      max-width: calc(2 * 80px + 4rem);
+      max-width: calc(2 * 80px + 1 * 1rem);
     }
   }
   
@@ -127,42 +144,70 @@
 /* mobile portrait default - 3 columns */
 .grid-five {
   @apply grid gap-4;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  max-width: calc(3 * 80px + 4rem);
+  grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+  max-width: calc(3 * 80px + 2 * 1rem);
+}
+
+@media (min-width: 300px) and (max-width: 410px) {
+  .grid-five {
+    @apply grid gap-3;
+    max-width: calc(3 * 80px + 2 * 1rem);
+  }
 }
 
 /* larger than mobile portrait (min-width: 480px) - 4 columns */
 @media (min-width: 480px) and (max-width: 767px) {
   .grid-five {
-    max-width: calc(4 * 80px + 4rem);
+    max-width: calc(4 * 80px + 3 * 1rem);
   }
 }
 
 /* tablet and above (min-width: 768px) - 5 columns */
 @media (min-width: 768px) {
   .grid-five {
-    max-width: calc(5 * 80px + 4rem);
+    max-width: calc(5 * 80px + 4 * 1rem);
   }
 }
 
-/* mobile portrait default - 3 columns */
 .grid-four {
   @apply grid gap-4;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  max-width: calc(4 * 80px + 4rem); /* was style default 4, here 3 */
+  grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+  max-width: calc(4 * 80px + 3 * 1rem); /* was style default 4, here 3 */
 }
+
+@media (min-width: 300px) and (max-width: 410px) {
+  .grid-four {
+    @apply grid gap-3;
+    max-width: calc(3 * 80px + 2 * 1rem);
+  }
+}
+
 
 /* larger than mobile portrait (min-width: 480px) - 4 columns */
 @media (min-width: 480px) and (max-width: 767px) {
   .grid-four {
-    max-width: calc(3 * 80px + 4rem);
+    max-width: calc(3 * 80px + 2 * 1rem);
   }
 }
 
 .grid-three {
   @apply grid gap-4;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  max-width: calc(3 * 80px + 4 * 1rem);
+  grid-template-columns: repeat(auto-fit, minmax(80px, max-content));
+  max-width: calc(3 * 80px + 2 * 1rem);
+}
+
+@media (min-width: 300px) and (max-width: 410px) {
+  .grid-three {
+    @apply grid gap-3;
+    max-width: calc(3 * 80px + 2 * 1rem);
+  }
+}
+
+/* larger than mobile portrait (min-width: 480px) - 4 columns */
+@media (min-width: 480px) and (max-width: 767px) {
+  .grid-three {
+    max-width: calc(3 * 80px + 2 * 1rem);
+  }
 }
 
 /* landscape tablet and small laptops */
