@@ -36,3 +36,123 @@ a:hover {
 .animate-fadeOut {
   animation: fadeInOut 1s ease-in-out reverse forwards;
 }
+
+.contact-container {
+  @apply max-w-6xl mx-auto px-4 pt-8 pb-16;
+}
+
+.contact-section {
+  @apply text-blue-300 font-normal px-0 sm:px-6;
+}
+
+.section-spacing {
+  @apply max-w-6xl mx-auto space-y-10;
+}
+
+.column-layout {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-10;
+}
+
+h2 {
+  @apply text-3xl sm:text-4xl font-bold mb-8 bg-[#28374E] w-fit;
+}
+
+h3 {
+  @apply text-xl sm:text-2xl font-semibold text-white bg-[#28374E] w-fit;
+}
+
+.notification-button {
+  @apply absolute top-1/2 -translate-y-1/2 right-0 w-11 h-11 min-h-[44px] flex items-center;
+  @apply justify-center text-white text-2xl font-bold leading-none rounded-md hover:bg-white/10;
+  @apply focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-0 focus:ring-offset-transparent;
+}
+
+.notification-box {
+  @apply relative mt-4 px-4 py-2 rounded min-h-[44px] text-white shadow-lg animate-fadeInOut;
+}
+
+.button-send {
+  @apply px-6 py-3 mt-4 sm:mt-2 sm:py-2 flex items-center justify-center min-w-[44px] min-h-[44px];
+  @apply text-blue-200 border-2 sm:bg-[#28374E] w-fit border-blue-300 border-opacity-50 font-semibold;
+  @apply text-base sm:text-lg sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10 transition duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#232837];
+}
+
+.message-field {
+  @apply w-full px-4 py-2 bg-slate-700 text-blue-100 border border-blue-300 border-opacity-30 rounded; 
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-300 resize-none;
+}
+
+.message-container {
+  @apply flex flex-col w-full;
+}
+
+.validation-error {
+  @apply text-red-400 text-sm mt-1;
+}
+
+.message-validation {
+  @apply text-red-400 text-sm;
+}
+
+.email-container {
+  @apply flex flex-col w-full;
+}
+
+.email-field {
+  @apply w-full px-4 py-2 bg-slate-700 text-blue-100 border border-blue-300 border-opacity-30;
+  @apply rounded focus:outline-none focus:ring-2 focus:ring-blue-300;
+}
+
+.name-field {
+  @apply w-full px-4 py-2 bg-slate-700 text-blue-100 border border-blue-300 border-opacity-30;
+  @apply rounded focus:outline-none focus:ring-2 focus:ring-blue-300;
+}
+
+.invalid {
+  @apply border-red-400;
+}
+
+.valid {
+  @apply border-blue-300 border-opacity-30;
+}
+
+.form-container {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.name-box {
+  @apply flex flex-col w-full;
+}
+
+.description {
+  @apply balanced-text text-base text-gray-300 leading-relaxed bg-[#28374E] w-fit;
+}
+
+.text-info {
+  @apply text-base text-gray-300 bg-[#28374E] w-fit;
+}
+
+.link-container {
+  @apply space-y-4 font-semibold bg-[#28374E] w-full;
+}
+
+.link-box {
+  @apply flex items-center gap-3 p-2 max-w-full;
+}
+
+.link-spacing {
+  @apply min-w-0 w-full;
+}
+
+.link-text {
+  @apply text-base break-words w-full;
+}
+
+.link-icon {
+  @apply flex-shrink-0;
+}
+
+.link-name {
+  @apply text-lg font-medium;
+}
