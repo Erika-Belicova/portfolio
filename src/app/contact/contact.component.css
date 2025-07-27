@@ -73,8 +73,8 @@ h3 {
 
 .button-send {
   @apply px-6 py-3 mt-4 sm:mt-2 sm:py-2 flex items-center justify-center min-w-[44px] min-h-[44px];
-  @apply text-blue-200 border-2 sm:bg-[#28374E] w-fit border-blue-300 border-opacity-50 font-semibold;
-  @apply text-base sm:text-lg sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10 transition duration-200;
+  @apply text-blue-200 border-2 border-blue-300 border-opacity-50 text-base sm:text-lg font-semibold w-fit;
+  @apply sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10 transition duration-200 sm:bg-[#28374E];
   @apply focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#232837];
 }
 
