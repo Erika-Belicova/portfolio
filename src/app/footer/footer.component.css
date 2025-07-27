@@ -1,0 +1,23 @@
+a {
+  @apply mx-4 text-2xl;
+}
+
+.navigation-container {
+  @apply mt-4 text-base flex flex-wrap justify-center;
+}
+
+.navigation-link {
+  @apply hover:text-blue-300 mx-2 min-h-[44px] py-2 text-base;
+}
+
+.footer-section {
+  @apply bg-gray-900 text-white w-full py-6;
+}
+
+.footer-container {
+  @apply mx-auto text-center;
+}
+
+.icons-container {
+  @apply flex justify-center mb-4;
+}
