@@ -17,14 +17,89 @@ margin-top: 1rem;
 p {
   line-height: 1.6rem;
 }
+
+.projects-container {
+  @apply max-w-6xl mx-auto xl:px-4 text-center;
+}
+
+.projects-heading {
+  @apply text-3xl sm:text-4xl font-bold mb-4 bg-[#242F43];
+}
+
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  @apply border border-blue-300/40 shadow-md flex flex-col hover:shadow-lg hover:-translate-y-1 transition-transform duration-300;
+  @apply rounded-2xl h-full p-4 xl:p-6 text-blue-200 font-semibold bg-slate-900/30 backdrop-blur-md;
 }
   
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.project-description {
+  @apply text-slate-300 mt-1 mb-5 text-center font-normal px-2 leading-relaxed tracking-wide;
+}
+
+.project-content {
+  @apply flex flex-col xl:px-2;
+}
+
+.tech-pill {
+  @apply inline-flex items-center text-blue-200 text-xs font-semibold px-3 py-1 rounded-full;
+  @apply border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10;
+}
+
+.tech-pill-container {
+  @apply flex justify-center flex-wrap gap-2 max-w-[500px];
+}
+
+.project-image-frame {
+  @apply overflow-hidden border border-blue-300/40 rounded-lg xl:mb-6 mb-4;
+}
+
+img {
+  @apply w-full h-32 object-cover;
+}
+
+h3 {
+  @apply text-xl mb-2;
+}
+
+br {
+  @apply hidden sm:block 2xl:hidden;
+}
+
+.project-btn {
+  @apply flex items-center justify-center min-w-[44px] min-h-[44px] py-2 px-2 rounded-md;
+  @apply text-blue-200 border-2 border-blue-300/50  text-sm font-semibold hover:bg-blue-400 hover:bg-opacity-10;
+}
+
+.btn-inactive {
+  @apply flex text-gray-400 border-2 border-gray-400 text-sm font-semibold cursor-not-allowed select-none;
+  @apply items-center justify-center min-w-[44px] min-h-[44px] rounded-md py-2 px-2;
+}
+
+.buttons-container {
+  @apply flex flex-wrap gap-2 justify-between mt-5 xl:mt-6;
+}
+
+.btn-long-name {
+  @apply hidden sm:inline;
+}
+
+.btn-short-name {
+  @apply sm:hidden min-w-[44px];
+}
+
+.project-cards-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12;
+}
+
+.tablet-view {
+  @apply hidden md:grid lg:hidden;
+}
+
 @media (max-width: 600px) {
   .h-40 {
     height: auto;
