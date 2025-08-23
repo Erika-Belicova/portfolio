@@ -1,71 +1,71 @@
 <section id="projects" class="py-10">
-  <div class="max-w-6xl mx-auto xl:px-4 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-[#242F43]">Mes Projets</h2>
+  <div class="projects-container">
+    <h2 class="projects-heading">Mes Projets</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
+    <div class="project-cards-container">
 
       <!-- project card one bg-slateNight-400/60 -->
       <div
-        class="project-card bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-4 xl:p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        class="project-card">
 
         <!-- framed image -->
-        <div class="overflow-hidden border border-blue-300/40 rounded-lg xl:mb-6 mb-4">
-          <img src="estate.jpg" alt="Estate project" class="w-full h-32 object-cover" />
+        <div class="project-image-frame">
+          <img src="estate.jpg" alt="Estate project" />
         </div>
 
         <!-- content -->
-        <div class="flex flex-col xl:px-2">
-          <h3 class="text-xl mb-2">Estate&nbsp;Application<br class="hidden sm:block 2xl:hidden" /> (back‑end)</h3>
-          <p class="text-slate-300 mt-1 mb-5 text-center font-normal px-2 leading-relaxed tracking-wide">
+        <div class="project-content">
+          <h3>Estate&nbsp;Application<br /> (back‑end)</h3>
+          <p class="project-description">
             Back-end d’une application de gestion immobilière connectée à un front-end existant via une API REST.
             Documenté avec Swagger.&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
 
           <!-- tech stack pills -->
-          <div class="flex justify-center flex-wrap gap-2 max-w-[500px]">
+          <div class="tech-pill-container">
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Java
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               API REST
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               MySQL
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Swagger
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Spring Boot
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               JWT authentication
             </span>
           </div>
 
           <!-- buttons -->
-          <div class="flex flex-wrap gap-2 justify-between mt-5 xl:mt-6">
+          <div class="buttons-container">
             <!-- <a href="" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
-              <span class="sm:hidden min-w-[44px]">Site</span>
-              <span class="hidden sm:inline">Voir le site</span>
+              class="project-btn">
+              <span class="btn-short-name">Site</span>
+              <span class="btn-long-name">Voir le site</span>
             </a> -->
             <a href="https://api.estate.erika-belicova.site/swagger-ui/index.html" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">API docs</span>
-              <span class="hidden sm:inline">API docs</span>
+              class="project-btn">
+              <span class="btn-short-name">API docs</span>
+              <span class="btn-long-name">API docs</span>
             </a>
             <!-- border-blue-300/60 is an option -- also an option to add/remove rounded-lg from the buttons here-->
             <a href="https://github.com/Erika-Belicova/estate" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">Code</span>
-              <span class="hidden sm:inline">Code GitHub</span>
+              class="project-btn">
+              <span class="btn-short-name">Code</span>
+              <span class="btn-long-name">Code GitHub</span>
             </a>
           </div>
         </div>
@@ -75,63 +75,62 @@
 
       <!-- new project card one bg-slateNight-400/60 -->
       <div
-        class="project-card bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-4 xl:p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        class="project-card">
         <!-- alternative : border-white/30 or even border-white/20 -->
 
         <!-- framed image -->
-        <div class="overflow-hidden border border-blue-300/40 rounded-lg xl:mb-6 mb-4">
-          <img src="olympic1.png" alt="Screenshot of Olympic Games Project interface"
-            class="w-full h-32 object-cover" />
+        <div class="project-image-frame">
+          <img src="olympic1.png" alt="Screenshot of Olympic Games Project interface" />
         </div>
 
         <!-- content -->
-        <div class="flex flex-col xl:px-2">
-          <h3 class="text-xl mb-2">Olympic&nbsp;Dashboard<br class="hidden sm:block 2xl:hidden" /> (front‑end)</h3>
-          <p class="text-slate-300 mt-1 mb-5 text-center font-normal px-2 leading-relaxed tracking-wide">
+        <div class="project-content">
+          <h3>Olympic&nbsp;Dashboard<br /> (front‑end)</h3>
+          <p class="project-description">
             Dashboard interactif avec les données des Jeux Olympiques, basé sur des maquettes, utilisant les services,
             responsive et connecté.
           </p>
 
           <!-- tech stack pills -->
-          <div class="flex justify-center flex-wrap gap-2 max-w-[500px]">
+          <div class="tech-pill-container">
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Angular
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Typescript
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               RxJS
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               HTML
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               ngx-charts
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Angular Material
             </span>
           </div>
 
           <!-- buttons -->
-          <div class="flex flex-wrap gap-2 justify-between mt-5 xl:mt-6">
+          <div class="buttons-container">
             <a href="http://olympic-games.erika-belicova.site/" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">Site</span>
-              <span class="hidden sm:inline">Voir le site</span>
+              class="project-btn">
+              <span class="btn-short-name">Site</span>
+              <span class="btn-long-name">Voir le site</span>
             </a>
             <!-- border-blue-300/60 is an option -- also an option to ad/remove rounded-lg from the buttons here-->
             <a href="https://github.com/Erika-Belicova/olympic-games" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">Code</span>
-              <span class="hidden sm:inline">Code GitHub</span>
+              class="project-btn">
+              <span class="btn-short-name">Code</span>
+              <span class="btn-long-name">Code GitHub</span>
             </a>
           </div>
         </div>
@@ -140,65 +139,65 @@
       <!-- project card 3 -->
 
       <div
-        class="project-card bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-4 xl:p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        class="project-card">
         <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
         <!-- framed image -->
-        <div class="overflow-hidden border border-blue-300/40 rounded-lg xl:mb-6 mb-4">
-          <img src="portfolio1.png" alt="Site portfolio project" class="w-full h-32 object-cover" />
+        <div class="project-image-frame">
+          <img src="portfolio1.png" alt="Site portfolio project" />
         </div>
 
         <!-- content -->
-        <div class="flex flex-col xl:px-2">
-          <h3 class="text-xl mb-2">Site&nbsp;portfolio<br class="hidden sm:block 2xl:hidden" /> (front‑end)</h3>
-          <p class="text-slate-300 mt-1 mb-5 text-center font-normal px-2 leading-relaxed tracking-wide">
+        <div class="project-content">
+          <h3>Site&nbsp;portfolio<br /> (front‑end)</h3>
+          <p class="project-description">
             Un site personnel pour présenter mes projets, avec une interface
             interactive et responsive, intégrant des animations dynamiques.
           </p>
 
           <!-- tech stack pills -->
-          <div class="flex justify-center flex-wrap gap-2 max-w-[500px]">
+          <div class="tech-pill-container">
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Angular
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               TypeScript
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               HTML
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               CSS
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               TailwindCSS
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               EmailJS
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Three.js
             </span>
           </div>
 
           <!-- buttons -->
-          <div class="flex flex-wrap gap-2 justify-between mt-5 xl:mt-6">
+          <div class="buttons-container">
             <a href="https://erika-belicova.site" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">Site</span>
-              <span class="hidden sm:inline">Voir le site</span>
+              class="project-btn">
+              <span class="btn-short-name">Site</span>
+              <span class="btn-long-name">Voir le site</span>
             </a>
             <!-- border-blue-300/60 is an option -- also an option to add/remove rounded-lg from the buttons here-->
             <a href="https://github.com/Erika-Belicova/portfolio" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">Code</span>
-              <span class="hidden sm:inline">Code GitHub</span>
+              class="project-btn">
+              <span class="btn-short-name">Code</span>
+              <span class="btn-long-name">Code GitHub</span>
             </a>
           </div>
         </div>
@@ -207,67 +206,67 @@
       <!-- project 4 -->
 
       <div
-        class="project-card w-full mx-auto bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-4 xl:p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
+        class="project-card w-full mx-auto">
         <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
         <!-- framed image -->
-        <div class="overflow-hidden border border-blue-300/40 rounded-lg xl:mb-6 mb-4">
-          <img src="yoga.jpg" alt="Yoga studio project" class="w-full h-32 object-cover" />
+        <div class="project-image-frame">
+          <img src="yoga.jpg" alt="Yoga studio project" />
         </div>
 
         <!-- content -->
-        <div class="flex flex-col xl:px-2">
-          <h3 class="text-xl mb-2">Yoga&nbsp;studio<br class="hidden sm:block 2xl:hidden" /> (tests&nbsp;automatisés)
+        <div class="project-content">
+          <h3>Yoga&nbsp;studio<br /> (tests&nbsp;automatisés)
           </h3>
-          <p class="text-slate-300 mt-1 mb-5 text-center font-normal px-2 leading-relaxed tracking-wide">
+          <p class="project-description">
             Réalisation de tests automatisés back‑end, front‑end et end‑to‑end sur une application existante de gestion
             de séances
             de yoga.
           </p>
 
           <!-- tech stack pills -->
-          <div class="flex justify-center flex-wrap gap-2 max-w-[500px]">
+          <div class="tech-pill-container">
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Java
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               JUnit 5
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Mockito
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Angular
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Cypress
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Jest
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Istanbul
             </span>
           </div>
 
           <!-- buttons -->
-          <div class="flex flex-wrap gap-2 justify-between mt-5 xl:mt-6">
+          <div class="buttons-container">
             <a href="https://yoga.erika-belicova.site/" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
+              class="project-btn">
               <span class="2xl:hidden min-w-[44px]">Couverture</span>
               <span class="hidden 2xl:inline">Rapports de couverture</span>
             </a>
             <!-- border-blue-300/60 is an option -- also an option to add/remove rounded-lg from the buttons here-->
             <a href="https://github.com/Erika-Belicova/yoga" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10">
-              <span class="sm:hidden min-w-[44px]">Code</span>
-              <span class="hidden sm:inline">Code GitHub</span>
+              class="project-btn">
+              <span class="btn-short-name">Code</span>
+              <span class="btn-long-name">Code GitHub</span>
             </a>
           </div>
         </div>
@@ -276,48 +275,48 @@
       <!-- project 5 -->
 
       <div
-        class="project-card w-full bg-slate-900/30 backdrop-blur-md border border-blue-300/40 rounded-2xl shadow-md text-blue-200 font-semibold flex flex-col h-full p-4 xl:p-6 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
-        <div class="overflow-hidden border border-blue-300/40 rounded-lg xl:mb-6 mb-4">
-          <img src="mdd.jpg" alt="Réseau social project" class="w-full h-32 object-cover" />
+        class="project-card w-full">
+        <div class="project-image-frame">
+          <img src="mdd.jpg" alt="Réseau social project" />
         </div>
 
         <!-- content -->
-        <div class="flex flex-col xl:px-2">
-          <h3 class="text-xl mb-2">Réseau&nbsp;social<br class="hidden sm:block 2xl:hidden" /> (full‑stack)</h3>
-          <p class="text-slate-300 mt-1 mb-5 text-center font-normal px-2 leading-relaxed tracking-wide">
+        <div class="project-content">
+          <h3>Réseau&nbsp;social<br /> (full‑stack)</h3>
+          <p class="project-description">
             MVP d’un réseau social pour développeurs, conçu selon les spécifications fonctionnelles, maquettes et
             contraintes
             techniques.
           </p>
 
           <!-- tech stack pills -->
-          <div class="flex justify-center flex-wrap gap-2 max-w-[500px]">
+          <div class="tech-pill-container">
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Java
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Spring Boot
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               MySQL
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               JWT
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               API REST
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               TypeScript
             </span>
             <span
-              class="inline-flex items-center border border-blue-300 border-opacity-60 bg-blue-400 bg-opacity-10 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
+              class="tech-pill">
               Angular
             </span>
           </div>
@@ -325,18 +324,18 @@
           <!-- buttons -->
           <div class="flex flex-wrap gap-2 justify-end mt-5 xl:mt-6">
             <!-- <a href="https://my.site/" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
-              <span class="sm:hidden min-w-[44px]">Site</span>
-              <span class="hidden sm:inline">Voir le site</span>
+              class="project-btn">
+              <span class="btn-short-name">Site</span>
+              <span class="btn-long-name">Voir le site</span>
             </a> -->
             <!-- border-blue-300/60 is an option -- also an option to add/remove rounded-lg from the buttons here-->
             <!-- <a href="https://github.com/my/olympic-games" target="_blank"
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-blue-200 border-2 border-blue-300/50 py-2 px-2 text-sm font-semibold rounded-md hover:bg-blue-400 hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-[#324765] transition duration-200">
-              <span class="sm:hidden min-w-[44px]">Code</span>
-              <span class="hidden sm:inline">Code GitHub</span>
+              class="project-btn">
+              <span class="btn-short-name">Code</span>
+              <span class="btn-long-name">Code GitHub</span>
             </a> -->
             <a
-              class="flex items-center justify-center min-w-[44px] min-h-[44px] text-gray-400 border-2 border-gray-400 py-2 px-2 text-sm font-semibold rounded-md cursor-not-allowed select-none">
+              class="btn-inactive">
               Travail en cours
             </a>
           </div>
@@ -347,7 +346,7 @@
 
     <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto pb-2" style="transform: translateX(17%);"> -->
     <!-- <div class="translate-x-[17%] md:translate-x-0"> -->
-    <div class="hidden md:grid lg:hidden"> <!-- for tablet view -->
+    <div class="tablet-view"> <!-- for tablet view -->
       <!-- 2-2-1 card layout for medium screens -->
     </div>
 
