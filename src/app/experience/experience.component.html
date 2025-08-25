@@ -39,7 +39,7 @@
           </div>
         </div>
 
-        <div class="relative flex items-start fade-in" style="animation-delay: 0.2s;">
+        <div class="job-card-container" style="animation-delay: 0.2s;">
           <div class="w-full md:w-1/2 hidden md:block"></div>
 
           <div class="w-full md:w-1/2 pl-0 sm:pl-8">
@@ -53,7 +53,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[5]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[5]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -66,17 +66,17 @@
                 </svg>
               </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+              <h4 class="job-title">
                 Développeuse Python / Django
               </h4>
-              <div class="space-y-1 mb-4">
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
                 <p class="text-gray-400 text-sm">août 2025 – en cours | CDD</p>
               </div>
 
               <!-- toggled details -->
               <div *ngIf="showDetails[5]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-indigo-400 mr-2">•</span>
                     Prise en charge complète du développement d’une application web full-stack
@@ -93,7 +93,7 @@
               </div>
 
               <!-- skill tags -->
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
                   <span class="xl:hidden">Développement</span>
@@ -118,9 +118,9 @@
           </div>
         </div>
 
-        <div class="relative flex items-start fade-in" style="animation-delay: 0.1s;">
+        <div class="job-card-container" style="animation-delay: 0.1s;">
           <!-- desktop card (left side) -->
-          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+          <div class="hidden-on-mobile">
             <div
               class="card relative inline-block border border-white/25 bg-slate-800 md:bg-slate-800/90 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-right">
@@ -130,7 +130,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[0]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[0]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -143,17 +143,17 @@
                 </svg>
               </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+              <h4 class="job-title">
                 Développeuse JavaScript<br />– automatisation
               </h4>
-              <div class="space-y-1 mb-4">
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
                 <p class="text-gray-400 text-sm">août 2024 – sept. 2024 | Stage</p>
               </div>
 
               <!-- toggle for details -->
               <div *ngIf="showDetails[0]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
                     Extension d’une librairie open source pour la modélisation de diagrammes d’architecture logicielle
@@ -170,7 +170,7 @@
               </div>
 
               <!-- skill tags -->
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
                   <span class="xl:hidden">Développement</span>
@@ -196,7 +196,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[0]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[0]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -209,15 +209,15 @@
                 </svg>
               </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse JavaScript<br />– automatisation</h4>
-              <div class="space-y-1 mb-4">
+              <h4 class="job-title">Développeuse JavaScript<br />– automatisation</h4>
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
                 <p class="text-gray-400 text-sm">août 2024 – sept. 2024 | Stage</p>
               </div>
 
               <!-- toggle for details -->
               <div *ngIf="showDetails[0]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4 text-gray-300">
+                <ul class="details-list text-gray-300">
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
                     Extension d’une librairie open source pour la modélisation de diagrammes d’architecture logicielle
@@ -233,7 +233,7 @@
                 </ul>
               </div>
 
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
                   <span class="xl:hidden">Développement</span>
@@ -257,7 +257,7 @@
           </div>
         </div>
 
-        <div class="relative flex items-start fade-in" style="animation-delay: 0.2s;">
+        <div class="job-card-container" style="animation-delay: 0.2s;">
           <div class="w-full md:w-1/2 hidden md:block"></div>
 
           <div class="w-full md:w-1/2 pl-0 sm:pl-8">
@@ -271,7 +271,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[1]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[1]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -284,17 +284,17 @@
                 </svg>
               </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+              <h4 class="job-title">
                 Testeuse fonctionnelle<br />mobile et web
               </h4>
-              <div class="space-y-1 mb-4">
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
                 <p class="text-gray-400 text-sm">mai 2023 – juin 2023 | Stage</p>
               </div>
 
               <!-- toggled details -->
               <div *ngIf="showDetails[1]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
                     Réalisation de tests manuels sur une application bancaire mobile (iOS / Android) et web
@@ -311,7 +311,7 @@
               </div>
 
               <!-- skill tags -->
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Tests logiciels"
                   class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0">
                   <span class="xl:hidden">Tests</span>
@@ -335,9 +335,9 @@
           </div>
         </div>
 
-        <div class="relative flex items-start fade-in" style="animation-delay: 0.3s;">
+        <div class="job-card-container" style="animation-delay: 0.3s;">
           <!-- desktop left side card -->
-          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+          <div class="hidden-on-mobile">
             <div
               class="card relative inline-block border border-white/25 bg-slate-800 md:bg-slate-800/90 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
               data-aos="fade-right">
@@ -348,7 +348,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon -->
-                <svg *ngIf="!showDetails[2]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[2]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -362,15 +362,15 @@
               </button>
 
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Conceptrice d'applications</h4>
-              <div class="space-y-1 mb-4">
+              <h4 class="job-title">Conceptrice d'applications</h4>
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
                 <p class="text-gray-400 text-sm">nov. 2022 – avr. 2023 | Stage</p>
               </div>
 
               <!-- details toggled -->
               <div *ngIf="showDetails[2]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
                     Conception de diagrammes d’architecture applicative avec Sparx Enterprise Architect
@@ -387,7 +387,7 @@
               </div>
 
               <!-- skill tags -->
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Architecture logicielle"
                   class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
                   <span class="xl:hidden">Architecture</span>
@@ -414,7 +414,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[2]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[2]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -427,15 +427,15 @@
                 </svg>
               </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Conceptrice d'applications</h4>
-              <div class="space-y-1 mb-4">
+              <h4 class="job-title">Conceptrice d'applications</h4>
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
                 <p class="text-gray-400 text-sm">nov. 2022 – avr. 2023 | Stage</p>
               </div>
 
               <!-- details toggled mobile -->
               <div *ngIf="showDetails[2]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-cyan-400 mr-2">•</span>
                     Conception de diagrammes d’architecture applicative avec Sparx Enterprise Architect
@@ -451,7 +451,7 @@
                 </ul>
               </div>
 
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Architecture logicielle"
                   class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
                   <span class="xl:hidden">Architecture</span>
@@ -475,7 +475,7 @@
           </div>
         </div>
 
-        <div class="relative flex items-start fade-in" style="animation-delay: 0.4s;">
+        <div class="job-card-container" style="animation-delay: 0.4s;">
           <div class="w-full md:w-1/2 hidden md:block"></div>
 
           <div class="w-full md:w-1/2 pl-0 sm:pl-8">
@@ -489,7 +489,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[3]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[3]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -501,18 +501,18 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
                 </svg> </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">
+              <h4 class="job-title">
                 Consultante / ingénieure<br>en automatisation de tests
               </h4>
 
-              <div class="space-y-1 mb-4">
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">msg life Slovakia – Bratislava, Slovaquie</p>
                 <p class="text-gray-400 text-sm">févr. 2022 – sept. 2022 | CDI</p>
               </div>
 
               <!-- details -->
               <div *ngIf="showDetails[3]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-emerald-400 mr-2">•</span>
                     Développement de scripts pour l'automatisation les cycles de tests
@@ -529,7 +529,7 @@
               </div>
 
               <!-- skill tags -->
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Tests logiciels"
                   class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0">
                   <span class="xl:hidden">Tests</span>
@@ -553,8 +553,8 @@
           </div>
         </div>
 
-        <div class="relative flex items-start fade-in" style="animation-delay: 0.5s;">
-          <div class="w-full md:w-1/2 pr-8 text-left hidden md:block">
+        <div class="job-card-container" style="animation-delay: 0.5s;">
+          <div class="hidden-on-mobile">
             <div
               class="card relative inline-block border border-white/25 bg-slate-800 md:bg-slate-800/90 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-right">
@@ -565,7 +565,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon -->
-                <svg *ngIf="!showDetails[4]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[4]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -577,15 +577,15 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
                 </svg> </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse Back‑End Java</h4>
-              <div class="space-y-1 mb-4">
+              <h4 class="job-title">Développeuse Back‑End Java</h4>
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">Asseco Central Europe – Bratislava, Slovaquie</p>
                 <p class="text-gray-400 text-sm">sept. 2019 – janv. 2022 | CDI</p>
               </div>
 
               <!-- details -->
               <div *ngIf="showDetails[4]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
                     Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public
@@ -603,7 +603,7 @@
               </div>
 
               <!-- skill tags -->
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
                   <span class="xl:hidden">Développement</span>
@@ -630,7 +630,7 @@
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
-                <svg *ngIf="!showDetails[4]" class="w-5 h-5 group-hover:rotate-90 transition-transform duration-300"
+                <svg *ngIf="!showDetails[4]" class="plus-icon"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
@@ -643,15 +643,15 @@
                 </svg>
               </button>
 
-              <h4 class="text-xl font-bold text-blue-300 mb-3 pr-12">Développeuse Back‑End Java</h4>
+              <h4 class="job-title">Développeuse Back‑End Java</h4>
 
-              <div class="space-y-1 mb-4">
+              <div class="company-details">
                 <p class="text-gray-300 font-medium">Asseco Central Europe – Bratislava, Slovaquie</p>
                 <p class="text-gray-400 text-sm">Sep 2019 – Jan 2022 | CDI</p>
               </div>
 
               <div *ngIf="showDetails[4]">
-                <ul class="space-y-5 mt-4 mb-8 pl-4">
+                <ul class="details-list">
                   <li class="text-gray-300 flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
                     Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public
@@ -668,7 +668,7 @@
                 </ul>
               </div>
 
-              <div class="flex flex-wrap gap-2 mt-6">
+              <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
                   <span class="xl:hidden">Développement</span>
