@@ -65,6 +65,34 @@
   animation: pulse 2s infinite;
 }
 
+.details-list {
+  @apply space-y-5 mt-4 mb-8 pl-4;
+}
+
+.skill-tags-container {
+  @apply flex flex-wrap gap-2 mt-6;
+}
+
+.job-card-container {
+  @apply relative flex items-start fade-in;
+}
+
+.hidden-on-mobile {
+  @apply w-full md:w-1/2 pr-8 text-left hidden md:block;
+}
+
+.plus-icon {
+  @apply w-5 h-5 group-hover:rotate-90 transition-transform duration-300;
+}
+
+.job-title {
+  @apply text-xl font-bold text-blue-300 mb-3 pr-12;
+}
+
+.company-details {
+  @apply space-y-1 mb-4;
+}
+
 @keyframes pulse {
 
   0%,
