@@ -93,6 +93,75 @@
   @apply space-y-1 mb-4;
 }
 
+h2 {
+  @apply text-3xl sm:text-4xl font-bold text-gray-200 text-center mb-4 bg-[#182234];
+}
+
+.experience-container {
+  @apply relative max-w-6xl mx-auto py-12 px-0 md:px-4 overflow-x-hidden mb-6 md:mb-0;
+}
+
+.content-container {
+  @apply relative max-w-6xl mx-auto mt-8 px-0 lg:px-8;
+}
+
+.timeline-container {
+  @apply relative max-w-6xl mx-auto mt-8;
+}
+
+.timeline {
+  @apply absolute top-[0rem] left-1/2 w-0.5 bg-gray-400 shadow-xl h-full transform -translate-x-1/2;
+}
+
+.company-name {
+  @apply text-gray-300 font-medium;
+}
+
+.duration {
+  @apply text-gray-400 text-sm;
+}
+
+.list-item {
+  @apply text-gray-300 flex items-start;
+}
+
+.short-tag {
+  @apply xl:hidden;
+}
+
+.long-tag {
+  @apply hidden xl:inline;
+}
+
+.analyse-tag {
+  @apply inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 rounded-full;
+  @apply text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal;
+}
+
+.development-tag {
+  @apply inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 border border-sky-400/30;
+  @apply px-3 py-1 text-sky-300 text-[13px] font-normal rounded-full mb-1 md:mb-0;
+}
+
+.architecture-tag {
+  @apply inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 border border-cyan-400/30;
+  @apply px-3 py-1 text-cyan-300 text-[13px] font-normal rounded-full;
+}
+
+.test-tag {
+  @apply inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 border border-emerald-400/30;
+  @apply px-3 py-1 text-emerald-300 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0;
+}
+
+.consulting-tag {
+  @apply inline-block bg-gradient-to-r from-violet-500/20 to-violet-600/20 border border-violet-400/30;
+  @apply px-3 py-1 text-violet-300 text-[13px] font-normal rounded-full mb-1 md:mb-0;
+}
+
+.mobile-card {
+  @apply w-full md:hidden pl-0 sm:pl-8;
+}
+
 @keyframes pulse {
 
   0%,

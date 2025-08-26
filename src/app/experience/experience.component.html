@@ -1,7 +1,7 @@
 <!-- experience section -->
-<div class="relative max-w-6xl mx-auto py-12 px-0 md:px-4 overflow-x-hidden mb-6 md:mb-0">
-  <h2 class="text-3xl sm:text-4xl font-bold text-gray-200 text-center mb-4 bg-[#182234]">Expérience professionnelle</h2>
-  <div class="relative max-w-6xl mx-auto mt-8 px-0 lg:px-8">
+<div class="experience-container">
+  <h2>Expérience professionnelle</h2>
+  <div class="content-container">
 
     <div class="text-center">
       <button (click)="toggleAll()"
@@ -22,9 +22,9 @@
     </button> -->
 
     <!-- timeline layout -->
-    <div class="relative max-w-6xl mx-auto mt-8">
+    <div class="timeline-container">
       <!-- timeline center line -->
-      <div class="absolute top-[0rem] left-1/2 w-0.5 bg-gray-400 shadow-xl h-full transform -translate-x-1/2">
+      <div class="timeline">
         <!-- absolute top-[-2rem] to move the timeline lower -->
       </div>
 
@@ -70,22 +70,22 @@
                 Développeuse Python / Django
               </h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
-                <p class="text-gray-400 text-sm">août 2025 – en cours | CDD</p>
+                <p class="company-name">Globasoft – Toulouse, France</p>
+                <p class="duration">août 2025 – en cours | CDD</p>
               </div>
 
               <!-- toggled details -->
               <div *ngIf="showDetails[5]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-indigo-400 mr-2">•</span>
                     Prise en charge complète du développement d’une application web full-stack
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-indigo-400 mr-2">•</span>
                     Décision de son fonctionnement interne et participation aux choix techniques pour l’implémentation
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-indigo-400 mr-2">•</span>
                     Mise en œuvre selon une maquette, un cahier des charges précis et des priorités définies
                   </li>
@@ -95,14 +95,14 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  <span class="xl:hidden">Développement</span>
-                  <span class="hidden xl:inline">Développement logiciel</span>
+                  class="skill-tag development-tag">
+                  <span class="short-tag">Développement</span>
+                  <span class="long-tag">Développement logiciel</span>
                 </span>
                 <span title="Analyse des besoins"
-                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Analyse</span>
-                  <span class="hidden xl:inline">Analyse des besoins</span>
+                  class="skill-tag analyse-tag">
+                  <span class="short-tag">Analyse</span>
+                  <span class="long-tag">Analyse des besoins</span>
                 </span>
               </div>
 
@@ -147,22 +147,22 @@
                 Développeuse JavaScript<br />– automatisation
               </h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
-                <p class="text-gray-400 text-sm">août 2024 – sept. 2024 | Stage</p>
+                <p class="company-name">Globasoft – Toulouse, France</p>
+                <p class="duration">août 2024 – sept. 2024 | Stage</p>
               </div>
 
               <!-- toggle for details -->
               <div *ngIf="showDetails[0]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Extension d’une librairie open source pour la modélisation de diagrammes d’architecture logicielle
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Développement de scripts JavaScript pour automatiser le processus de modélisation
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Analyse des besoins et conception d’une stratégie adaptée aux diagrammes
                   </li>
@@ -173,20 +173,20 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Développement</span>
-                  <span class="hidden xl:inline">Développement logiciel</span>
+                  <span class="short-tag">Développement</span>
+                  <span class="long-tag">Développement logiciel</span>
                 </span>
                 <span title="Architecture logicielle"
-                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Architecture</span>
-                  <span class="hidden xl:inline">Architecture logicielle</span>
+                  class="skill-tag architecture-tag">
+                  <span class="short-tag">Architecture</span>
+                  <span class="long-tag">Architecture logicielle</span>
                 </span>
               </div>
             </div>
           </div>
 
           <!-- mobile card -->
-          <div class="w-full md:hidden pl-0 sm:pl-8">
+          <div class="mobile-card">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-left">
@@ -211,8 +211,8 @@
 
               <h4 class="job-title">Développeuse JavaScript<br />– automatisation</h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">Globasoft – Toulouse, France</p>
-                <p class="text-gray-400 text-sm">août 2024 – sept. 2024 | Stage</p>
+                <p class="company-name">Globasoft – Toulouse, France</p>
+                <p class="duration">août 2024 – sept. 2024 | Stage</p>
               </div>
 
               <!-- toggle for details -->
@@ -235,14 +235,14 @@
 
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  <span class="xl:hidden">Développement</span>
-                  <span class="hidden xl:inline">Développement logiciel</span>
+                  class="skill-tag development-tag">
+                  <span class="short-tag">Développement</span>
+                  <span class="long-tag">Développement logiciel</span>
                 </span>
                 <span title="Architecture logicielle"
-                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Architecture</span>
-                  <span class="hidden xl:inline">Architecture logicielle</span>
+                  class="skill-tag architecture-tag">
+                  <span class="short-tag">Architecture</span>
+                  <span class="long-tag">Architecture logicielle</span>
                 </span>
               </div>
             </div>
@@ -288,22 +288,22 @@
                 Testeuse fonctionnelle<br />mobile et web
               </h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
-                <p class="text-gray-400 text-sm">mai 2023 – juin 2023 | Stage</p>
+                <p class="company-name">VÚB banka – Bratislava, Slovaquie</p>
+                <p class="duration">mai 2023 – juin 2023 | Stage</p>
               </div>
 
               <!-- toggled details -->
               <div *ngIf="showDetails[1]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
                     Réalisation de tests manuels sur une application bancaire mobile (iOS / Android) et web
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
                     Tests fonctionnels des notifications push sur les modules critiques
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
                     Exécution de tests à partir des tickets Jira (nouvelles fonctionnalités et corrections)
                   </li>
@@ -313,14 +313,14 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Tests logiciels"
-                  class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0">
-                  <span class="xl:hidden">Tests</span>
-                  <span class="hidden xl:inline">Tests logiciels</span>
+                  class="skill-tag test-tag">
+                  <span class="short-tag">Tests</span>
+                  <span class="long-tag">Tests logiciels</span>
                 </span>
                 <span title="Analyse des besoins"
-                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  <span class="xl:hidden">Analyse</span>
-                  <span class="hidden xl:inline">Analyse des besoins</span>
+                  class="skill-tag analyse-tag">
+                  <span class="short-tag">Analyse</span>
+                  <span class="long-tag">Analyse des besoins</span>
                 </span>
               </div>
             </div>
@@ -364,22 +364,22 @@
 
               <h4 class="job-title">Conceptrice d'applications</h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
-                <p class="text-gray-400 text-sm">nov. 2022 – avr. 2023 | Stage</p>
+                <p class="company-name">VÚB banka – Bratislava, Slovaquie</p>
+                <p class="duration">nov. 2022 – avr. 2023 | Stage</p>
               </div>
 
               <!-- details toggled -->
               <div *ngIf="showDetails[2]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
                     Conception de diagrammes d’architecture applicative avec Sparx Enterprise Architect
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
                     Préparation de documents d’intégration
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
                     Mise à jour d’un portail web du point de vue de l’architecture métier
                   </li>
@@ -389,21 +389,21 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Architecture logicielle"
-                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Architecture</span>
-                  <span class="hidden xl:inline">Architecture logicielle</span>
+                  class="skill-tag architecture-tag">
+                  <span class="short-tag">Architecture</span>
+                  <span class="long-tag">Architecture logicielle</span>
                 </span>
                 <span title="Analyse des besoins"
-                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Analyse</span>
-                  <span class="hidden xl:inline">Analyse des besoins</span>
+                  class="skill-tag analyse-tag">
+                  <span class="short-tag">Analyse</span>
+                  <span class="long-tag">Analyse des besoins</span>
                 </span>
               </div>
             </div>
           </div>
 
           <!-- mobile card -->
-          <div class="w-full md:hidden pl-0 sm:pl-8">
+          <div class="mobile-card">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
               data-aos="fade-left">
@@ -429,22 +429,22 @@
 
               <h4 class="job-title">Conceptrice d'applications</h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">VÚB banka – Bratislava, Slovaquie</p>
-                <p class="text-gray-400 text-sm">nov. 2022 – avr. 2023 | Stage</p>
+                <p class="company-name">VÚB banka – Bratislava, Slovaquie</p>
+                <p class="duration">nov. 2022 – avr. 2023 | Stage</p>
               </div>
 
               <!-- details toggled mobile -->
               <div *ngIf="showDetails[2]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
                     Conception de diagrammes d’architecture applicative avec Sparx Enterprise Architect
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
                     Préparation de documents d’intégration
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
                     Mise à jour d’un portail web du point de vue de l’architecture métier
                   </li>
@@ -453,14 +453,14 @@
 
               <div class="skill-tags-container">
                 <span title="Architecture logicielle"
-                  class="skill-tag inline-block bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 text-cyan-300 border border-cyan-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  <span class="xl:hidden">Architecture</span>
-                  <span class="hidden xl:inline">Architecture logicielle</span>
+                  class="skill-tag architecture-tag">
+                  <span class="short-tag">Architecture</span>
+                  <span class="long-tag">Architecture logicielle</span>
                 </span>
                 <span title="Analyse des besoins"
-                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Analyse</span>
-                  <span class="hidden xl:inline">Analyse des besoins</span>
+                  class="skill-tag analyse-tag">
+                  <span class="short-tag">Analyse</span>
+                  <span class="long-tag">Analyse des besoins</span>
                 </span>
               </div>
             </div>
@@ -506,22 +506,22 @@
               </h4>
 
               <div class="company-details">
-                <p class="text-gray-300 font-medium">msg life Slovakia – Bratislava, Slovaquie</p>
-                <p class="text-gray-400 text-sm">févr. 2022 – sept. 2022 | CDI</p>
+                <p class="company-name">msg life Slovakia – Bratislava, Slovaquie</p>
+                <p class="duration">févr. 2022 – sept. 2022 | CDI</p>
               </div>
 
               <!-- details -->
               <div *ngIf="showDetails[3]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
                     Développement de scripts pour l'automatisation les cycles de tests
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
                     Collaboration avec l'équipe de direction pour optimiser les stratégies de tests
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
                     Proposition de solutions pour automatiser des processus clés du test manuel
                   </li>
@@ -531,12 +531,12 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Tests logiciels"
-                  class="skill-tag inline-block bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 text-emerald-300 border border-emerald-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 mr-1 md:mb-0">
-                  <span class="xl:hidden">Tests</span>
-                  <span class="hidden xl:inline">Tests logiciels</span>
+                  class="skill-tag test-tag">
+                  <span class="short-tag">Tests</span>
+                  <span class="long-tag">Tests logiciels</span>
                 </span>
                 <span title="Conseil"
-                  class="skill-tag inline-block bg-gradient-to-r from-violet-500/20 to-violet-600/20 text-violet-300 border border-violet-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
+                  class="skill-tag consulting-tag">
                   Conseil
                 </span>
               </div>
@@ -579,23 +579,23 @@
 
               <h4 class="job-title">Développeuse Back‑End Java</h4>
               <div class="company-details">
-                <p class="text-gray-300 font-medium">Asseco Central Europe – Bratislava, Slovaquie</p>
-                <p class="text-gray-400 text-sm">sept. 2019 – janv. 2022 | CDI</p>
+                <p class="company-name">Asseco Central Europe – Bratislava, Slovaquie</p>
+                <p class="duration">sept. 2019 – janv. 2022 | CDI</p>
               </div>
 
               <!-- details -->
               <div *ngIf="showDetails[4]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Personnalisation de solutions logicielles existantes en fonction
                     des demandes du client
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Analyse et correction d’erreurs non reproductibles en production
                   </li>
@@ -606,20 +606,20 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Développement</span>
-                  <span class="hidden xl:inline">Développement logiciel</span>
+                  <span class="short-tag">Développement</span>
+                  <span class="long-tag">Développement logiciel</span>
                 </span>
                 <span title="Analyse des besoins"
-                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Analyse</span>
-                  <span class="hidden xl:inline">Analyse des besoins</span>
+                  class="skill-tag analyse-tag">
+                  <span class="short-tag">Analyse</span>
+                  <span class="long-tag">Analyse des besoins</span>
                 </span>
               </div>
             </div>
           </div>
 
           <!-- mobile card -->
-          <div class="w-full md:hidden pl-0 sm:pl-8">
+          <div class="mobile-card">
             <div
               class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
               data-aos="fade-left">
@@ -646,22 +646,22 @@
               <h4 class="job-title">Développeuse Back‑End Java</h4>
 
               <div class="company-details">
-                <p class="text-gray-300 font-medium">Asseco Central Europe – Bratislava, Slovaquie</p>
-                <p class="text-gray-400 text-sm">Sep 2019 – Jan 2022 | CDI</p>
+                <p class="company-name">Asseco Central Europe – Bratislava, Slovaquie</p>
+                <p class="duration">Sep 2019 – Jan 2022 | CDI</p>
               </div>
 
               <div *ngIf="showDetails[4]">
                 <ul class="details-list">
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Personnalisation de solutions logicielles existantes en fonction
                     des demandes du client
                   </li>
-                  <li class="text-gray-300 flex items-start">
+                  <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
                     Analyse et correction d’erreurs non reproductibles en production
                   </li>
@@ -670,14 +670,14 @@
 
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full mb-1 md:mb-0">
-                  <span class="xl:hidden">Développement</span>
-                  <span class="hidden xl:inline">Développement logiciel</span>
+                  class="skill-tag development-tag">
+                  <span class="short-tag">Développement</span>
+                  <span class="long-tag">Développement logiciel</span>
                 </span>
                 <span title="Analyse des besoins"
-                  class="skill-tag inline-block bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 text-indigo-300 border border-indigo-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
-                  <span class="xl:hidden">Analyse</span>
-                  <span class="hidden xl:inline">Analyse des besoins</span>
+                  class="skill-tag analyse-tag">
+                  <span class="short-tag">Analyse</span>
+                  <span class="long-tag">Analyse des besoins</span>
                 </span>
               </div>
             </div>
