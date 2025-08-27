@@ -5,7 +5,7 @@
 
     <div class="text-center">
       <button (click)="toggleAll()"
-        class="text-blue-300 border-2 border-blue-300 border-opacity-50 relative z-30 py-3 px-6 mt-4 text-base sm:text-lg font-semibold sm:bg-[#182234]/40 sm:hover:bg-blue-400 sm:hover:bg-opacity-10 bg-blue-400 bg-opacity-10">
+        class="btn-toggle-all">
         {{ allExpanded ? 'Tout réduire' : 'Tout développer' }}
       </button>
       <!-- Collapse All : Expand All -->
@@ -13,7 +13,7 @@
 
     <!-- scroll arrow -->
     <!-- <button (click)="scrollToTimeline()"
-      class="mx-auto w-11 h-11 mt-2 cursor-pointer text-blue-300 animate-bounce hover:text-blue-400 flex items-center justify-center"
+      class="scroll-arrow"
       aria-label="Scroll down" title="Scroll down to work experience timeline">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
         stroke-linecap="round" stroke-linejoin="round" class="w-11 h-11">
@@ -29,27 +29,27 @@
       </div>
 
       <!-- timeline items, spacing between timeline dots -->
-      <div class="space-y-6 md:space-y-0">
+      <div class="timeline-spacing">
 
         <!-- job 6 -->
         <div class="relative">
           <!-- timeline dot -->
           <div
-            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-indigo-400 to-purple-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+            class="timeline-dot timeline-indigo-purple">
           </div>
         </div>
 
         <div class="job-card-container" style="animation-delay: 0.2s;">
-          <div class="w-full md:w-1/2 hidden md:block"></div>
+          <div class="placeholder-card-right"></div>
 
-          <div class="w-full md:w-1/2 pl-0 sm:pl-8">
+          <div class="card-right">
             <div
-              class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-indigo-400/30"
+              class="card hover:border-indigo-400/30"
               data-aos="fade-left"> <!-- border-white/20 -->
 
               <!-- toggle button -->
               <button (click)="toggleDetails(5)"
-                class="absolute top-4 right-4 text-indigo-300 border-2 border-indigo-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-indigo-400/10 hover:border-indigo-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-indigo group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -95,7 +95,7 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag development-tag">
+                  class="skill-tag development-tag dev-margin">
                   <span class="short-tag">Développement</span>
                   <span class="long-tag">Développement logiciel</span>
                 </span>
@@ -114,7 +114,7 @@
         <div class="relative">
           <!-- timeline dot -->
           <div
-            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-sky-400 to-sky-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+            class="timeline-dot timeline-sky">
           </div>
         </div>
 
@@ -122,11 +122,11 @@
           <!-- desktop card (left side) -->
           <div class="hidden-on-mobile">
             <div
-              class="card relative inline-block border border-white/25 bg-slate-800 md:bg-slate-800/90 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
+              class="card inline-block hover:border-sky-400/30"
               data-aos="fade-right">
               <!-- toggle button -->
               <button (click)="toggleDetails(0)"
-                class="absolute top-4 right-4 text-blue-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-blue-sky group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -172,7 +172,7 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
+                  class="skill-tag development-tag">
                   <span class="short-tag">Développement</span>
                   <span class="long-tag">Développement logiciel</span>
                 </span>
@@ -188,11 +188,11 @@
           <!-- mobile card -->
           <div class="mobile-card">
             <div
-              class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
+              class="card hover:border-sky-400/30"
               data-aos="fade-left">
               <!-- mobile toggle button -->
               <button (click)="toggleDetails(0)"
-                class="absolute top-4 right-4 text-blue-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-blue-sky group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -235,7 +235,7 @@
 
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag development-tag">
+                  class="skill-tag development-tag dev-margin">
                   <span class="short-tag">Développement</span>
                   <span class="long-tag">Développement logiciel</span>
                 </span>
@@ -253,21 +253,21 @@
         <div class="relative">
           <!-- timeline dot -->
           <div
-            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-emerald-400 to-green-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+            class="timeline-dot timeline-emerald-green">
           </div>
         </div>
 
         <div class="job-card-container" style="animation-delay: 0.2s;">
-          <div class="w-full md:w-1/2 hidden md:block"></div>
+          <div class="placeholder-card-right"></div>
 
-          <div class="w-full md:w-1/2 pl-0 sm:pl-8">
+          <div class="card-right">
             <div
-              class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-emerald-400/30"
+              class="card hover:border-emerald-400/30"
               data-aos="fade-left"> <!-- border-white/20 -->
 
               <!-- toggle button -->
               <button (click)="toggleDetails(1)"
-                class="absolute top-4 right-4 text-emerald-300 border-2 border-emerald-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-emerald-400/10 hover:border-emerald-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-emerald group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -331,7 +331,7 @@
         <div class="relative">
           <!-- timeline dot -->
           <div
-            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+            class="timeline-dot timeline-cyan-blue">
           </div>
         </div>
 
@@ -339,12 +339,12 @@
           <!-- desktop left side card -->
           <div class="hidden-on-mobile">
             <div
-              class="card relative inline-block border border-white/25 bg-slate-800 md:bg-slate-800/90 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
+              class="card inline-block hover:border-cyan-400/30"
               data-aos="fade-right">
 
               <!-- toggle button -->
               <button (click)="toggleDetails(2)"
-                class="absolute top-4 right-4 text-cyan-300 border-2 border-cyan-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-cyan-400/10 hover:border-cyan-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-cyan group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon -->
@@ -405,12 +405,12 @@
           <!-- mobile card -->
           <div class="mobile-card">
             <div
-              class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-cyan-400/30"
+              class="card hover:border-cyan-400/30"
               data-aos="fade-left">
 
               <!-- mobile toggle button -->
               <button (click)="toggleDetails(2)"
-                class="absolute top-4 right-4 text-cyan-300 border-2 border-cyan-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-cyan-400/10 hover:border-cyan-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-cyan group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -471,21 +471,21 @@
         <div class="relative">
           <!-- timeline dot -->
           <div
-            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-emerald-400 to-green-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+            class="timeline-dot timeline-emerald-green">
           </div>
         </div>
 
         <div class="job-card-container" style="animation-delay: 0.4s;">
-          <div class="w-full md:w-1/2 hidden md:block"></div>
+          <div class="placeholder-card-right"></div>
 
-          <div class="w-full md:w-1/2 pl-0 sm:pl-8">
+          <div class="card-right">
             <div
-              class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-emerald-400/30"
+              class="card hover:border-emerald-400/30"
               data-aos="fade-left">
 
               <!-- toggle button -->
               <button (click)="toggleDetails(3)"
-                class="absolute top-4 right-4 text-emerald-300 border-2 border-emerald-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-emerald-400/10 hover:border-emerald-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-emerald group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -549,19 +549,19 @@
         <div class="relative">
           <!-- timeline dot -->
           <div id="timeline"
-            class="timeline-dot absolute top-12 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-sky-400 to-sky-500 border-2 border-slate-800 rounded-full shadow-lg flex items-center justify-center z-10">
+            class="timeline-dot timeline-sky">
           </div>
         </div>
 
         <div class="job-card-container" style="animation-delay: 0.5s;">
           <div class="hidden-on-mobile">
             <div
-              class="card relative inline-block border border-white/25 bg-slate-800 md:bg-slate-800/90 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
+              class="card inline-block hover:border-sky-400/30"
               data-aos="fade-right">
 
               <!-- toggle button -->
               <button (click)="toggleDetails(4)"
-                class="absolute top-4 right-4 text-sky-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-sky group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon -->
@@ -605,7 +605,7 @@
               <!-- skill tags -->
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag inline-block bg-gradient-to-r from-sky-500/20 to-sky-600/20 text-sky-300 border border-sky-400/30 px-3 py-1 text-[13px] font-normal rounded-full">
+                  class="skill-tag development-tag">
                   <span class="short-tag">Développement</span>
                   <span class="long-tag">Développement logiciel</span>
                 </span>
@@ -621,12 +621,12 @@
           <!-- mobile card -->
           <div class="mobile-card">
             <div
-              class="card relative bg-slate-800 md:bg-slate-800/90 border border-white/25 p-6 rounded-xl shadow-xl text-white w-full max-w-md hover:border-sky-400/30"
+              class="card hover:border-sky-400/30"
               data-aos="fade-left">
 
               <!-- toggle button -->
               <button (click)="toggleDetails(4)"
-                class="absolute top-4 right-4 text-sky-300 border-2 border-sky-300/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-sky-400/10 hover:border-sky-400/70 transition-all duration-300 hover:scale-110 group"
+                class="btn-toggle-details btn-sky group"
                 aria-label="Toggle details" title="Toggle details">
 
                 <!-- plus icon with rotate on hover -->
@@ -670,7 +670,7 @@
 
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
-                  class="skill-tag development-tag">
+                  class="skill-tag development-tag dev-margin">
                   <span class="short-tag">Développement</span>
                   <span class="long-tag">Développement logiciel</span>
                 </span>
@@ -692,7 +692,7 @@
 
 <ng-template #toggleButton let-index="index">
   <button (click)="toggleDetails(index)"
-    class="absolute top-3 right-3 text-blue-300 border-2 border-blue-300 border-opacity-50 w-11 h-11 rounded-full flex items-center justify-center hover:bg-blue-400 hover:bg-opacity-10 focus:outline-visible transition"
+    class="toggle-btn"
     [attr.aria-label]="showDetails[index] ? 'Hide details' : 'Show details'"
     [title]="showDetails[index] ? 'Hide details' : 'Show details'">
     <svg *ngIf="!showDetails[index]" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
