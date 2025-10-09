@@ -38,7 +38,20 @@ export class ContactComponent {
     if (this.submitted) {
       this.submitted = false;
     }
-  }  
+  }
+  
+  isSuspiciousName(name: string): boolean {
+    if (!name) return false;
+
+    // alternating-case regex (no spaces)
+    const pattern = /^(?:[A-Z]+[a-z]+[A-Z]+|[a-z]+[A-Z]+[a-z]+)\S*$/;
+
+    // count uppercase letters
+    const upperCount = (name.match(/[A-Z]/g) || []).length;
+
+    // suspicious if regex matches AND at least 3 uppercase letters
+    return pattern.test(name) && upperCount >= 3;
+  }
 
   sendEmail(contactForm: NgForm) {
     this.submitted = true;
@@ -55,6 +68,20 @@ export class ContactComponent {
     const honeypotValue = contactForm.value.phone;
     if (honeypotValue) {
       return; // spam detected - do not send
+    }
+
+    // suspicious name check
+    const nameValue = contactForm.value.name;
+    if (this.isSuspiciousName(nameValue)) {
+      // show fake server error for bots
+      this.isSending = true;
+      setTimeout(() => {
+        this.isSending = false;
+        this.showError = true;
+        this.scrollToNotification();
+        setTimeout(() => (this.showError = false), 5000);
+      }, 1200 + Math.random() * 800);
+      return; // stop sending
     }
 
     this.showSuccess = false;
