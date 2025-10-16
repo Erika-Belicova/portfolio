@@ -43,14 +43,30 @@ export class ContactComponent {
   isSuspiciousName(name: string): boolean {
     if (!name) return false;
 
-    // alternating-case regex (no spaces)
-    const pattern = /^(?:[A-Z]+[a-z]+[A-Z]+|[a-z]+[A-Z]+[a-z]+)\S*$/;
+    name = name.trim();
 
-    // count uppercase letters
+    // alternating-case pattern
+    const alternatingPattern = /^(?:[A-Z]+[a-z]+[A-Z]+|[a-z]+[A-Z]+[a-z]+)\S*$/;
+
     const upperCount = (name.match(/[A-Z]/g) || []).length;
 
-    // suspicious if regex matches AND at least 3 uppercase letters
-    return pattern.test(name) && upperCount >= 3;
+    // alternating-case and 3 or more uppercase letters
+    if (alternatingPattern.test(name) && upperCount >= 3) {
+      return true;
+    }
+
+    const hasSuspiciousInternalUpper =
+      upperCount > 0 &&
+      upperCount <= 2 &&
+      /^[a-z]/.test(name) &&    // starts lowercase
+      !name.includes(' ') &&    // no spaces
+      /[A-Z]/.test(name);       // at least one uppercase somewhere
+
+    if (hasSuspiciousInternalUpper) {
+      return true;
+    }
+
+    return false;
   }
 
   sendEmail(contactForm: NgForm) {
