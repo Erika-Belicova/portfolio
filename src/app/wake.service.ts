@@ -5,9 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class WakeService {
   private readonly subdomains = [
-    "https://api.estate.erika-belicova.site/swagger-ui/index.html/",
-    "https://olympic-games.erika-belicova.site/",
-    "https://yoga.erika-belicova.site/"
+    "https://api.estate.erika-belicova.com/swagger-ui/index.html",
+    "https://olympic-games.erika-belicova.com",
+    "https://yoga.erika-belicova.com",
+    "https://mdd.erika-belicova.com",
+    "https://api-mdd.erika-belicova.com",
+    "https://api-mdd.erika-belicova.com/swagger-ui/index.html",
   ];
 
   constructor() { }
