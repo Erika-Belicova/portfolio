@@ -1,6 +1,6 @@
 # Portfolio Application
 
-[Live Demo](https://erika-belicova.site) | [Source Code](https://github.com/Erika-Belicova/portfolio)
+[Live Demo](https://www.erika-belicova.com) | [Source Code](https://github.com/Erika-Belicova/portfolio)
 
 ## Description
 
