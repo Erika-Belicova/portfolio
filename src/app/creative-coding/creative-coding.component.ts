@@ -66,11 +66,11 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     let particleCount: number;
     let particleSize: number;
 
-    if (isMobileLandscape) {
-      radius = 400;
+    if (isMobileLandscape) { // and 13" screen
+      radius = 550;
       cameraZ = 700;
-      particleCount = 800;
-      particleSize = 3.5;
+      particleCount = 1200;
+      particleSize = 1;
     } else if (isMobilePortrait) {
       radius = 350;
       cameraZ = 700;
@@ -319,10 +319,10 @@ export class CreativeCodingComponent implements OnInit, AfterViewInit {
     // the values that differ from the ones in ngAfterViewInit() are deliberate
     if (isMobileLandscape) {
       return {
-        radius: 400,
+        radius: 550,
         cameraZ: 700,
-        particleCount: 800, // 850
-        particleSize: 2.5 // 3 is too much with the zoom
+        particleCount: 1200,
+        particleSize: 1
       };
     } else if (isMobilePortrait) {
       return {
