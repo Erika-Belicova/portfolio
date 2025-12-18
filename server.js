@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const { DateTime } = require('luxon');
 
+// NOTE: server-side wake disabled, client-side wake handled by Angular
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'dist/portfolio/browser')));
@@ -45,16 +47,18 @@ async function wakeApps() {
 }
 
 // ping every 20 minutes during Paris business hours
-setInterval(() => {
-  if (isBusinessHoursParis()) {
-    wakeApps();
-  }
-}, 20 * 60 * 1000);
+// commented out temporarily to limit dyno hours usage
+// setInterval(() => {
+//   if (isBusinessHoursParis()) {
+//     wakeApps();
+//   }
+// }, 20 * 60 * 1000);
 
 // immediate ping on server restart if business hours
-if (isBusinessHoursParis()) {
-  wakeApps();
-}
+// commented out temporarily to limit dyno hours usage
+// if (isBusinessHoursParis()) {
+//   wakeApps();
+// }
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
