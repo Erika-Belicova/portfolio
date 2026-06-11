@@ -4,10 +4,11 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { environment } from '../../environments/environment';
 import { format } from 'date-fns-tz';
 import emailjs from 'emailjs-com';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
