@@ -22,6 +22,7 @@ A personal portfolio website designed to showcase my projects, skills, and work 
     - [Contact Form](#contact-form)
     - [Animation Performance](#animation-performance)
     - [Scroll Effects](#scroll-effects)
+    - [Localization](#localization)
   - [Architecture](#architecture)
   - [Known Limitations \& Future Work](#known-limitations--future-work)
   - [Technologies \& Libraries](#technologies--libraries)
@@ -91,6 +92,13 @@ Home · About · Education · Skills · Work Experience · Projects · Contact
 
 - Fade-in and fade-down animations using AOS library
 
+### Localization
+
+- Bilingual interface (French/English) implemented with ngx-translate
+- Language automatically detected from browser settings, with manual override via navbar switcher
+- User preference persisted across visits
+- Architecture supports adding other languages in the future
+
 ## Architecture
 
 - Built with Angular using standalone components  
@@ -102,7 +110,6 @@ Home · About · Education · Skills · Work Experience · Projects · Contact
 
 - Accessibility enhancements needed (ARIA attributes, etc.)  
 - Refactoring to move inline HTML logic into Angular components  
-- Translation/localization component planned but not implemented yet  
 - Animations performance can be further optimized
 
 ## Technologies & Libraries
@@ -113,6 +120,7 @@ Home · About · Education · Skills · Work Experience · Projects · Contact
 - Three.js (3D animations)  
 - EmailJS (contact form)  
 - AOS (scroll animations)
+- ngx-translate (internationalization)
 
 ## Troubleshooting
 

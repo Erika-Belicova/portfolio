@@ -15,13 +15,13 @@
 
               <!-- section header -->
               <div class="text-left">
-                <h2>Contact</h2>
+                <h2>{{ 'contact.title' | translate }}</h2>
               </div>
 
               <!-- social links -->
-              <h3>Où me trouver</h3>
+              <h3>{{ 'contact.find_me' | translate }}</h3>
               <p class="text-info">
-                Vous pouvez me retrouver sur les plateformes suivantes :
+                {{ 'contact.find_me_text' | translate }}
               </p>
             </div>
 
@@ -46,7 +46,7 @@
             </div>
 
             <p class="description pt-3">
-              N’hésitez pas à me contacter via les réseaux sociaux ou par message, je vous répondrai rapidement.
+              {{ 'contact.reach_out' | translate }}
             </p>
 
           </div>
@@ -56,10 +56,9 @@
 
             <!-- contact form -->
             <div>
-              <h3>Formulaire de contact</h3>
+              <h3>{{ 'contact.form_title' | translate }}</h3>
               <p class="description mt-2">
-                Pour toute question, signalement de bug, opportunité ou simplement un bonjour, utilisez le formulaire
-                ci-dessous.
+                {{ 'contact.form_desc' | translate }}
               </p>
             </div>
 
@@ -68,13 +67,13 @@
               <div class="form-container">
                 <!-- name field -->
                 <div class="name-box">
-                  <input type="text" name="name" ngModel required #name="ngModel" placeholder="Votre nom*"
+                  <input type="text" name="name" ngModel required #name="ngModel" placeholder="{{ 'contact.name_placeholder' | translate }}"
                     class="name-field" [ngClass]="{
                       'invalid': submitted && name.invalid,
                       'valid': !(submitted && name.invalid)
                     }" />
                   <div *ngIf="submitted && name.invalid" class="validation-error">
-                    Le nom est obligatoire.
+                    {{ 'contact.validation.name_required' | translate }}
                   </div>
                 </div>
 
@@ -82,13 +81,13 @@
                 <div class="email-container">
                   <input type="email" name="email" ngModel required
                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" #email="ngModel"
-                    placeholder="Votre email*" class="email-field" [ngClass]="{
+                    placeholder="{{ 'contact.email_placeholder' | translate }}" class="email-field" [ngClass]="{
                       'invalid': submitted && email.invalid,
                       'valid': !(submitted && email.invalid)
                     }" />
                   <div *ngIf="submitted && email.invalid" class="validation-error">
-                    <div *ngIf="email.errors?.['required']">L’email est obligatoire.</div>
-                    <div *ngIf="email.errors?.['pattern']">Veuillez entrer une adresse email valide.</div>
+                    <div *ngIf="email.errors?.['required']">{{ 'contact.validation.email_required' | translate }}</div>
+                    <div *ngIf="email.errors?.['pattern']">{{ 'contact.validation.email_invalid' | translate }}</div>
                   </div>
                 </div>
 
@@ -97,19 +96,19 @@
               </div>
 
               <div class="message-container">
-                <textarea name="message" ngModel required #message="ngModel" rows="6" placeholder="Votre message*"
+                <textarea name="message" ngModel required #message="ngModel" rows="6" placeholder="{{ 'contact.message_placeholder' | translate }}"
                   class="message-field" [ngClass]="{
                     'invalid': submitted && message.invalid,
                     'valid': !(submitted && message.invalid)
                   }"></textarea>
                 <div *ngIf="submitted && message.invalid" class="message-validation">
-                  Le message est obligatoire.
+                  {{ 'contact.validation.message_required' | translate }}
                 </div>
               </div>
 
               <button type="submit" [disabled]="isSending" class="button-send">
-                <span *ngIf="!isSending">Envoyer</span>
-                <span *ngIf="isSending">Envoi en cours...</span>
+                <span *ngIf="!isSending">{{ 'contact.send' | translate }}</span>
+                <span *ngIf="isSending">{{ 'contact.sending' | translate }}</span>
               </button>
             </form>
 
@@ -119,7 +118,7 @@
                 aria-label="Close success message">
                 ×
               </button>
-              Votre message a été envoyé avec succès !
+              {{ 'contact.success' | translate }}
             </div>
 
             <!-- error message notification -->
@@ -128,7 +127,7 @@
                 aria-label="Close error message">
                 ×
               </button>
-              Une erreur est survenue. Veuillez réessayer.
+              {{ 'contact.error' | translate }}
             </div>
 
           </div>

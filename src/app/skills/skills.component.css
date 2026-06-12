@@ -61,7 +61,7 @@
   }
 
   .box-blue {
-    @apply bg-opacity-10 backdrop-blur-sm border-blue-300 bg-blue-400;
+    @apply bg-opacity-10 backdrop-blur-sm border-blue-300 bg-blue-400 w-fit;
   }
 
   .box-indigo {
@@ -69,7 +69,7 @@
   }
 
   .box-lavender {
-    @apply bg-opacity-10 backdrop-blur-sm border-[#AFB1F4] bg-[#AFB1F4];
+    @apply bg-opacity-10 backdrop-blur-sm border-[#AFB1F4] bg-[#AFB1F4] w-fit;
   }
 
   .text-lavender {

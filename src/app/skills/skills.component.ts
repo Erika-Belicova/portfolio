@@ -1,17 +1,18 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 type SectionKey = 'fullStackDetails' | 'frontEndDetails' | 'backEndDetails';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-   skillSections = [
+  skillSections = [
     {
       title: 'Front-end',
       colorClass: 'text-blue-300',

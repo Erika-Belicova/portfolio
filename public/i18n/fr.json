@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "education": "Formation",
+    "skills": "Technologies & Outils",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "home": {
+    "role_line1": "Développeuse",
+    "role_line2": "Full‑Stack & Back-End",
+    "tagline": "Développeuse passionnée par la qualité et attentive aux détails.",
+    "description": "J'ai 4 ans d'expérience dans l'IT, couvrant la conception, le développement et les tests automatisés. Je privilégie un code propre, des logiciels intuitifs et soutiens les équipes par la collaboration et le mentorat.",
+    "mobile_description": "J'ai 4 ans d'expérience dans l'IT, couvrant la conception, le développement et les tests automatisés.",
+    "cta": "En savoir plus",
+    "mobile_tagline": "Passionnée par la qualité et attentive aux détails."
+  },
+  "about": {
+    "title": "À propos de moi",
+    "what_i_do_title": "Ce que je fais",
+    "what_i_do_text": "Développeuse engagée, j'appuie mon travail sur une expérience variée en développement, architecture et tests, pour créer des logiciels fiables, cohérents et bien pensés dans leur ensemble.",
+    "philosophy_title": "Ma philosophie technique",
+    "philosophy_text": "Je cherche l'équilibre entre innovation et pragmatisme pour un logiciel fonctionnel, tout en suivant les bonnes pratiques.",
+    "inspiration_title": "Ce qui m'inspire",
+    "inspiration_text": "Fascinée par l'espace et l'art abstrait visuel, je trouve dans le code un terrain d'expression créatif où je peux résoudre des problèmes complexes tout en apportant une vraie valeur."
+  },
+  "education": {
+    "title": "Formation",
+    "technical_overview": "Aperçu technique",
+    "main_stack": "Stack principal",
+    "skills_title": "Compétences",
+    "languages_title": "Langues",
+    "entries": {
+      "oc_title": "Expert en développement logiciel",
+      "oc_level": "RNCP 36912 — Niveau 7, Bac +5",
+      "oc_dates": "2025 – 2026, Toulouse, France",
+      "wagon_title": "Concepteur Développeur d'Applications Web",
+      "wagon_level": "RNCP 39261 — Niveau 6, Bac +3/4",
+      "wagon_dates": "2024 – 2024, Toulouse, France",
+      "french_title": "Cours de français intensif (en temps plein)",
+      "french_level": "Niveau A2 à C1",
+      "french_dates": "2023 – 2024, Toulouse, France"
+    },
+    "competences": {
+      "backend": "Développement Back-End",
+      "frontend": "Développement Front-End",
+      "fullstack": "Développement Full-Stack",
+      "automation": "Automatisation et scripting",
+      "testing": "Automatisation des tests",
+      "uml": "Diagrammes UML",
+      "architecture": "Modélisation d'architecture logicielle",
+      "mentoring": "Mentorat",
+      "specs": "Rédaction de spécifications techniques"
+    },
+    "spoken_languages": {
+      "fr": "Français — Courant",
+      "en": "Anglais — Courant",
+      "de": "Allemand — Bilingue",
+      "sk": "Slovaque — Natif"
+    }
+  },
+  "skills": {
+    "title": "Technologies & Outils",
+    "backend": "Back-End",
+    "frontend": "Front-End",
+    "databases": "Bases de données",
+    "testing": "Tests & Assurance Qualité",
+    "architecture": "Architecture & Patterns",
+    "devtools": "Outils de développement & IDE",
+    "methodologies": "Méthodologies & Collaboration",
+    "cloud": "Cloud"
+  },
+  "experience": {
+    "title": "Expérience professionnelle",
+    "expand_all": "Tout développer",
+    "collapse_all": "Tout réduire",
+    "tags": {
+      "development": "Développement logiciel",
+      "dev_short": "Développement",
+      "architecture": "Architecture logicielle",
+      "arch_short": "Architecture",
+      "testing": "Tests logiciels",
+      "test_short": "Tests",
+      "analysis": "Analyse des besoins",
+      "analysis_short": "Analyse",
+      "consulting": "Conseil"
+    },
+    "jobs": {
+      "j6_title": "Développeuse Python / Django",
+      "j6_company": "Globasoft – Toulouse, France",
+      "j6_duration": "août 2025 – sept. 2025 | CDD",
+      "j6_detail1": "Prise en charge complète du développement d'une application web full-stack",
+      "j6_detail2": "Décision de son fonctionnement interne et participation aux choix techniques pour l'implémentation",
+      "j6_detail3": "Mise en œuvre selon une maquette, un cahier des charges précis et des priorités définies",
+      
+      "j1_title_line1": "Développeuse JavaScript",
+      "j1_title_line2": "– automatisation",
+      "j1_company": "Globasoft – Toulouse, France",
+      "j1_duration": "août 2024 – sept. 2024 | Stage",
+      "j1_detail1": "Extension d'une librairie open source pour la modélisation de diagrammes d'architecture logicielle",
+      "j1_detail2": "Développement de scripts JavaScript pour automatiser le processus de modélisation",
+      "j1_detail3": "Analyse des besoins et conception d'une stratégie adaptée aux diagrammes",
+      
+      "j2_title_line1": "Testeuse fonctionnelle",
+      "j2_title_line2": "mobile et web",
+      "j2_company": "VÚB banka – Bratislava, Slovaquie",
+      "j2_duration": "mai 2023 – juin 2023 | Stage",
+      "j2_detail1": "Réalisation de tests manuels sur une application bancaire mobile (iOS / Android) et web",
+      "j2_detail2": "Tests fonctionnels des notifications push sur les modules critiques",
+      "j2_detail3": "Exécution de tests à partir des tickets Jira (nouvelles fonctionnalités et corrections)",
+      
+      "j3_title": "Conceptrice d'applications",
+      "j3_company": "VÚB banka – Bratislava, Slovaquie",
+      "j3_duration": "nov. 2022 – avr. 2023 | Stage",
+      "j3_detail1": "Conception de diagrammes d'architecture applicative avec Sparx Enterprise Architect",
+      "j3_detail2": "Préparation de documents d'intégration",
+      "j3_detail3": "Mise à jour d'un portail web du point de vue de l'architecture métier",
+      
+      "j4_title_line1": "Consultante / ingénieure",
+      "j4_title_line2": "en automatisation de tests",
+      "j4_company": "msg life Slovakia – Bratislava, Slovaquie",
+      "j4_duration": "févr. 2022 – sept. 2022 | CDI",
+      "j4_detail1": "Développement de scripts pour l'automatisation les cycles de tests",
+      "j4_detail2": "Collaboration avec l'équipe de direction pour optimiser les stratégies de tests",
+      "j4_detail3": "Proposition de solutions pour automatiser des processus clés du test manuel",
+      
+      "j5_title": "Développeuse Back‑End Java",
+      "j5_company": "Asseco Central Europe – Bratislava, Slovaquie",
+      "j5_duration": "sept. 2019 – janv. 2022 | CDI",
+      "j5_detail1": "Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public",
+      "j5_detail2": "Personnalisation de solutions logicielles existantes en fonction des demandes du client",
+      "j5_detail3": "Analyse et correction d'erreurs non reproductibles en production"
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "estate_title": "Estate application",
+    "estate_title_type": " (back‑end)",
+    "estate_desc": "Back-end d'une application de gestion immobilière connecté à un front-end existant via une API REST. Documenté avec Swagger.",
+    "olympic_title": "Olympic dashboard",
+    "olympic_title_type": " (front‑end)",
+    "olympic_desc": "Dashboard interactif avec les données des Jeux Olympiques, basé sur des maquettes, utilisant les services, responsive et connecté.",
+    "portfolio_title": "Site portfolio",
+    "portfolio_title_type": " (front‑end)",
+    "portfolio_desc": "Un site personnel pour présenter mes projets, avec une interface interactive et responsive, intégrant des animations dynamiques.",
+    "yoga_title": "Yoga studio",
+    "yoga_title_type": " (tests automatisés)",
+    "yoga_desc": "Réalisation de tests automatisés back‑end, front‑end et end‑to‑end sur une application existante de gestion des séances de yoga.",
+    "social_title": "Réseau social",
+    "social_title_type": " (full‑stack)",
+    "social_desc": "MVP d'un réseau social pour développeurs, conçu selon les spécifications fonctionnelles, maquettes et contraintes techniques.",
+    "ycyw_title": "Chat support PoC",
+    "ycyw_title_type": " (full-stack)",
+    "ycyw_desc": "Ce PoC implémente un chat de support en temps réel permettant aux utilisateurs de contacter les agents de support.",
+    
+    "btn_site": "Voir le site",
+    "btn_site_short": "Site",
+    "btn_code": "Code GitHub",
+    "btn_code_short": "Code",
+    "btn_api": "API docs",
+    "btn_coverage": "Rapports de couverture",
+    "btn_coverage_short": "Couverture"
+  },
+  "contact": {
+    "title": "Contact",
+    "find_me": "Où me trouver",
+    "find_me_text": "Vous pouvez me retrouver sur les plateformes suivantes :",
+    "reach_out": "N'hésitez pas à me contacter via les réseaux sociaux ou par message, je vous répondrai rapidement.",
+    "form_title": "Formulaire de contact",
+    "form_desc": "Pour toute question, signalement de bug, opportunité ou simplement un bonjour, utilisez le formulaire ci-dessous.",
+    "name_placeholder": "Votre nom*",
+    "email_placeholder": "Votre email*",
+    "message_placeholder": "Votre message*",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Votre message a été envoyé avec succès !",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "validation": {
+      "name_required": "Le nom est obligatoire.",
+      "email_required": "L'email est obligatoire.",
+      "email_invalid": "Veuillez entrer une adresse email valide.",
+      "message_required": "Le message est obligatoire."
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}
