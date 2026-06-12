@@ -43,3 +43,4 @@ Thumbs.db
 
 # Env file
 .env.angular/
+.env
