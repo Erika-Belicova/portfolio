@@ -6,29 +6,27 @@
     <div data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" id="education"
       class="w-full lg:w-[35%] text-left">
       <div class="education-inset">
-        <h2 class="text-3xl sm:text-4xl font-bold text-blue-300 mb-4 tracking-wide bg-text-education">Formation</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-300 mb-4 tracking-wide bg-text-education">{{ 'education.title' | translate }}</h2>
 
         <div class="education-box">
-          <h3 class="education-title mt-4 bg-text-education">Expert en développement logiciel</h3>
-          <p class="text-light-gray less-margin-p bg-text-education">RNCP 36912 — Niveau 7, Bac +5</p>
+          <h3 class="education-title mt-4 bg-text-education">{{ 'education.entries.oc_title' | translate }}</h3>
+          <p class="text-light-gray less-margin-p bg-text-education">{{ 'education.entries.oc_level' | translate }}</p>
           <p class="text-dark-gray less-margin-p bg-text-education">OpenClassrooms</p>
-          <p class="text-dark-gray no-margin-p bg-text-education">janv. 2025 – en cours, Toulouse, France</p>
+          <p class="text-dark-gray no-margin-p bg-text-education">{{ 'education.entries.oc_dates' | translate }}</p>
         </div>
 
         <div class="education-box">
-          <h3 class="education-title mt-8 bg-text-education">Concepteur Développeur d’Applications
-            Web</h3>
-          <p class="text-light-gray less-margin-p bg-text-education">RNCP 39261 — Niveau 6, Bac +3/4</p>
+          <h3 class="education-title mt-8 bg-text-education">{{ 'education.entries.wagon_title' | translate }}</h3>
+          <p class="text-light-gray less-margin-p bg-text-education">{{ 'education.entries.wagon_level' | translate }}</p>
           <p class="text-dark-gray less-margin-p bg-text-education">Le Wagon</p>
-          <p class="text-dark-gray no-margin-p bg-text-education">oct. 2024 – déc. 2024, Toulouse, France</p>
+          <p class="text-dark-gray no-margin-p bg-text-education">{{ 'education.entries.wagon_dates' | translate }}</p>
         </div>
 
         <div class="education-box">
-          <h3 class="education-title mt-8 bg-text-education">Cours de français intensif (en temps
-            plein)</h3>
-          <p class="text-light-gray less-margin-p bg-text-education">Niveau A2 à C1</p>
+          <h3 class="education-title mt-8 bg-text-education">{{ 'education.entries.french_title' | translate }}</h3>
+          <p class="text-light-gray less-margin-p bg-text-education">{{ 'education.entries.french_level' | translate }}</p>
           <p class="text-dark-gray less-margin-p bg-text-education">Langue Onze Toulouse</p>
-          <p class="text-dark-gray no-margin-p bg-text-education">oct. 2023 – juin 2024, Toulouse, France</p>
+          <p class="text-dark-gray no-margin-p bg-text-education">{{ 'education.entries.french_dates' | translate }}</p>
 
         </div>
       </div>
@@ -41,10 +39,10 @@
 
         <div class="content-box">
           <h2 class="text-3xl sm:text-4xl font-bold text-blue-300 mb-10 tracking-wide bg-text-tech">
-            Aperçu technique</h2>
+            {{ 'education.technical_overview' | translate }}</h2>
 
           <!-- main stack -->
-          <h2 class="subtitle text-blue-300 bg-text-tech">Stack principal</h2>
+          <h2 class="subtitle text-blue-300 bg-text-tech">{{ 'education.main_stack' | translate }}</h2>
 
           <div class="stack-box">
             <ul class="list mt-2">
@@ -54,7 +52,7 @@
               <li class="skill-tag stack-tag">Django</li>
               <li class="skill-tag stack-tag">Hibernate</li>
               <li class="skill-tag stack-tag">SQL</li>
-              <li class="skill-tag stack-tag">MySQL</li>
+              <li class="skill-tag stack-tag">PostgreSQL</li>
               <li class="skill-tag stack-tag">API REST</li>
               <li class="skill-tag stack-tag">JavaScript</li>
               <li class="skill-tag stack-tag">TypeScript</li>
@@ -66,53 +64,53 @@
 
         <!-- technical scope -->
         <div class="content-box">
-          <h2 class="subtitle text-indigo-300 bg-text-tech">Compétences</h2>
+          <h2 class="subtitle text-indigo-300 bg-text-tech">{{ 'education.skills_title' | translate }}</h2>
           <ul class="list">
             <li class="skill-tag scope-tag">
-              Développement Back-End
+              {{ 'education.competences.backend' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Développement Front-End
+              {{ 'education.competences.frontend' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Développement Full-Stack
+              {{ 'education.competences.fullstack' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Automatisation et scripting
+              {{ 'education.competences.automation' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Automatisation des tests
+              {{ 'education.competences.testing' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Diagrammes UML
+              {{ 'education.competences.uml' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Modélisation d’architecture logicielle
+              {{ 'education.competences.architecture' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Mentorat
+              {{ 'education.competences.mentoring' | translate }}
             </li>
             <li class="skill-tag scope-tag">
-              Rédaction de spécifications techniques
+              {{ 'education.competences.specs' | translate }}
             </li>
           </ul>
         </div>
 
         <!-- languages -->
         <div class="content-box">
-          <h2 class="subtitle text-[#AFB1F4] bg-text-tech">Langues</h2>
+          <h2 class="subtitle text-[#AFB1F4] bg-text-tech">{{ 'education.languages_title' | translate }}</h2>
           <ul class="list">
             <li class="skill-tag language-tag">
-              Français — Courant
+              {{ 'education.spoken_languages.fr' | translate }}
             </li>
             <li class="skill-tag language-tag">
-              Allemand — Bilingue
+              {{ 'education.spoken_languages.en' | translate }}
             </li>
             <li class="skill-tag language-tag">
-              Anglais — Courant
+              {{ 'education.spoken_languages.de' | translate }}
             </li>
             <li class="skill-tag language-tag">
-              Slovaque — Natif
+              {{ 'education.spoken_languages.sk' | translate }}
             </li>
           </ul>
         </div>

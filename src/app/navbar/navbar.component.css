@@ -31,15 +31,19 @@
 }
 
 .mobile-menu-container {
-  @apply lg:hidden bg-gray-900 pt-4 text-white space-y-2 text-base;
+  @apply lg:hidden pt-2 text-white text-base overflow-hidden rounded-b-xl;
+}
+
+.mobile-menu-link:first-child {
+  @apply border-t border-gray-700;
 }
 
 .mobile-menu-link {
-  @apply block px-4 py-3 hover:text-blue-300 border-b border-gray-700;
+  @apply block px-4 py-3 min-h-[44px] items-center hover:text-blue-300 border-b border-gray-700 border-x bg-gray-900;
 }
 
 .mobile-menu-contact {
-  @apply block px-4 py-3 hover:text-blue-300;
+  @apply block px-4 py-3 min-h-[44px] items-center hover:text-blue-300 border-b border-gray-700 border-x rounded-b-xl bg-gray-900;
 }
 
 .mobile-menu-button {

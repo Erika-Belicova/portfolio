@@ -1,267 +1,8 @@
 <section id="projects" class="py-10">
   <div class="projects-container">
-    <h2 class="projects-heading">Mes Projets</h2>
+    <h2 class="projects-heading">{{ 'projects.title' | translate }}</h2>
 
     <div class="project-cards-container">
-
-      <!-- project card one bg-slateNight-400/60 -->
-      <div
-        class="project-card">
-
-        <!-- framed image -->
-        <div class="project-image-frame">
-          <img src="estate.jpg" alt="Estate project" />
-        </div>
-
-        <!-- content -->
-        <div class="project-content">
-          <h3>Estate&nbsp;Application<br /> (back‑end)</h3>
-          <p class="project-description">
-            Back-end d’une application de gestion immobilière connecté à un front-end existant via une API REST.
-            Documenté avec Swagger.&nbsp;&nbsp;&nbsp;&nbsp;
-          </p>
-
-          <!-- tech stack pills -->
-          <div class="tech-pill-container">
-            <span
-              class="tech-pill">
-              Java
-            </span>
-            <span
-              class="tech-pill">
-              API REST
-            </span>
-            <span
-              class="tech-pill">
-              MySQL
-            </span>
-            <span
-              class="tech-pill">
-              Swagger
-            </span>
-            <span
-              class="tech-pill">
-              Spring Boot
-            </span>
-            <span
-              class="tech-pill">
-              JWT authentication
-            </span>
-          </div>
-
-          <!-- buttons -->
-          <div class="buttons-container">
-            <a href="https://api.estate.erika-belicova.com/swagger-ui/index.html" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">API docs</span>
-              <span class="btn-long-name">API docs</span>
-            </a>
-            <a href="https://github.com/Erika-Belicova/estate" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">Code</span>
-              <span class="btn-long-name">Code GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- project card two -->
-
-      <!-- new project card one bg-slateNight-400/60 -->
-      <div
-        class="project-card">
-        <!-- alternative : border-white/30 or even border-white/20 -->
-
-        <!-- framed image -->
-        <div class="project-image-frame">
-          <img src="olympic1.png" alt="Screenshot of Olympic Games Project interface" />
-        </div>
-
-        <!-- content -->
-        <div class="project-content">
-          <h3>Olympic&nbsp;Dashboard<br /> (front‑end)</h3>
-          <p class="project-description">
-            Dashboard interactif avec les données des Jeux Olympiques, basé sur des maquettes, utilisant les services,
-            responsive et connecté.
-          </p>
-
-          <!-- tech stack pills -->
-          <div class="tech-pill-container">
-            <span
-              class="tech-pill">
-              Angular
-            </span>
-            <span
-              class="tech-pill">
-              Typescript
-            </span>
-            <span
-              class="tech-pill">
-              RxJS
-            </span>
-            <span
-              class="tech-pill">
-              HTML
-            </span>
-            <span
-              class="tech-pill">
-              ngx-charts
-            </span>
-            <span
-              class="tech-pill">
-              Angular Material
-            </span>
-          </div>
-
-          <!-- buttons -->
-          <div class="buttons-container">
-            <a href="http://olympic-games.erika-belicova.com/" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">Site</span>
-              <span class="btn-long-name">Voir le site</span>
-            </a>
-            <a href="https://github.com/Erika-Belicova/olympic-games" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">Code</span>
-              <span class="btn-long-name">Code GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- project card 3 -->
-
-      <div
-        class="project-card">
-        <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
-        <!-- framed image -->
-        <div class="project-image-frame">
-          <img src="portfolio1.png" alt="Site portfolio project" />
-        </div>
-
-        <!-- content -->
-        <div class="project-content">
-          <h3>Site&nbsp;portfolio<br /> (front‑end)</h3>
-          <p class="project-description">
-            Un site personnel pour présenter mes projets, avec une interface
-            interactive et responsive, intégrant des animations dynamiques.
-          </p>
-
-          <!-- tech stack pills -->
-          <div class="tech-pill-container">
-            <span
-              class="tech-pill">
-              Angular
-            </span>
-            <span
-              class="tech-pill">
-              TypeScript
-            </span>
-            <span
-              class="tech-pill">
-              HTML
-            </span>
-            <span
-              class="tech-pill">
-              CSS
-            </span>
-            <span
-              class="tech-pill">
-              TailwindCSS
-            </span>
-            <span
-              class="tech-pill">
-              EmailJS
-            </span>
-            <span
-              class="tech-pill">
-              Three.js
-            </span>
-          </div>
-
-          <!-- buttons -->
-          <div class="buttons-container">
-            <a href="https://www.erika-belicova.com" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">Site</span>
-              <span class="btn-long-name">Voir le site</span>
-            </a>
-            <a href="https://github.com/Erika-Belicova/portfolio" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">Code</span>
-              <span class="btn-long-name">Code GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- project 4 -->
-
-      <div
-        class="project-card w-full mx-auto">
-        <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
-        <!-- framed image -->
-        <div class="project-image-frame">
-          <img src="yoga.jpg" alt="Yoga studio project" />
-        </div>
-
-        <!-- content -->
-        <div class="project-content">
-          <h3>Yoga&nbsp;studio<br /> (tests&nbsp;automatisés)
-          </h3>
-          <p class="project-description">
-            Réalisation de tests automatisés back‑end, front‑end et end‑to‑end sur une application existante de gestion
-            des séances
-            de yoga.
-          </p>
-
-          <!-- tech stack pills -->
-          <div class="tech-pill-container">
-            <span
-              class="tech-pill">
-              Java
-            </span>
-            <span
-              class="tech-pill">
-              JUnit 5
-            </span>
-            <span
-              class="tech-pill">
-              Mockito
-            </span>
-            <span
-              class="tech-pill">
-              Angular
-            </span>
-            <span
-              class="tech-pill">
-              Cypress
-            </span>
-            <span
-              class="tech-pill">
-              Jest
-            </span>
-            <span
-              class="tech-pill">
-              Istanbul
-            </span>
-          </div>
-
-          <!-- buttons -->
-          <div class="buttons-container">
-            <a href="https://yoga.erika-belicova.com/" target="_blank"
-              class="project-btn">
-              <span class="2xl:hidden min-w-[44px]">Couverture</span>
-              <span class="hidden 2xl:inline">Rapports de couverture</span>
-            </a>
-            <a href="https://github.com/Erika-Belicova/yoga" target="_blank"
-              class="project-btn">
-              <span class="btn-short-name">Code</span>
-              <span class="btn-long-name">Code GitHub</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
       <!-- project 5 -->
 
@@ -273,11 +14,9 @@
 
         <!-- content -->
         <div class="project-content">
-          <h3>Réseau&nbsp;social<br /> (full‑stack)</h3>
+          <h3>{{ 'projects.social_title' | translate }}<br />{{ 'projects.social_title_type' | translate }}</h3>
           <p class="project-description">
-            MVP d’un réseau social pour développeurs, conçu selon les spécifications fonctionnelles, maquettes et
-            contraintes
-            techniques.
+            {{ 'projects.social_desc' | translate }}
           </p>
 
           <!-- tech stack pills -->
@@ -316,23 +55,350 @@
           <div class="buttons-container">
             <a href="https://mdd.erika-belicova.com/" target="_blank"
               class="project-btn">
-              <span class="btn-short-name">Site</span>
-              <span class="btn-long-name">Voir le site</span>
+              <span class="btn-short-name">{{ 'projects.btn_site_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_site' | translate }}</span>
             </a>
             <a href="https://api-mdd.erika-belicova.com/swagger-ui/index.html" target="_blank"
               class="project-btn">
-              <span class="btn-short-name">API docs</span>
-              <span class="btn-long-name">API docs</span>
+              <span class="btn-short-name">{{ 'projects.btn_api' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_api' | translate }}</span>
             </a>
             <a href="https://github.com/Erika-Belicova/social-network-mdd" target="_blank"
               class="project-btn">
-              <span class="btn-short-name">Code</span>
+              <span class="btn-short-name">{{ 'projects.btn_code_short' | translate }}</span>
               <span class="btn-long-name">GitHub</span>
             </a>
           </div>
         </div>
 
       </div>
+
+      <!-- project 6 -->
+
+      <div
+        class="project-card w-full">
+        <div class="project-image-frame">
+          <img src="ycyw.png" alt="Your Car Your Way PoC" />
+        </div>
+
+        <!-- content -->
+        <div class="project-content">
+          <h3>{{ 'projects.ycyw_title' | translate }}<br />{{ 'projects.ycyw_title_type' | translate }}</h3>
+          <p class="project-description">
+            {{ 'projects.ycyw_desc' | translate }}
+          </p>
+
+          <!-- tech stack pills -->
+          <div class="tech-pill-container">
+            <span
+              class="tech-pill">
+              Java
+            </span>
+            <span
+              class="tech-pill">
+              Spring Boot
+            </span>
+            <span
+              class="tech-pill">
+              WebSocket
+            </span>
+            <span
+              class="tech-pill">
+              API
+            </span>
+            <span
+              class="tech-pill">
+              JWT
+            </span>
+            <span
+              class="tech-pill">
+              PostgreSQL
+            </span>
+            <span
+              class="tech-pill">
+              Angular
+            </span>
+          </div>
+
+          <!-- buttons -->
+          <div class="buttons-container" style="justify-content: flex-end;">
+            <!-- 
+            <div class="buttons-container">
+            <a href="https://ycyw.erika-belicova.com/" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_site_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_site' | translate }}</span>
+            </a>
+            <a href="https://api-ycyw.erika-belicova.com/swagger-ui/index.html" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_api' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_api' | translate }}</span>
+            </a> -->
+            <a href="https://github.com/Erika-Belicova/your-car-your-way" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_code_short' | translate }}</span>
+              <!-- <span class="btn-long-name">GitHub</span> -->
+              <span class="btn-long-name">{{ 'projects.btn_code' | translate }}</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- project card 1 bg-slateNight-400/60 -->
+      <div
+        class="project-card">
+
+        <!-- framed image -->
+        <div class="project-image-frame">
+          <img src="estate.jpg" alt="Estate project" />
+        </div>
+
+        <!-- content -->
+        <div class="project-content">
+          <h3>{{ 'projects.estate_title' | translate }}<br /> {{ 'projects.estate_title_type' | translate }}</h3>
+          <p class="project-description">
+            {{ 'projects.estate_desc' | translate }}&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+
+          <!-- tech stack pills -->
+          <div class="tech-pill-container">
+            <span
+              class="tech-pill">
+              Java
+            </span>
+            <span
+              class="tech-pill">
+              API REST
+            </span>
+            <span
+              class="tech-pill">
+              MySQL
+            </span>
+            <span
+              class="tech-pill">
+              Swagger
+            </span>
+            <span
+              class="tech-pill">
+              Spring Boot
+            </span>
+            <span
+              class="tech-pill">
+              JWT authentication
+            </span>
+          </div>
+
+          <!-- buttons -->
+          <div class="buttons-container">
+            <a href="https://api.estate.erika-belicova.com/swagger-ui/index.html" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_api' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_api' | translate }}</span>
+            </a>
+            <a href="https://github.com/Erika-Belicova/estate" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_code_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_code' | translate }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- project card two -->
+
+      <!-- new project card one bg-slateNight-400/60 -->
+      <div
+        class="project-card">
+        <!-- alternative : border-white/30 or even border-white/20 -->
+
+        <!-- framed image -->
+        <div class="project-image-frame">
+          <img src="olympic1.png" alt="Screenshot of Olympic Games Project interface" />
+        </div>
+
+        <!-- content -->
+        <div class="project-content">
+          <h3>{{ 'projects.olympic_title' | translate }}<br />{{ 'projects.olympic_title_type' | translate }}</h3>
+          <p class="project-description">
+            {{ 'projects.olympic_desc' | translate }}
+          </p>
+
+          <!-- tech stack pills -->
+          <div class="tech-pill-container">
+            <span
+              class="tech-pill">
+              Angular
+            </span>
+            <span
+              class="tech-pill">
+              Typescript
+            </span>
+            <span
+              class="tech-pill">
+              RxJS
+            </span>
+            <span
+              class="tech-pill">
+              HTML
+            </span>
+            <span
+              class="tech-pill">
+              ngx-charts
+            </span>
+            <span
+              class="tech-pill">
+              Angular Material
+            </span>
+          </div>
+
+          <!-- buttons -->
+          <div class="buttons-container">
+            <a href="http://olympic-games.erika-belicova.com/" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_site_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_site' | translate }}</span>
+            </a>
+            <a href="https://github.com/Erika-Belicova/olympic-games" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_code_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_code' | translate }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- project card 3 -->
+
+      <div
+        class="project-card">
+        <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
+        <!-- framed image -->
+        <div class="project-image-frame">
+          <img src="portfolio1.png" alt="Site portfolio project" />
+        </div>
+
+        <!-- content -->
+        <div class="project-content">
+          <h3>{{ 'projects.portfolio_title' | translate }}<br />{{ 'projects.portfolio_title_type' | translate }}</h3>
+          <p class="project-description">
+            {{ 'projects.portfolio_desc' | translate }}
+          </p>
+
+          <!-- tech stack pills -->
+          <div class="tech-pill-container">
+            <span
+              class="tech-pill">
+              Angular
+            </span>
+            <span
+              class="tech-pill">
+              TypeScript
+            </span>
+            <span
+              class="tech-pill">
+              HTML
+            </span>
+            <span
+              class="tech-pill">
+              CSS
+            </span>
+            <span
+              class="tech-pill">
+              TailwindCSS
+            </span>
+            <span
+              class="tech-pill">
+              EmailJS
+            </span>
+            <span
+              class="tech-pill">
+              Three.js
+            </span>
+          </div>
+
+          <!-- buttons -->
+          <div class="buttons-container">
+            <a href="https://www.erika-belicova.com" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_site_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_site' | translate }}</span>
+            </a>
+            <a href="https://github.com/Erika-Belicova/portfolio" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_code_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_code' | translate }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- project 4 -->
+
+      <div
+        class="project-card w-full mx-auto">
+        <!-- could be hover:shadow-xl hover:shadow-black/30 or hover:shadow-2xl hover:shadow-black/40 -->
+        <!-- framed image -->
+        <div class="project-image-frame">
+          <img src="yoga.jpg" alt="Yoga studio project" />
+        </div>
+
+        <!-- content -->
+        <div class="project-content">
+          <h3>{{ 'projects.yoga_title' | translate }}<br /> {{ 'projects.yoga_title_type' | translate }}
+          </h3>
+          <p class="project-description">
+            {{ 'projects.yoga_desc' | translate }}
+          </p>
+
+          <!-- tech stack pills -->
+          <div class="tech-pill-container">
+            <span
+              class="tech-pill">
+              Java
+            </span>
+            <span
+              class="tech-pill">
+              JUnit 5
+            </span>
+            <span
+              class="tech-pill">
+              Mockito
+            </span>
+            <span
+              class="tech-pill">
+              Angular
+            </span>
+            <span
+              class="tech-pill">
+              Cypress
+            </span>
+            <span
+              class="tech-pill">
+              Jest
+            </span>
+            <span
+              class="tech-pill">
+              Istanbul
+            </span>
+          </div>
+
+          <!-- buttons -->
+          <div class="buttons-container">
+            <a href="https://yoga.erika-belicova.com/" target="_blank"
+              class="project-btn">
+              <span class="2xl:hidden min-w-[44px]">{{ 'projects.btn_coverage_short' | translate }}</span>
+              <span class="hidden 2xl:inline">{{ 'projects.btn_coverage' | translate }}</span>
+            </a>
+            <a href="https://github.com/Erika-Belicova/yoga" target="_blank"
+              class="project-btn">
+              <span class="btn-short-name">{{ 'projects.btn_code_short' | translate }}</span>
+              <span class="btn-long-name">{{ 'projects.btn_code' | translate }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="tablet-view"> <!-- for tablet view -->
