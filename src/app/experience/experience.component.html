@@ -1,12 +1,12 @@
 <!-- experience section -->
 <div class="experience-container">
-  <h2>Expérience professionnelle</h2>
+  <h2>{{ 'experience.title' | translate }}</h2>
   <div class="content-container">
 
     <div class="text-center">
       <button (click)="toggleAll()"
         class="btn-toggle-all">
-        {{ allExpanded ? 'Tout réduire' : 'Tout développer' }}
+        {{ (allExpanded ? 'experience.collapse_all' : 'experience.expand_all') | translate }}
       </button>
       <!-- Collapse All : Expand All -->
     </div>
@@ -67,11 +67,11 @@
               </button>
 
               <h4 class="job-title">
-                Développeuse Full-Stack<br />Python / Django
+                {{ 'experience.jobs.j6_title' | translate }}
               </h4>
               <div class="company-details">
-                <p class="company-name">Globasoft – Toulouse, France</p>
-                <p class="duration">août 2025 – sept. 2025 | CDD</p>
+                <p class="company-name">{{ 'experience.jobs.j6_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j6_duration' | translate }}</p>
               </div>
 
               <!-- toggled details -->
@@ -79,15 +79,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-indigo-400 mr-2">•</span>
-                    Prise en charge complète du développement d’une application web full-stack
+                    {{ 'experience.jobs.j6_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-indigo-400 mr-2">•</span>
-                    Décision de son fonctionnement interne et participation aux choix techniques pour l’implémentation
+                    {{ 'experience.jobs.j6_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-indigo-400 mr-2">•</span>
-                    Mise en œuvre selon une maquette, un cahier des charges précis et des priorités définies
+                    {{ 'experience.jobs.j6_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -96,13 +96,13 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag development-tag dev-margin">
-                  <span class="short-tag">Développement</span>
-                  <span class="long-tag">Développement logiciel</span>
+                  <span class="short-tag">{{ 'experience.tags.dev_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.development' | translate }}</span>
                 </span>
                 <span title="Analyse des besoins"
                   class="skill-tag analyse-tag">
-                  <span class="short-tag">Analyse</span>
-                  <span class="long-tag">Analyse des besoins</span>
+                  <span class="short-tag">{{ 'experience.tags.analysis_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.analysis' | translate }}</span>
                 </span>
               </div>
 
@@ -144,11 +144,11 @@
               </button>
 
               <h4 class="job-title">
-                Développeuse JavaScript<br />– automatisation
+                {{ 'experience.jobs.j1_title_line1' | translate }}<br />{{ 'experience.jobs.j1_title_line2' | translate }}
               </h4>
               <div class="company-details">
-                <p class="company-name">Globasoft – Toulouse, France</p>
-                <p class="duration">août 2024 – sept. 2024 | Stage</p>
+                <p class="company-name">{{ 'experience.jobs.j1_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j1_duration' | translate }}</p>
               </div>
 
               <!-- toggle for details -->
@@ -156,15 +156,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Extension d’une librairie open source pour la modélisation de diagrammes d’architecture logicielle
+                    {{ 'experience.jobs.j1_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Développement de scripts JavaScript pour automatiser le processus de modélisation
+                    {{ 'experience.jobs.j1_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Analyse des besoins et conception d’une stratégie adaptée aux diagrammes
+                    {{ 'experience.jobs.j1_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -173,13 +173,13 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag development-tag">
-                  <span class="short-tag">Développement</span>
-                  <span class="long-tag">Développement logiciel</span>
+                  <span class="short-tag">{{ 'experience.tags.dev_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.development' | translate }}</span>
                 </span>
                 <span title="Architecture logicielle"
                   class="skill-tag architecture-tag">
-                  <span class="short-tag">Architecture</span>
-                  <span class="long-tag">Architecture logicielle</span>
+                  <span class="short-tag">{{ 'experience.tags.arch_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.architecture' | translate }}</span>
                 </span>
               </div>
             </div>
@@ -209,10 +209,10 @@
                 </svg>
               </button>
 
-              <h4 class="job-title">Développeuse JavaScript<br />– automatisation</h4>
+              <h4 class="job-title">{{ 'experience.jobs.j1_title_line1' | translate }}<br />{{ 'experience.jobs.j1_title_line2' | translate }}</h4>
               <div class="company-details">
-                <p class="company-name">Globasoft – Toulouse, France</p>
-                <p class="duration">août 2024 – sept. 2024 | Stage</p>
+                <p class="company-name">{{ 'experience.jobs.j1_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j1_duration' | translate }}</p>
               </div>
 
               <!-- toggle for details -->
@@ -220,15 +220,15 @@
                 <ul class="details-list text-gray-300">
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Extension d’une librairie open source pour la modélisation de diagrammes d’architecture logicielle
+                    {{ 'experience.jobs.j1_detail1' | translate }}
                   </li>
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Développement de scripts JavaScript pour automatiser le processus de modélisation
+                    {{ 'experience.jobs.j1_detail2' | translate }}
                   </li>
                   <li class="flex items-start">
                     <span class="text-sky-400 mr-2">•</span>
-                    Analyse des besoins et conception d’une stratégie adaptée aux diagrammes
+                    {{ 'experience.jobs.j1_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -236,13 +236,13 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag development-tag dev-margin">
-                  <span class="short-tag">Développement</span>
-                  <span class="long-tag">Développement logiciel</span>
+                  <span class="short-tag">{{ 'experience.tags.dev_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.development' | translate }}</span>
                 </span>
                 <span title="Architecture logicielle"
                   class="skill-tag architecture-tag">
-                  <span class="short-tag">Architecture</span>
-                  <span class="long-tag">Architecture logicielle</span>
+                  <span class="short-tag">{{ 'experience.tags.arch_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.architecture' | translate }}</span>
                 </span>
               </div>
             </div>
@@ -285,11 +285,11 @@
               </button>
 
               <h4 class="job-title">
-                Testeuse fonctionnelle<br />mobile et web
+                {{ 'experience.jobs.j2_title_line1' | translate }}<br />{{ 'experience.jobs.j2_title_line2' | translate }}
               </h4>
               <div class="company-details">
-                <p class="company-name">VÚB banka – Bratislava, Slovaquie</p>
-                <p class="duration">mai 2023 – juin 2023 | Stage</p>
+                <p class="company-name">{{ 'experience.jobs.j2_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j2_duration' | translate }}</p>
               </div>
 
               <!-- toggled details -->
@@ -297,15 +297,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Réalisation de tests manuels sur une application bancaire mobile (iOS / Android) et web
+                    {{ 'experience.jobs.j2_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Tests fonctionnels des notifications push sur les modules critiques
+                    {{ 'experience.jobs.j2_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Exécution de tests à partir des tickets Jira (nouvelles fonctionnalités et corrections)
+                    {{ 'experience.jobs.j2_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -314,13 +314,13 @@
               <div class="skill-tags-container">
                 <span title="Tests logiciels"
                   class="skill-tag test-tag">
-                  <span class="short-tag">Tests</span>
-                  <span class="long-tag">Tests logiciels</span>
+                  <span class="short-tag">{{ 'experience.tags.test_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.testing' | translate }}</span>
                 </span>
                 <span title="Analyse des besoins"
                   class="skill-tag analyse-tag">
-                  <span class="short-tag">Analyse</span>
-                  <span class="long-tag">Analyse des besoins</span>
+                  <span class="short-tag">{{ 'experience.tags.analysis_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.analysis' | translate }}</span>
                 </span>
               </div>
             </div>
@@ -362,10 +362,10 @@
               </button>
 
 
-              <h4 class="job-title">Conceptrice d'applications</h4>
+              <h4 class="job-title">{{ 'experience.jobs.j3_title' | translate }}</h4>
               <div class="company-details">
-                <p class="company-name">VÚB banka – Bratislava, Slovaquie</p>
-                <p class="duration">nov. 2022 – avr. 2023 | Stage</p>
+                <p class="company-name">{{ 'experience.jobs.j3_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j3_duration' | translate }}</p>
               </div>
 
               <!-- details toggled -->
@@ -373,15 +373,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Conception de diagrammes d’architecture applicative avec Sparx Enterprise Architect
+                    {{ 'experience.jobs.j3_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Préparation de documents d’intégration
+                    {{ 'experience.jobs.j3_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Mise à jour d’un portail web du point de vue de l’architecture métier
+                    {{ 'experience.jobs.j3_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -390,13 +390,13 @@
               <div class="skill-tags-container">
                 <span title="Architecture logicielle"
                   class="skill-tag architecture-tag">
-                  <span class="short-tag">Architecture</span>
-                  <span class="long-tag">Architecture logicielle</span>
+                  <span class="short-tag">{{ 'experience.tags.arch_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.architecture' | translate }}</span>
                 </span>
                 <span title="Analyse des besoins"
                   class="skill-tag analyse-tag">
-                  <span class="short-tag">Analyse</span>
-                  <span class="long-tag">Analyse des besoins</span>
+                  <span class="short-tag">{{ 'experience.tags.analysis_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.analysis' | translate }}</span>
                 </span>
               </div>
             </div>
@@ -427,10 +427,10 @@
                 </svg>
               </button>
 
-              <h4 class="job-title">Conceptrice d'applications</h4>
+              <h4 class="job-title">{{ 'experience.jobs.j3_title' | translate }}</h4>
               <div class="company-details">
-                <p class="company-name">VÚB banka – Bratislava, Slovaquie</p>
-                <p class="duration">nov. 2022 – avr. 2023 | Stage</p>
+                <p class="company-name">{{ 'experience.jobs.j3_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j3_duration' | translate }}</p>
               </div>
 
               <!-- details toggled mobile -->
@@ -438,15 +438,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Conception de diagrammes d’architecture applicative avec Sparx Enterprise Architect
+                    {{ 'experience.jobs.j3_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Préparation de documents d’intégration
+                    {{ 'experience.jobs.j3_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-cyan-400 mr-2">•</span>
-                    Mise à jour d’un portail web du point de vue de l’architecture métier
+                    {{ 'experience.jobs.j3_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -454,13 +454,13 @@
               <div class="skill-tags-container">
                 <span title="Architecture logicielle"
                   class="skill-tag architecture-tag">
-                  <span class="short-tag">Architecture</span>
-                  <span class="long-tag">Architecture logicielle</span>
+                  <span class="short-tag">{{ 'experience.tags.arch_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.architecture' | translate }}</span>
                 </span>
                 <span title="Analyse des besoins"
                   class="skill-tag analyse-tag">
-                  <span class="short-tag">Analyse</span>
-                  <span class="long-tag">Analyse des besoins</span>
+                  <span class="short-tag">{{ 'experience.tags.analysis_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.analysis' | translate }}</span>
                 </span>
               </div>
             </div>
@@ -502,12 +502,12 @@
                 </svg> </button>
 
               <h4 class="job-title">
-                Consultante / ingénieure<br>en automatisation de tests
+                {{ 'experience.jobs.j4_title_line1' | translate }}<br>{{ 'experience.jobs.j4_title_line2' | translate }}
               </h4>
 
               <div class="company-details">
-                <p class="company-name">msg life Slovakia – Bratislava, Slovaquie</p>
-                <p class="duration">févr. 2022 – sept. 2022 | CDI</p>
+                <p class="company-name">{{ 'experience.jobs.j4_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j4_duration' | translate }}</p>
               </div>
 
               <!-- details -->
@@ -515,15 +515,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Développement de scripts pour l'automatisation les cycles de tests
+                    {{ 'experience.jobs.j4_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Collaboration avec l'équipe de direction pour optimiser les stratégies de tests
+                    {{ 'experience.jobs.j4_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-emerald-400 mr-2">•</span>
-                    Proposition de solutions pour automatiser des processus clés du test manuel
+                    {{ 'experience.jobs.j4_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -532,12 +532,12 @@
               <div class="skill-tags-container">
                 <span title="Tests logiciels"
                   class="skill-tag test-tag">
-                  <span class="short-tag">Tests</span>
-                  <span class="long-tag">Tests logiciels</span>
+                  <span class="short-tag">{{ 'experience.tags.test_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.testing' | translate }}</span>
                 </span>
                 <span title="Conseil"
                   class="skill-tag consulting-tag">
-                  Conseil
+                  {{ 'experience.tags.consulting' | translate }}
                 </span>
               </div>
 
@@ -577,10 +577,10 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16" />
                 </svg> </button>
 
-              <h4 class="job-title">Développeuse Back‑End Java</h4>
+              <h4 class="job-title">{{ 'experience.jobs.j5_title' | translate }}</h4>
               <div class="company-details">
-                <p class="company-name">Asseco Central Europe – Bratislava, Slovaquie</p>
-                <p class="duration">sept. 2019 – janv. 2022 | CDI</p>
+                <p class="company-name">{{ 'experience.jobs.j5_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j5_duration' | translate }}</p>
               </div>
 
               <!-- details -->
@@ -588,16 +588,15 @@
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public
+                    {{ 'experience.jobs.j5_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Personnalisation de solutions logicielles existantes en fonction
-                    des demandes du client
+                    {{ 'experience.jobs.j5_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Analyse et correction d’erreurs non reproductibles en production
+                    {{ 'experience.jobs.j5_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -606,13 +605,13 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag development-tag">
-                  <span class="short-tag">Développement</span>
-                  <span class="long-tag">Développement logiciel</span>
+                  <span class="short-tag">{{ 'experience.tags.dev_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.development' | translate }}</span>
                 </span>
                 <span title="Analyse des besoins"
                   class="skill-tag analyse-tag">
-                  <span class="short-tag">Analyse</span>
-                  <span class="long-tag">Analyse des besoins</span>
+                  <span class="short-tag">{{ 'experience.tags.analysis_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.analysis' | translate }}</span>
                 </span>
               </div>
             </div>
@@ -643,27 +642,26 @@
                 </svg>
               </button>
 
-              <h4 class="job-title">Développeuse Back‑End Java</h4>
+              <h4 class="job-title">{{ 'experience.jobs.j5_title' | translate }}</h4>
 
               <div class="company-details">
-                <p class="company-name">Asseco Central Europe – Bratislava, Slovaquie</p>
-                <p class="duration">Sep 2019 – Jan 2022 | CDI</p>
+                <p class="company-name">{{ 'experience.jobs.j5_company' | translate }}</p>
+                <p class="duration">{{ 'experience.jobs.j5_duration' | translate }}</p>
               </div>
 
               <div *ngIf="showDetails[4]">
                 <ul class="details-list">
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Développement de fonctionnalités métier pour une solution intranet de gestion administrative destinée au secteur public
+                    {{ 'experience.jobs.j5_detail1' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Personnalisation de solutions logicielles existantes en fonction
-                    des demandes du client
+                    {{ 'experience.jobs.j5_detail2' | translate }}
                   </li>
                   <li class="list-item">
                     <span class="text-sky-400 mr-2">•</span>
-                    Analyse et correction d’erreurs non reproductibles en production
+                    {{ 'experience.jobs.j5_detail3' | translate }}
                   </li>
                 </ul>
               </div>
@@ -671,13 +669,13 @@
               <div class="skill-tags-container">
                 <span title="Développement logiciel"
                   class="skill-tag development-tag dev-margin">
-                  <span class="short-tag">Développement</span>
-                  <span class="long-tag">Développement logiciel</span>
+                  <span class="short-tag">{{ 'experience.tags.dev_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.development' | translate }}</span>
                 </span>
                 <span title="Analyse des besoins"
                   class="skill-tag analyse-tag">
-                  <span class="short-tag">Analyse</span>
-                  <span class="long-tag">Analyse des besoins</span>
+                  <span class="short-tag">{{ 'experience.tags.analysis_short' | translate }}</span>
+                  <span class="long-tag">{{ 'experience.tags.analysis' | translate }}</span>
                 </span>
               </div>
             </div>

@@ -42,4 +42,5 @@ testem.log
 Thumbs.db
 
 # Env file
+.env.angular/
 .env

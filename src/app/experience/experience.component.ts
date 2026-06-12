@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-experience',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.css']
 })
@@ -13,6 +14,12 @@ export class ExperienceComponent {
 
   toggleDetails(index: number) {
     this.showDetails[index] = !this.showDetails[index];
+      // sync the button state after manual toggle
+      if (this.showDetails.every(v => v === true)) {
+        this.allExpanded = true;
+      } else if (this.showDetails.every(v => v === false)) {
+        this.allExpanded = false;
+      }
   }
 
   toggleAll() {

@@ -51,8 +51,14 @@
 
 .timeline-dot {
   position: relative;
-  @apply absolute top-12 left-1/2 transform -translate-x-1/2 flex items-center justify-center;
+  @apply absolute top-8 left-1/2 transform -translate-x-1/2 flex items-center justify-center;
   @apply border-2 border-slate-800 rounded-full shadow-lg z-10 w-4 h-4;
+}
+
+@media (max-width: 768px) {
+  .timeline-dot {
+    @apply top-2;
+  }
 }
 
 .timeline-dot::before {

@@ -8,32 +8,61 @@
 
     <!-- navbar -->
     <ul class="navbar-menu">
-      <li><a href="#" (click)="scrollToSection('home', $event)" class="navbar-link">Accueil</a></li>
-      <li><a href="#" (click)="scrollToSection('about', $event)" class="navbar-link">À propos</a></li>
-      <li><a href="#" (click)="scrollToSection('education', $event)" class="navbar-link">Formation</a></li>
-      <li><a href="#" (click)="scrollToSection('skills', $event)" class="navbar-link">Technologies & Outils</a></li>
-      <li><a href="#" (click)="scrollToSection('experience', $event)" class="navbar-link">Expérience</a></li>
-      <li><a href="#" (click)="scrollToSection('projects', $event)" class="navbar-link">Projets</a></li>
-      <li><a href="#" (click)="scrollToSection('contact', $event)" class="navbar-link">Contact</a></li>
+      <li><a href="#" (click)="scrollToSection('home', $event)" class="navbar-link">{{ 'nav.home' | translate }}</a></li>
+      <li><a href="#" (click)="scrollToSection('about', $event)" class="navbar-link">{{ 'nav.about' | translate }}</a></li>
+      <li><a href="#" (click)="scrollToSection('education', $event)" class="navbar-link">{{ 'nav.education' | translate }}</a></li>
+      <li><a href="#" (click)="scrollToSection('skills', $event)" class="navbar-link">{{ 'nav.skills' | translate }}</a></li>
+      <li><a href="#" (click)="scrollToSection('experience', $event)" class="navbar-link">{{ 'nav.experience' | translate }}</a></li>
+      <li><a href="#" (click)="scrollToSection('projects', $event)" class="navbar-link">{{ 'nav.projects' | translate }}</a></li>
+      <li><a href="#" (click)="scrollToSection('contact', $event)" class="navbar-link">{{ 'nav.contact' | translate }}</a></li>
+
+      <!-- language switcher: only shows the OTHER language -->
+      <li class="lang-switcher">
+        <ng-container *ngFor="let lang of translate.getLangs()">
+          <button
+            *ngIf="lang !== currentLang"
+            (click)="switchLang(lang)"
+            class="lang-btn"
+            [title]="getLangLabel(lang)">
+            <span class="fi fi-{{ lang === 'en' ? 'gb' : lang }}"></span>
+            <span class="lang-code">{{ lang.toUpperCase() }}</span>
+          </button>
+        </ng-container>
+      </li>
     </ul>
 
-    <!-- menu mobile button -->
-    <button #menuToggle id="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
-      aria-controls="mobile-menu" aria-label="Toggle menu" class="mobile-menu-button">
-      ☰
-    </button>
+    <!-- mobile: lang switcher + menu button -->
+    <div class="mobile-right">
+      <!-- language switcher: only shows the OTHER language -->
+      <ng-container *ngFor="let lang of translate.getLangs()">
+        <button
+          *ngIf="lang !== currentLang"
+          (click)="switchLang(lang)"
+          class="lang-btn"
+          [title]="getLangLabel(lang)">
+          <span class="fi fi-{{ lang === 'en' ? 'gb' : lang }}"></span>
+          <span class="lang-code">{{ lang.toUpperCase() }}</span>
+        </button>
+      </ng-container>
+
+      <button #menuToggle id="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
+        aria-controls="mobile-menu" aria-label="Toggle menu" class="mobile-menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
   </div>
 
-  <!-- menu mobile - default: hidden -->
+  <!-- mobile menu -->
   <div #mobileMenu id="mobile-menu" [ngClass]="{'hidden': !isMenuOpen}" class="mobile-menu-container">
-    <a href="#" (click)="scrollToSection('home', $event); closeMenu()" class="mobile-menu-link border-t">Accueil</a>
-    <a href="#" (click)="scrollToSection('about', $event); closeMenu()" class="mobile-menu-link">À propos</a>
-    <a href="#" (click)="scrollToSection('education', $event); closeMenu()" class="mobile-menu-link">Formation</a>
-    <a href="#" (click)="scrollToSection('skills', $event); closeMenu()" class="mobile-menu-link">Technologies &
-      Outils</a>
-    <a href="#" (click)="scrollToSection('experience', $event); closeMenu()" class="mobile-menu-link">Expérience</a>
-    <a href="#" (click)="scrollToSection('projects', $event); closeMenu()" class="mobile-menu-link">Projects</a>
-    <a href="#" (click)="scrollToSection('contact', $event); closeMenu()" class="mobile-menu-contact">Contact</a>
+    <a href="#" (click)="scrollToSection('home', $event); closeMenu()" class="mobile-menu-link border-t">{{ 'nav.home' | translate }}</a>
+    <a href="#" (click)="scrollToSection('about', $event); closeMenu()" class="mobile-menu-link">{{ 'nav.about' | translate }}</a>
+    <a href="#" (click)="scrollToSection('education', $event); closeMenu()" class="mobile-menu-link">{{ 'nav.education' | translate }}</a>
+    <a href="#" (click)="scrollToSection('skills', $event); closeMenu()" class="mobile-menu-link">{{ 'nav.skills' | translate }}</a>
+    <a href="#" (click)="scrollToSection('experience', $event); closeMenu()" class="mobile-menu-link">{{ 'nav.experience' | translate }}</a>
+    <a href="#" (click)="scrollToSection('projects', $event); closeMenu()" class="mobile-menu-link">{{ 'nav.projects' | translate }}</a>
+    <a href="#" (click)="scrollToSection('contact', $event); closeMenu()" class="mobile-menu-contact">{{ 'nav.contact' | translate }}</a>
   </div>
 </nav>
