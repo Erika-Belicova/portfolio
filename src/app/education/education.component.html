@@ -27,15 +27,22 @@
           <p class="text-light-gray less-margin-p bg-text-education">{{ 'education.entries.french_level' | translate }}</p>
           <p class="text-dark-gray less-margin-p bg-text-education">Langue Onze Toulouse</p>
           <p class="text-dark-gray no-margin-p bg-text-education">{{ 'education.entries.french_dates' | translate }}</p>
-
         </div>
+
+        <div class="education-box">
+          <h3 class="education-title mt-8 bg-text-education">{{ 'education.entries.uni_title' | translate }}</h3>
+          <p class="text-light-gray less-margin-p bg-text-education">{{ 'education.entries.uni_level' | translate }}</p>
+          <p class="text-dark-gray less-margin-p bg-text-education">{{ 'education.entries.uni_name' | translate }}</p>
+          <p class="text-dark-gray no-margin-p bg-text-education">{{ 'education.entries.uni_dates' | translate }}</p>
+        </div>
+
       </div>
     </div>
 
     <!-- technical overview section -->
     <div data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" #technicalOverview
       id="teachnical-overview" class="w-full lg:w-[50%] text-left flex justify-center">
-      <div class="space-y-6 px-2 sm:px-0">
+      <div class="space-y-6 px-2 sm:px-0 md:mt-10">
 
         <div class="content-box">
           <h2 class="text-3xl sm:text-4xl font-bold text-blue-300 mb-10 tracking-wide bg-text-tech">
@@ -105,7 +112,7 @@
             </li>
             <li class="skill-tag language-tag">
               {{ 'education.spoken_languages.en' | translate }}
-            </li>
+            </li><br>
             <li class="skill-tag language-tag">
               {{ 'education.spoken_languages.de' | translate }}
             </li>
