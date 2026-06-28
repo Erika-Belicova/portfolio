@@ -1,118 +1,116 @@
 .section-container {
-    @apply min-h-screen text-white flex items-center justify-center px-6 relative overflow-hidden;
+  @apply min-h-screen text-white flex items-center justify-center px-6 relative overflow-hidden;
 }
 
 .content-container {
-    @apply max-w-6xl text-center relative z-20;
+  @apply max-w-6xl text-center relative z-20;
 }
 
 @media (max-height: 529px) and (min-width: 530px) and (max-width: 1024px)  and (orientation: landscape) {
-    .role-box {
-        margin-top: 48px !important; /* mobile landscape */
-        margin-bottom: 8px !important;
-    }
+  .role-box {
+    margin-top: 48px !important; /* mobile landscape */
+    margin-bottom: 8px !important;
+  }
 
-    .role-title {
-        font-size: 20px !important;
-    }
+  .role-title {
+    font-size: 20px !important;
+  }
 
-    p {
-        margin-bottom: 1rem !important;
-    }
+  p {
+    margin-bottom: 1rem !important;
+  }
 
-    a {
-        padding: 6px 12x 6px 12px !important;
-    }
+  a {
+    padding: 6px 12x 6px 12px !important;
+  }
 
-    h1 {
-        margin-bottom: 20px !important;
-    }
+  h1 {
+    margin-bottom: 20px !important;
+  }
 }
 
 .button-span {
-    @apply bg-slate-800 px-1 transition-colors duration-300 group-hover:bg-transparent;
+  @apply bg-slate-800 px-1 transition-colors duration-300 group-hover:bg-transparent;
 }
 
 a {
-    @apply inline-flex items-center border-2 border-blue-300 py-3 px-6 text-lg font-semibold text-blue-300 transition ease-in-out duration-300 hover:bg-blue-400 hover:bg-opacity-10;
+  @apply inline-flex items-center border-2 border-blue-300 py-3 px-6 text-lg font-semibold text-blue-300 transition ease-in-out duration-300 hover:bg-blue-400 hover:bg-opacity-10;
 }
 
 .name {
-    @apply bg-slate-800 text-blue-300 inline px-1;
+  @apply bg-slate-800 text-blue-300 inline px-1;
 }
 
 .tagline {
-    @apply bg-slate-800/80 inline-block px-1 sm:mt-1 leading-tight;
+  @apply bg-slate-800/80 inline-block px-1 sm:mt-1 leading-tight;
 }
 
 p {
-    @apply text-base sm:text-lg md:text-xl text-gray-300 mb-10;
+  @apply text-base sm:text-lg md:text-xl text-gray-300 mb-10;
 }
 
 .profile-description {
-    @apply bg-slate-800/90 lg:bg-slate-800 pb-1 px-4 rounded inline-block;
-    line-height: normal;
+  @apply bg-slate-800/90 lg:bg-slate-800 pb-1 px-4 rounded inline-block;
+  line-height: normal;
 }
 
 .role-box {
-    @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide;
+  @apply text-lg sm:text-xl md:text-2xl text-blue-300 mb-4 font-semibold tracking-wide;
 }
 
 .role-title {
-    @apply bg-slate-800 px-1 inline mt-6
+  @apply bg-slate-800 px-1 inline mt-6
 }
 
 .title {
-    @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight;
+  @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight;
 }
 
 h1 {
-    @apply space-y-3 sm:space-y-0 my-10 sm:mt-0;
+  @apply space-y-3 sm:space-y-0 my-10 sm:mt-0;
 }
 
 .mobile-text {
-    @apply text-base font-normal bg-slate-800/90 text-gray-300 px-4 py-6 pb-10 w-fit mx-auto rounded-full;
+  @apply text-base font-normal bg-slate-800/90 text-gray-300 px-4 py-6 pb-10 w-fit mx-auto rounded-full;
 }
 
 .mobile-title {
-    @apply text-2xl font-semibold bg-slate-800/80 leading-tight text-gray-100 w-fit mx-auto;
+  @apply text-2xl font-semibold bg-slate-800/80 leading-tight text-gray-100 w-fit mx-auto;
 }
 
 .mobile-role {
-    @apply text-xl font-semibold bg-slate-800 w-fit text-blue-300 mb-8 mx-auto;
+  @apply text-xl font-semibold bg-slate-800 w-fit text-blue-300 mb-8 mx-auto;
 }
 
 /* landscape tablet and small laptops */
 @media (max-height: 720px) and (min-width: 1025px) and  (max-width: 1280px) and (orientation: landscape) {
-    .content-container {
-        max-width: 1024px !important;
-    }
-    h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.2 !important;
-        margin: 3rem 1rem 3rem 1rem !important;
-    }
+  .content-container {
+    max-width: 1024px !important;
+  }
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+    margin: 3rem 1rem 3rem 1rem !important;
+  }
 
-    h2 {
-        font-size: 1.7rem !important;
-        line-height: 1.2 !important;
-    }
+  h2 {
+    font-size: 1.7rem !important;
+    line-height: 1.2 !important;
+  }
 
-    h3 {
-        font-size: 1.5rem !important;
-        line-height: 1.2 !important;
-    }
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
 
-    p {
-        font-size: 1.2rem !important;
-        line-height: 1.5 !important;
-        margin: 2rem 3rem 2rem 3rem;
-    }
+  p {
+    font-size: 1.2rem !important;
+    line-height: 1.5 !important;
+    margin: 2rem 3rem 2rem 3rem;
+  }
 
-    .role-box {
-        @apply mt-6;
-    }
-    
-    
-
+  .role-box {
+    @apply mt-6;
+  }
+  
 }
