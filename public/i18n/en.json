@@ -147,7 +147,7 @@
     "portfolio_desc": "Personal portfolio website showcasing my projects through an interactive, responsive interface with dynamic animations.",
     "yoga_title": "Yoga Studio",
     "yoga_title_type": "(automated tests)",
-    "yoga_desc": "Developed automated backend, frontend, and end-to-end tests for an existing yoga session management application.",
+    "yoga_desc": "Developed automated backend, frontend, and end-to-end tests for an existing yoga session booking and management application.",
     "social_title": "Social Network",
     "social_title_type": " (full-stack)",
     "social_desc": "MVP of a social network for developers, built according to functional requirements, design mockups, and technical constraints.",

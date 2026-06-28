@@ -153,7 +153,7 @@
     "social_desc": "MVP d'un réseau social pour développeurs, conçu selon les spécifications fonctionnelles, maquettes et contraintes techniques.",
     "ycyw_title": "Chat support PoC",
     "ycyw_title_type": " (full-stack)",
-    "ycyw_desc": "Ce PoC implémente un chat de support en temps réel permettant aux utilisateurs de contacter les agents de support.",
+    "ycyw_desc": "Ce PoC implémente un chat de support en ligne permettant aux utilisateurs d'échanger avec les agents de support en temps réel.",
     
     "btn_site": "Voir le site",
     "btn_site_short": "Site",
