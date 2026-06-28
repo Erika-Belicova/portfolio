@@ -11,6 +11,8 @@ export class WakeService {
     "https://mdd.erika-belicova.com",
     "https://api-mdd.erika-belicova.com",
     "https://api-mdd.erika-belicova.com/swagger-ui/index.html",
+    "https://your-car-your-way.erika-belicova.com",
+    "https://api-ycyw.erika-belicova.com/swagger-ui/index.html",
   ];
 
   constructor() { }

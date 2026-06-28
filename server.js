@@ -20,6 +20,8 @@ const subdomains = [
   "https://mdd.erika-belicova.com",
   "https://api-mdd.erika-belicova.com",
   "https://api-mdd.erika-belicova.com/swagger-ui/index.html",
+  "https://your-car-your-way.erika-belicova.com",
+  "https://api-ycyw.erika-belicova.com/swagger-ui/index.html",
 ];
 
 // check if current time in Paris is between 8am and 5pm inclusive
