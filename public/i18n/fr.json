@@ -3,7 +3,7 @@
     "home": "Accueil",
     "about": "À propos",
     "education": "Formation",
-    "skills": "Technologies & Outils",
+    "skills": "Technologies et outils",
     "experience": "Expérience",
     "projects": "Projets",
     "contact": "Contact"
@@ -48,9 +48,9 @@
       "uni_dates": "2017 – 2018, Bratislava, Slovaquie (UE)"
     },
     "competences": {
-      "backend": "Développement Back-End",
-      "frontend": "Développement Front-End",
-      "fullstack": "Développement Full-Stack",
+      "backend": "Développement back-end",
+      "frontend": "Développement front-end",
+      "fullstack": "Développement full-stack",
       "automation": "Automatisation et scripting",
       "testing": "Automatisation des tests",
       "uml": "Diagrammes UML",
@@ -66,14 +66,14 @@
     }
   },
   "skills": {
-    "title": "Technologies & Outils",
-    "backend": "Back-End",
-    "frontend": "Front-End",
+    "title": "Technologies et outils",
+    "backend": "Back-end",
+    "frontend": "Front-end",
     "databases": "Bases de données",
-    "testing": "Tests & Assurance Qualité",
-    "architecture": "Architecture & Patterns",
-    "devtools": "Outils de développement & IDE",
-    "methodologies": "Méthodologies & Collaboration",
+    "testing": "Tests et assurance qualité",
+    "architecture": "Architecture et patterns",
+    "devtools": "Outils de développement et IDE",
+    "methodologies": "Méthodologies et collaboration",
     "cloud": "Cloud"
   },
   "experience": {
