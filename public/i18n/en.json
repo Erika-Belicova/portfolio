@@ -9,11 +9,10 @@
     "contact": "Contact"
   },
   "home": {
-    "role_line1": "Full‑Stack & Backend",
-    "role_line2": "Developer",
+    "role": "Backend Developer",
     "tagline": "Passionate about software quality and attention to detail.",
-    "description": "I have 4 years of experience in IT, covering software development, architecture, and automated testing. I prioritize clean code, intuitive software, and support teams through collaboration and mentoring.",
-    "mobile_description": "I have 4 years of IT experience spanning design, development, and automated testing.",
+    "description": "I have more than 3 years of experience in software development, covering backend development, test automation, and application design. I prioritize clean code, intuitive software, and support teams through collaboration and mentoring.",
+    "mobile_description": "I have more than 3 years of experience spanning development, automated testing, and application design.",
     "cta": "Learn more",
     "mobile_tagline": "Passionate about software quality and attention to detail."
   },
@@ -92,7 +91,7 @@
       "consulting": "Consulting"
     },
     "jobs": {
-      "j6_title_line1": "Full-Stack Python/Django",
+      "j6_title_line1": "Python/Django Backend",
       "j6_title_line2": "Developer",
       "j6_company": "Globasoft – Toulouse, France",
       "j6_duration": "Aug. 2025 – Sep. 2025 | Fixed-term contract",
@@ -100,8 +99,8 @@
       "j6_detail2": "Defined application behaviour and contributed to key technical implementation decisions",
       "j6_detail3": "Delivered features based on detailed specifications, mockups, and project priorities",
 
-      "j1_title_line1": "JavaScript Developer",
-      "j1_title_line2": "– Automation",
+      "j1_title_line1": "JavaScript Backend",
+      "j1_title_line2": "Developer – Automation",
       "j1_company": "Globasoft – Toulouse, France",
       "j1_duration": "Aug. 2024 – Sep. 2024 | Internship",
       "j1_detail1": "Extended an open-source library used for software architecture diagram modelling",

@@ -9,11 +9,10 @@
     "contact": "Contact"
   },
   "home": {
-    "role_line1": "Développeuse",
-    "role_line2": "full‑stack et back-end",
+    "role": "Développeuse back-end",
     "tagline": "Développeuse passionnée par la qualité et attentive aux détails.",
-    "description": "J'ai 4 ans d'expérience dans l'IT, couvrant la conception, le développement et les tests automatisés. Je privilégie un code propre, des logiciels intuitifs et soutiens les équipes par la collaboration et le mentorat.",
-    "mobile_description": "J'ai 4 ans d'expérience dans l'IT, couvrant la conception, le développement et les tests automatisés.",
+    "description": "J’ai plus de 3 ans d’expérience en développement, couvrant le développement back-end, l’automatisation de tests et la conception applicative. Je privilégie un code propre, des logiciels intuitifs et soutiens les équipes par la collaboration et le mentorat.",
+    "mobile_description": "J’ai plus de 3 ans d’expérience couvrant le développement, les tests automatisés et la conception applicative.",
     "cta": "En savoir plus",
     "mobile_tagline": "Passionnée par la qualité et attentive aux détails."
   },
@@ -92,16 +91,16 @@
       "consulting": "Conseil"
     },
     "jobs": {
-      "j6_title_line1": "Développeuse full-stack",
+      "j6_title_line1": "Développeuse back-end",
       "j6_title_line2": "Python / Django ",
       "j6_company": "Globasoft – Toulouse, France",
       "j6_duration": "août 2025 – sept. 2025 | CDD",
-      "j6_detail1": "Prise en charge complète du développement d'une application web full-stack",
+      "j6_detail1": "Prise en charge complète du développement d'une application web",
       "j6_detail2": "Décision de son fonctionnement interne et participation aux choix techniques pour l'implémentation",
       "j6_detail3": "Mise en œuvre selon une maquette, un cahier des charges précis et des priorités définies",
       
-      "j1_title_line1": "Développeuse JavaScript",
-      "j1_title_line2": "– automatisation",
+      "j1_title_line1": "Développeuse back-end",
+      "j1_title_line2": "JavaScript – automatisation",
       "j1_company": "Globasoft – Toulouse, France",
       "j1_duration": "août 2024 – sept. 2024 | Immersion professionnelle",
       "j1_detail1": "Extension d'une librairie open source pour la modélisation de diagrammes d'architecture logicielle",
